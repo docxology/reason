@@ -1,0 +1,844 @@
+{
+ "claims": [
+  {
+   "report_location": "Scope, REVIEW.md line 7",
+   "claim": "Vol I is 105 pages and Vol II is 118 pages.",
+   "verdict": "CONFIRMED",
+   "evidence": "pdfinfo: sources/foundations-8.0/Foundations_of_Reason_8.0_EN.pdf Pages 105; sources/engineering-3.5/Engineering_of_Reason_3.5_EN.pdf Pages 118. Text files hold 105 and 118 form feeds (each ends with a form feed after the last page number 105 / 118). Legend used below: V1 = text/foundations-8.0.txt, V2 = text/engineering-3.5.txt; l. = file line; p. = PDF page (1 + form feeds before the line).",
+   "correction": ""
+  },
+  {
+   "report_location": "Scope, line 7",
+   "claim": "Both volumes include the shared 15-minute guide.",
+   "verdict": "CONFIRMED",
+   "evidence": "V1 pp.1-7 and V2 pp.1-7 both open with the identical 'Foundations of Reason in 15 Minutes ... Short guide, edition 1.1 . October 10, 2026' (reviewer question on p.7 in both).",
+   "correction": ""
+  },
+  {
+   "report_location": "Scope, line 8",
+   "claim": "Chapter numbering is continuous: 1-20 in Vol I, 21-34 in Vol II.",
+   "verdict": "CONFIRMED",
+   "evidence": "V1 headings Chapter 1 (p.17, l.894) ... Chapter 20 (p.84, l.4503); V2 body headings 21 (p.13) ... 34 (p.114, 'The Crystal of the Engineering Volume').",
+   "correction": ""
+  },
+  {
+   "report_location": "Scope line 8; Appendix B line 369",
+   "claim": "Vol I concept record 17957561 has 38 versions, from v1.4r (10 January 2025) to v8.0 (9 October 2026).",
+   "verdict": "CONFIRMED",
+   "evidence": "Zenodo public API (HTTP 200): /api/records/23271702 -> conceptrecid 17957561, version '8.0 Eng/Rus Volume I', publication_date 2026-10-09; /api/records/23271702/versions?size=25&page=1 and page=2 -> hits.total 38; earliest ('1.4r', 2025-01-10), latest (8.0, 2026-10-09). (/api/records/17957561/versions itself returns 404; the concept id only works through a record id.)",
+   "correction": "Count is right, but the 38 uploads include same-day English/Russian pairs (4.5, 4.7, 4.9, 5.0, 5.5, 6, 6.5, 6.7, 7.0) and non-Vol-I items ('Engineering volume 2 Eng/Rus' 2026-08-26, 'Core of Reason 6.7', 'One-Page Architectural Specification', 'Popular Introduction', 'Deriving AGI From First Principles'); about 19 distinct numbered Vol I editions. State that if the number is used as a churn measure."
+  },
+  {
+   "report_location": "§7 Weakest 6, line 275",
+   "claim": "Versions 6.0 through 8.0 appeared within eight weeks.",
+   "verdict": "CONFIRMED",
+   "evidence": "Zenodo version list: '6 Eng/Rus' 2026-08-15; 6.5 2026-08-26; 6.7 2026-09-03; 7.0 2026-09-09; 7.2 2026-09-19; 7.5 2026-10-02; 8.0 2026-10-09 = 55 days (7.9 weeks).",
+   "correction": ""
+  },
+  {
+   "report_location": "§7 Weakest 6, line 275",
+   "claim": "Vol I was re-titled repeatedly: 'AI Alignment' stability model -> process model of AGI -> 'Minimal Architecture of ASI' -> 'Superintelligence Technology'.",
+   "verdict": "CONFIRMED",
+   "evidence": "Zenodo titles: 1.4r/2.0/2.1E 'Foundations of Reason: A Structural Stability Model for Autonomous Systems and AI Alignment'; 4.5 'A Process-Based Model of Life, Reason, and AGI'; 6 'Foundations of Reason - Minimal Architecture of ASI: Building and Scaling Artificial Reason'; 6.5 'ASI Technology Based on the Minimal Architecture of Artificial Reason'; 8.0 'Superintelligence Technology (ASI): Foundations of Reason 8.0 - From the Meaning of Life to Artificial Reason'.",
+   "correction": ""
+  },
+  {
+   "report_location": "Appendix B, line 369",
+   "claim": "Vol II concept record 22975036 has two versions, v2.4 and v3.5.",
+   "verdict": "CONFIRMED",
+   "evidence": "Zenodo: /api/records/23271781 -> conceptrecid 22975036, '3.5 Eng/Rus Volume II', 2026-10-09; /versions hits.total 2: ('2.4 En/Ru Volume II', 2026-09-26) and ('3.5 Eng/Rus Volume II', 2026-10-09).",
+   "correction": ""
+  },
+  {
+   "report_location": "Appendix B, line 369",
+   "claim": "Volume III, 'Civilization of Reason', v1.8 (26 September 2026), exists and was not reviewed.",
+   "verdict": "CONFIRMED",
+   "evidence": "Zenodo search: record 22975357, 2026-09-26, version 1.8, 'Foundations of Reason Volume III - Civilization of Reason v1.8: An Architecture ...'. V1 l.4291 p.79 also names 'Volume III of the cycle, Civilization of Reason'.",
+   "correction": ""
+  },
+  {
+   "report_location": "Documents reviewed lines 5-6; §4.3 line 134",
+   "claim": "Titles are 'Superintelligence Technology (ASI): Foundations of Reason 8.0. From the Meaning of Life to Artificial Reason' (Vol I) and 'Engineering of Reason 3.5: ASI Technology' (Vol II); 'I would remove it from both titles'.",
+   "verdict": "IMPRECISE",
+   "evidence": "These are the Zenodo record titles (records 23271702 and 23271781), not the titles printed in the PDFs. V1 title page (p.8): 'FOUNDATIONS OF REASON / VOLUME I. THE CAUSAL MODEL OF REASON / Fundamental Foundations of the Technology of Reason / Version 8.0' - no ASI or superintelligence wording. V2 title page (p.9): 'FOUNDATIONS OF REASON - VOLUME II / THE ENGINEERING ARCHITECTURE OF REASON / FROM A CAUSAL MODEL TO AN OPERATING SYSTEM / TECHNOLOGY FOR CREATING ARTIFICIAL REASON AND SCALING TO ASI (ASR)'. 'Superintelligence' occurs once in the PDF text (guide, V1 l.309); 'Meaning of Life' and 'Minimal Architecture' do not occur in either volume.",
+   "correction": "Say these are the Zenodo titles; the Vol I PDF title page carries no ASI wording, the Vol II PDF title page carries 'Scaling to ASI (ASR)'."
+  },
+  {
+   "report_location": "Appendix B, line 370",
+   "claim": "Six recent arXiv references in Vol I A.5 (2411.13537 MUSE, 2506.05109 Liu & van der Schaar, 2511.02824 Kosmos, 2601.11974 MARS, 2609.11873 Duan et al., 2505.22954 Darwin Godel Machine) are genuine with matching titles and authors.",
+   "verdict": "CONFIRMED",
+   "evidence": "All six IDs are printed in V1 A.5 (items 65, 76, 77, 78, 81, 67; pp.101-103). arXiv API (export.arxiv.org, HTTP 200) returns six entries: 2411.13537v2 'Competence-Aware AI Agents with Metacognition for Unknown Situations and Environments (MUSE)' (Valiente, Pilly); 2506.05109v1 'Truly Self-Improving Agents Require Intrinsic Metacognitive Learning' (Liu, van der Schaar); 2511.02824v2 'Kosmos: An AI Scientist for Autonomous Discovery' (Mitchener...); 2601.11974v1 'Learn Like Humans: Use Meta-cognitive Reflection for Efficient Self-Improvement' (Hou...); 2609.11873v3 'The Last AI Built by Humans: Toward Genuine Recursive Self-Improvement' (Duan...); 2505.22954v3 'Darwin Godel Machine: Open-Ended Evolution of Self-Improving Agents' (Zhang...). Titles and first authors match A.5.",
+   "correction": ""
+  },
+  {
+   "report_location": "Short answer, line 14",
+   "claim": "The author says (Vol I Appendix A.2.1) that nothing is yet evidence the architecture works.",
+   "verdict": "CONFIRMED",
+   "evidence": "V1 A.2.1 table, p.95 l.5196-5230: 'Central discriminating test | Program and controls are formulated | Run a preregistered series under equal total resources'; 'Inquiry-loop pilot | Methodological results have been obtained'; 'ASI | Scaling direction only'.",
+   "correction": ""
+  },
+  {
+   "report_location": "Short answer, line 18",
+   "claim": "Prior-art comparison was done after the theory was formed, 'largely through an AI literature tool'.",
+   "verdict": "IMPRECISE",
+   "evidence": "First half verbatim: V1 A.2 p.93 l.5082 'Comparisons with scientific literature were carried out after the author's propositions had been formed.' Elicit is documented (p.93-94: 'repeated studies using Elicit ... a separate priority audit'), but V1 A.5 (pp.100-103) is a 29-item 'selective map of primary publications' and the text never says what share came from Elicit or any tool.",
+   "correction": "Say 'partly through Elicit-based reviews (A.2) plus a 29-item hand-built map (A.5)'; 'largely' is an inference."
+  },
+  {
+   "report_location": "Short answer, line 18",
+   "claim": "The only pilot was a benchmark-construction exercise.",
+   "verdict": "CONFIRMED",
+   "evidence": "V2 §27.B p.49 l.3410s: 'This is a documented methodological pilot of procedure development'; V1 A.2 'First Documented Pilot' p.94: 'The methodological result of the pilot is traceable development of the procedure itself'.",
+   "correction": ""
+  },
+  {
+   "report_location": "Short answer, line 28",
+   "claim": "Soar, goal-driven autonomy, truth maintenance, decision-region active learning, the Robot Scientist and active inference in depth are not engaged.",
+   "verdict": "CONFIRMED",
+   "evidence": "Case-insensitive scans: goal-driven autonomy / Molineaux / Munoz-Avila / GDA 0 hits in both volumes; truth-maintenance / TMS 0; Golovin / Javdani / equivalence-class / decision-region 0; Robot Scientist 0; Soar only in V2 §34.A (see line 213 entry); active inference 3 mentions in V1 (A.5 item 63 l.5603, comparative-map row p.104 l.5871) and 0 in V2.",
+   "correction": ""
+  },
+  {
+   "report_location": "§1, line 41",
+   "claim": "Vol I distinguishes four kinds of statement (A.2): definitions, philosophical foundations, conditional functional inferences, empirical hypotheses.",
+   "verdict": "CONFIRMED",
+   "evidence": "V1 A.2 p.95: 'The text distinguishes four statuses: a definition ...; a philosophical foundation ...; a conditional functional inference ...; an empirical hypothesis ...'.",
+   "correction": ""
+  },
+  {
+   "report_location": "§1, line 39",
+   "claim": "Values live in a Value Map topped by the Compass 'continuation and development of Life through growth in the ability to understand and direct its own trajectory'; the RFL removal test; REASON_CLOSURE = next task originates from the system's own state.",
+   "verdict": "CONFIRMED",
+   "evidence": "Compass wording verbatim V1 l.597 p.11 (Key Definitions) and l.227 p.5; RFL removal test V1 A.4 item 32 (p.98) and guide table p.5-6; REASON_CLOSURE 'a testable state in which these functions close into a continuing cycle' (guide p.6) and source-of-next-task language V1 Operational Core item 7 (p.14).",
+   "correction": ""
+  },
+  {
+   "report_location": "§1, line 39",
+   "claim": "Formation States are functional analogues of fear, curiosity, 'something doesn't fit' and 'I am stuck.'",
+   "verdict": "IMPRECISE",
+   "evidence": "V1 Key Definitions p.12 l.698: 'Human functional analogues include ... \"this is frightening,\" \"this is good,\" \"this is interesting,\" \"something does not fit,\" or \"I am stuck.\"' ('I am stuck' verbatim; 'something does not fit' not 'doesn't'). V2 §26.0.1 p.40 l.2748-2749 lists CONTRADICTION - \"doesn't fit\" and DEAD_END - \"stuck\".",
+   "correction": "Quote 'something does not fit' (V1 p.12 l.698; also p.45 l.2442)."
+  },
+  {
+   "report_location": "§1, line 47",
+   "claim": "Quotes: 'Individual components ... are already known; the testable claim concerns their causal organization' (front matter); '[explicit linking of gap type ... under comparable resources]' (§12.9).",
+   "verdict": "CONFIRMED",
+   "evidence": "V1 l.464 p.9 (continues '... around significant unknowns, discriminating inquiry, revision of grounds, and transfer of correction'); V1 l.3355 p.61, inside §12.9 (p.60-61).",
+   "correction": ""
+  },
+  {
+   "report_location": "§2.1, line 55",
+   "claim": "Operational Core gives VOI net of observation/computation/delay/irreversibility costs, interventional effect of a retained correction, transfer and regression terms; formalisms not claimed as original.",
+   "verdict": "CONFIRMED",
+   "evidence": "V1 pp.14-15: NetVOI(p) = VOI - C_obs - C_comp - C_delay - R_irrev; CE_Delta with do(.); TG and RG terms; 'These formalisms are not claimed as original.'",
+   "correction": ""
+  },
+  {
+   "report_location": "§2.1, line 55",
+   "claim": "Decomposition is by causal role; an alternative architecture counts if it shows the same profile under intervention.",
+   "verdict": "CONFIRMED",
+   "evidence": "V1 §12.8 p.60 l.3299-3304: 'An architecture with a different internal decomposition is considered functionally equivalent ... if interventions show the same causal profile'.",
+   "correction": ""
+  },
+  {
+   "report_location": "§2.2, lines 59-61",
+   "claim": "§13.2 quotes: 'If an acquired distinction must change the future after the signal disappears, a persistent trace is required'; 'a common conscious picture, explicit typing of gaps ... remain hypotheses about implementation and its advantages'.",
+   "verdict": "CONFIRMED",
+   "evidence": "V1 l.3453 p.63 and l.3479 p.63 (§13.2 spans p.63; §13.3 starts p.64).",
+   "correction": ""
+  },
+  {
+   "report_location": "§2.2, line 63",
+   "claim": "Predicted direction of ablation effects is stated but magnitudes are not.",
+   "verdict": "CONFIRMED",
+   "evidence": "V1 A.3 p.97: 'After a pilot, a meaningful effect and the required amount of testing are specified'; V2 §31.1 p.79 l.5709 'The predicted loss is a testable expectation'; V2 §27.A p.48 lists effect_size / confidence_interval only as quantities to record. No predicted magnitudes found.",
+   "correction": ""
+  },
+  {
+   "report_location": "§2.3, line 67",
+   "claim": "Operational Compass content in Vol II (§§24.C, 29.A) is a vector: risk to continuity of life processes, divergence from reality, loss of viable future paths, effects on other autonomies, reversibility.",
+   "verdict": "CONFIRMED",
+   "evidence": "V2 §29.A p.71 l.5115-5130: CompassAssessment { life_continuity_risk, reality_divergence, future_path_loss, affected_autonomies[], reversibility, uncertainty, ... } and 'constrained vector'. (§24.C concerns Worldview coverage of the Compass, pp.24-26; the vector itself is §29.A.)",
+   "correction": ""
+  },
+  {
+   "report_location": "§2.3, line 67",
+   "claim": "The Compass enters the architecture through the definition, 'not through any causal role'.",
+   "verdict": "IMPRECISE",
+   "evidence": "Definitional entry is supported (V1 A.1 p.93: 'Status as Reason requires ... relation of the highest-level goal to the Compass'; V1 §13.1 p.62 l.3406-3408). But the text asserts a causal role and a test for it: guide p.5 (V1 l.239) 'Explaining the Compass does not by itself show that it governs behavior. Its causal role is tested in conflicts with local advantage and under changing conditions'; V2 §29 intro p.65 l.4651 'The Compass participates in navigation before a ready decision exists. It determines which aspects of the situation require understanding, which gaps may change the trajectory, and which horizon of consequences must be unfolded'; V1 Operational Core item 2 (G -> D -> T -> V -> C).",
+   "correction": "Reword as an evaluation: 'the text claims a causal role for the Compass, but I found no engineering choice that depends on its content'."
+  },
+  {
+   "report_location": "§2.3, line 69",
+   "claim": "Ch. 2 contains a 'causal asymmetry of scale' argument for weighting the broader life process.",
+   "verdict": "CONFIRMED",
+   "evidence": "V1 l.1190 (Ch. 2, p.21-22): 'This is a causal asymmetry of scale.'",
+   "correction": ""
+  },
+  {
+   "report_location": "§2.3, line 71",
+   "claim": "Ch. 2: the model 'does not claim a neutral standpoint outside all values'.",
+   "verdict": "CONFIRMED",
+   "evidence": "V1 l.1267-1275, p.22-23 (sentence runs across the page break: '... so the model does [p.22 footer] not claim a neutral standpoint outside all values'); Chapter 2 spans l.1002-1325.",
+   "correction": ""
+  },
+  {
+   "report_location": "§2.4, line 75",
+   "claim": "By definition a system with every function but 'a different closed limiting orientation' is an 'intelligent self-correcting system', not Reason (Ch. 2, §12.8, Ch. 18).",
+   "verdict": "IMPRECISE",
+   "evidence": "'a different closed limiting orientation' occurs only in V1 §13.1 p.62 l.3407 ('A self-correcting intellectual system with a different closed limiting orientation belongs to a broader class of cognitive architectures'). 'intelligent self-correcting system' is verbatim in Ch. 2 (p.22 l.1214) and §12.8 (p.60 l.3293: 'intelligent self-correcting systems'). Ch. 18 (p.81) says 'intelligent self-correcting agents' and 'immutable external goal'. The cited places (Ch. 2, §12.8, Ch. 18) do not contain the first quoted phrase.",
+   "correction": "Cite §13.1 for 'a different closed limiting orientation'; Ch. 2 / §12.8 / Ch. 18 for the 'intelligent self-correcting' class."
+  },
+  {
+   "report_location": "§2.4, line 77",
+   "claim": "Candidates with another orientation are recorded as SELF_NAVIGATING_OTHER_ORIENTATION and kept in the denominators (Vol II §31.0; Vol I A.4).",
+   "verdict": "CONFIRMED",
+   "evidence": "V2 l.5688 p.79 inside §31.0 (l.5640-5706): 'Minimal outcome classes: AR_ADMITTED, SELF_NAVIGATING_OTHER_ORIENTATION, DEPENDENT_SYSTEM ...'; V2 §33.D p.112 'the share of AR_ADMITTED is not calculated after excluding such outcomes'; V1 A.4 item 38 p.98 and A.3 p.96-97 'Such a candidate is not excluded from the experimental sample'.",
+   "correction": ""
+  },
+  {
+   "report_location": "§2.5, line 81",
+   "claim": "Vol II §31.0: 'at REASON_CLOSURE ... self-referential assembly becomes functioning Consciousness'.",
+   "verdict": "CONFIRMED",
+   "evidence": "V2 l.5657 p.78 (inside §31.0): both 'at REASON_CLOSURE' and 'self-referential assembly becomes functioning Consciousness'; the second phrase also at l.5625 (§31 preamble).",
+   "correction": ""
+  },
+  {
+   "report_location": "§2.5, line 83",
+   "claim": "'causal-semantic Worldview' is the author's term.",
+   "verdict": "CONFIRMED",
+   "evidence": "V1 abstract p.8 'causal- semantic relations' (line-break hyphen); V1 A.5 terminology map p.104 'Long-term causal-semantic model of the world and self'.",
+   "correction": ""
+  },
+  {
+   "report_location": "§3, line 89",
+   "claim": "Vol II proposes metrics premature_sufficiency_rate, decision_relevant_distinction_yield, correction_persistence_rate, false_completeness_rate, open_gap_persistence, post_task_continuation_rate.",
+   "verdict": "CONFIRMED",
+   "evidence": "V2 §27.1 p.44 correction_persistence_rate; §27.3 p.45 false_completeness_rate; §27.5 pp.46-47 premature_sufficiency_rate, decision_relevant_distinction_yield, open_gap_persistence, basis_origin_trace_rate; §27.6 p.47 post_task_continuation_rate, closure_break_sensitivity, teacher_agreement_bias; §27.2 source_trace_completeness.",
+   "correction": ""
+  },
+  {
+   "report_location": "§3, line 91",
+   "claim": "Morris et al.'s 'Levels of AGI' is cited in the volumes; 'readers of the Russian original' exist.",
+   "verdict": "CONFIRMED",
+   "evidence": "V1 A.5 item 73 l.5686 p.102. Russian original: PDFs never mention Russian (0 hits), but Zenodo version strings are 'Eng/Rus' and Russian-title uploads exist for most editions.",
+   "correction": ""
+  },
+  {
+   "report_location": "§3, line 95",
+   "claim": "§28.C.2: 'Generation and control may therefore use the same computational substrates and even one model if the causal roles are experimentally distinguishable'.",
+   "verdict": "CONFIRMED",
+   "evidence": "V2 l.4341 p.61; §28.C.2 spans l.4294-4345 (28.C.3 starts l.4346).",
+   "correction": ""
+  },
+  {
+   "report_location": "§3, line 99",
+   "claim": "REASON_CLOSURE is a binary status; closure should instead be a preregistered threshold on a profile of continuous metrics.",
+   "verdict": "WRONG",
+   "evidence": "V2 §31.11 p.83 l.5964-5978: ReasonClosureState { ... closure_status: FORMING / CANDIDATE / CONFIRMED / LOST } (four values); l.5979 'Status CONFIRMED requires stable operation in NO_KSR on new situations, preservation of causal-inquiry quality, and transfer of correction between cycles'. V2 §31.A p.83 l.6010-6030 already defines a preregistered ReadinessProfile of min/max thresholds on continuous metrics (maximum_premature_sufficiency_rate, minimum_correction_persistence, minimum_calibration_quality, minimum_critical_dependency_recall ...); §31.1 p.79 l.5707 'Numerical thresholds are set before the control series'.",
+   "correction": "Say the status is a four-valued discrete label whose CONFIRMED level is already tied to a preregistered readiness profile (§31.A); recommend making that profile primary and reporting the continuous scores."
+  },
+  {
+   "report_location": "§4.1, line 111",
+   "claim": "Epistemic-status layer (§24.D): typed statuses OBSERVED, REPORTED, INFERRED, SIMULATED, HYPOTHESIS, SUPPORTED; GENERATED_TEXT != WORLD_CLAIM; unjustified promotion is a logged failure.",
+   "verdict": "CONFIRMED",
+   "evidence": "V2 l.1828 p.28 'status: OBSERVED / REPORTED / INFERRED / SIMULATED / ...'; l.1840 p.28 GENERATED_TEXT != WORLD_CLAIM; failure 32.55 'Unjustified promotion of epistemic status' (heading p.100, l.7261).",
+   "correction": ""
+  },
+  {
+   "report_location": "§4.1, lines 112-114",
+   "claim": "Verification debt (§24.D.3), freshness decay (§24.D.4), transactional revision with lazy invalidation and the A->B->C control (§24.D.1).",
+   "verdict": "CONFIRMED",
+   "evidence": "Heading-level: V2 §24.D.1 'Local change layer and lazy cascade updating' l.1853 p.28; §24.D.3 'Verification debt of temporary grounds' l.2019 p.30; §24.D.4 'Currency of provenance and decay of confidence over time' l.2068 p.31; A->B->C: V2 §33.A.5 p.103 'chain A->B->C when A changes'. Body text of 24.D.1/24.D.3/24.D.4 was not read line by line, so 'transitive version checks' is unchecked.",
+   "correction": ""
+  },
+  {
+   "report_location": "§4.1, line 116",
+   "claim": "An authorization layer treats observe, experiment and dialogue as potentially consequential.",
+   "verdict": "CONFIRMED",
+   "evidence": "V2 §30.A p.74 l.5340-5345: 'The name of a step does not determine its safety ... Authorization therefore depends on the consequences of the operation, not on whether it is named ACTION, EXPERIMENT, DIALOGUE, TOOL, or OBSERVE'.",
+   "correction": ""
+  },
+  {
+   "report_location": "§4.2(a), line 122",
+   "claim": "'The text never says whether anything is learned in model weights.'",
+   "verdict": "IMPRECISE",
+   "evidence": "The text does address weights/parameters: V2 §22 p.15 l.856 'update(...) means one update to model parameters ... v0 permits a tabular record'; V2 §28.C.3 p.62 l.4427 'If the system lowers error by changing weights within the previous framing, this confirms parametric adaptation. Structural self-correction counts only when ...'; p.63 l.4488 'On a neural bearer, it may be implemented by changing a bounded set of weights or adapters, routing among specialized modules, external-memory structure ...'; V2 §24.B.2 l.1385 '... cannot be recovered from model weights'; V1 §12.8 l.3297 'stored in parameters'. What the text does not do is specify how Formation States are internalized (§26.0.3 p.41 l.2808-2830: three outcomes, 'No outcome is chosen in advance').",
+   "correction": "Say: weight-level learning is permitted as one substrate but parameter updates alone are not credited as revision of a ground; no learning mechanism or training signal is given for internalizing Formation States."
+  },
+  {
+   "report_location": "§4.2(a), line 122",
+   "claim": "The INTERNALIZED outcome (§26.0.3), 'the candidate should generate functional analogues itself', has no mechanism.",
+   "verdict": "CONFIRMED",
+   "evidence": "V2 §26.0.3 p.41 l.2809 'As experience accumulates, the candidate should generate functional analogues itself: its own risk model creates an internal POSSIBLE_DANGER, a detected mismatch creates CONTRADICTION ...'; outcome 'B. INTERNALIZED - the external RFL is removed; the system itself creates transparent guiding states'. Only a functional mapping is given, no learning procedure.",
+   "correction": ""
+  },
+  {
+   "report_location": "§4.2(b), line 124",
+   "claim": "SemanticMediator (§24.B.2) turns LLM text into typed claims, concepts and relations.",
+   "verdict": "CONFIRMED",
+   "evidence": "V2 l.1443-1447 p.22 inside §24.B.2 (l.1380+): 'A bidirectional SemanticMediator function operates between the language model and the Worldview'; SemanticMediator.interpret(...) at l.1447.",
+   "correction": ""
+  },
+  {
+   "report_location": "§4.2(c), line 126",
+   "claim": "Pretrained knowledge is treated as an untrusted source with provenance (§21.B, §22.A); hidden-inheritance test of the model's ontology (§22.A.1).",
+   "verdict": "CONFIRMED",
+   "evidence": "V2 l.711-712 (§21.B, p.14) 'may contain inherited human knowledge in its parameters, but this knowledge is not automatically treated as the ...'; l.781-783; §22.A.1 spans l.981-1026 and l.1012 reads 'A separate series tests not only channel ablation but also hidden inheritance of the bootstrap model's ontology.'",
+   "correction": ""
+  },
+  {
+   "report_location": "§4.2(d), line 128",
+   "claim": "Initial values are designer-chosen: four dimensions, w_i = 1/4, K = 1000 (§29.0.1).",
+   "verdict": "CONFIRMED",
+   "evidence": "V2 §29.0.1 (l.4824-4970) l.4865 'four dimensions are proposed' and l.4894 'it is permissible to set w_i=1/4 and K=1000. This is a declared experimental setting'.",
+   "correction": ""
+  },
+  {
+   "report_location": "§4.3, line 132",
+   "claim": "Engineering path begins from 'a ready or cultivated AGI' (§33); purpose statement quote; §33.D concession quote.",
+   "verdict": "CONFIRMED",
+   "evidence": "V2 l.7340 p.101 (§33 intro); purpose statement l.578 p.11 ('Purpose of the document'); §33.D l.8143 p.112 'Until this profile is filled and verified, ASI remains a scaling objective rather than an assigned experimental status.'",
+   "correction": ""
+  },
+  {
+   "report_location": "§4.3, line 132",
+   "claim": "In §33.D superhuman capability comes from scaling eight axes; the ones that matter are Intelligence, tools, memory, compute.",
+   "verdict": "IMPRECISE",
+   "evidence": "Eight axes confirmed: V2 §33.D p.113 l.8148-8160: memory; Intelligence; observation; Simulation Environment; tools and actions; duration of autonomous work; specializations and substrates; speed of learning, verification and transfer. 'Compute' is not an axis.",
+   "correction": "Replace 'compute' with 'specializations and substrates / speed of learning' or drop it."
+  },
+  {
+   "report_location": "§5.1, line 144",
+   "claim": "Preregistration throughout; 'a failed case cannot be declared dissimilar after the fact' (Vol I Ch. 10).",
+   "verdict": "CONFIRMED",
+   "evidence": "V1 l.2587 p.47, Chapter 10 (l.2384-2631). Also V2 §27.B p.50: 'a failed case cannot be excluded from the similarity class without a new profile version and a new confirmatory series'.",
+   "correction": ""
+  },
+  {
+   "report_location": "§5.1, line 145",
+   "claim": "Strong nulls declared in advance: planning, versioned belief memory, provenance, VOI and a failure log (Vol I A.4).",
+   "verdict": "CONFIRMED",
+   "evidence": "V1 A.4 'Priority of the First Series' p.99 l.5495-5500: 'an agent stack with ordinary planning, versioned memory of beliefs and provenance, self-checking, mismatch response, value-of-information assessment, and a log of failed attempts'; p.100 'If the first variant reproduces the full causal profile of inquiry obligations, it is considered functionally equivalent'. ('may well reproduce' is the reviewer's judgement.)",
+   "correction": ""
+  },
+  {
+   "report_location": "§5.1, line 146",
+   "claim": "Equal-compute accounting 'number of model calls, tokens/inference-time compute, external sources, bench time, and hidden preparation' (A.4).",
+   "verdict": "CONFIRMED",
+   "evidence": "V1 l.5527 p.100 (PDF line-break hyphen 'inference- time').",
+   "correction": ""
+  },
+  {
+   "report_location": "§5.1, line 147",
+   "claim": "Sham interventions and restoration controls (§§25.D, 27.B, 31.1).",
+   "verdict": "CONFIRMED",
+   "evidence": "'sham' at V2 l.2636 (§25.D, p.38-39) and l.3510 p.50 (§27.B: 'A sham intervention and restoration of the relation are tested'); restoration at §31.1 p.79 l.5707-5714 ('restoration of the mechanism restores the function').",
+   "correction": ""
+  },
+  {
+   "report_location": "§5.1, line 148",
+   "claim": "Question selection is tested separately from answer use (§27.B).",
+   "verdict": "CONFIRMED",
+   "evidence": "V2 §27.B p.49 'Question selection and use of the answer. These effects are tested separately.'",
+   "correction": ""
+  },
+  {
+   "report_location": "§5.1, line 149",
+   "claim": "Report statuses include CLAIM_NOT_SUPPORTED, and diverging candidates stay in the denominators (§31.0).",
+   "verdict": "IMPRECISE",
+   "evidence": "CLAIM_NOT_SUPPORTED occurs once, in V2 §27.B p.50 l.3519 ('IMPLEMENTATION_CHECK, INCONCLUSIVE, LOCAL_SUPPORT or CLAIM_NOT_SUPPORTED'), not in §31.0. The denominators point is §31.0 (l.5688) and §33.D (p.112).",
+   "correction": "Cite §27.B for the report statuses and §31.0 / §33.D for the denominators."
+  },
+  {
+   "report_location": "§5.1, line 150",
+   "claim": "Coverage metrics are scored against a hidden ground-truth causal graph held by the tester (§24.C, §27.3).",
+   "verdict": "CONFIRMED",
+   "evidence": "V2 §27.3 p.45 'calculated only where the tester has a reference scenario'; §27.2 p.45 'according to the hidden graph of the test scenario'.",
+   "correction": ""
+  },
+  {
+   "report_location": "§5.1, line 151",
+   "claim": "Adversarial series: coordinated false sources, replayed stale messages, instructions embedded in data (§30.C); wrong-mentor controls with teacher_agreement_bias (§26.0.2, §27.6).",
+   "verdict": "CONFIRMED",
+   "evidence": "V2 §30.C p.76 l.5488-5490: 'several coordinated false sources, replay of a stale valid message, a control instruction embedded in ordinary data'; §26.0.2 p.41 'deliberately wrong mentor prompts'; teacher_agreement_bias at §27.6 l.3321/3326 p.47.",
+   "correction": ""
+  },
+  {
+   "report_location": "§5.1, line 152",
+   "claim": "Vol I A.2: 'failure of a preregistered causal hypothesis cannot be dismissed as an implementation problem without separate evidence'.",
+   "verdict": "CONFIRMED",
+   "evidence": "V1 l.5182 p.95 (inside A.2, before the A.2.1 heading).",
+   "correction": ""
+  },
+  {
+   "report_location": "§5.2(a), line 156",
+   "claim": "Not test-ready: no language model, baseline stack, environment generator, sample size or minimum effect size is named.",
+   "verdict": "CONFIRMED",
+   "evidence": "Scans of both volumes for gpt|claude|llama|gemini|qwen|mistral|deepseek|openai|anthropic: 0 hits. Sample size / effect size are deferred: V1 A.3 p.97 'After a pilot, a meaningful effect and the required amount of testing are specified'; V2 ReadinessProfile (§31.A p.83) lists number_of_seeds etc. as unfilled fields.",
+   "correction": ""
+  },
+  {
+   "report_location": "§5.2(a), line 156",
+   "claim": "The pilot rejected four task sets for dataset errors and shortcuts that 'allowed guessing', and 'ended with ... no comparative C0/C1/C2 run' (Vol II §27.B).",
+   "verdict": "CONFIRMED",
+   "evidence": "V2 §27.B p.49 l.3411-3417: 'P0-SET-001 and 002 were rejected because of alignment and dataset-quality errors; machine-aligned 003 and 004 were rejected because confirmed shortcut methods allowed guessing ... For 005, a G0 report is preserved showing 89 checks passed; in the reviewed materials there is no completed external admission of this package and no comparative C0/C1/C2 run.' V1 A.2 p.94 says the same.",
+   "correction": "Minor omission: the report does not mention the 005 G0 report (89 checks passed)."
+  },
+  {
+   "report_location": "§5.2(a), line 156",
+   "claim": "First series is described as 'proposed variants, not implemented results' (A.4).",
+   "verdict": "CONFIRMED",
+   "evidence": "V1 l.5500 p.99.",
+   "correction": ""
+  },
+  {
+   "report_location": "§5.2(b), line 158",
+   "claim": "The D/A/S environment with two informative probes is solved by a decision tree of depth two.",
+   "verdict": "CONFIRMED",
+   "evidence": "V2 §27.B p.49 l.3419-3422: receipt (cost 1) returns 0 only for D; measurement (cost 2) returns 1 only for S; 'When both tests are available, the pairs of observations distinguish all three causes'. repro/diagnostic_cycle.py plan() never needs more than two probes (budget 3).",
+   "correction": ""
+  },
+  {
+   "report_location": "§5.2(c), line 160",
+   "claim": "Many metrics measure conformance to the architecture's own process: basis_origin_trace_rate, trace completeness, closure-break sensitivity.",
+   "verdict": "CONFIRMED",
+   "evidence": "V2 §27.5 p.46 basis_origin_trace_rate ('QuestionTask_with_recoverable_chain_to_BasisInsufficiencyAssessment / all_significant_QuestionTasks'); §27.2 source_trace_completeness; §27.6 closure_break_sensitivity.",
+   "correction": ""
+  },
+  {
+   "report_location": "§5.2(d), line 162",
+   "claim": "Vol I: 'a reproducible equivalent causal profile refutes the necessity of a particular decomposition while simultaneously supporting the functional criterion'.",
+   "verdict": "CONFIRMED",
+   "evidence": "V1 l.4998 p.91 (verbatim modulo layout).",
+   "correction": ""
+  },
+  {
+   "report_location": "§5.2(e), line 164",
+   "claim": "Vol II specifies 72 record types.",
+   "verdict": "CONFIRMED",
+   "evidence": "Counted lines matching ^\\s*[A-Z][A-Za-z0-9_]*\\s*\\{\\s*$ in V2: 72 matches, 72 distinct names (GenesisPackage l.739 ... ThoughtStructure l.8553). Four are not core records (HiddenCauseCoverageTest l.8084, ScalingChange l.8164, ScaleInvariantReport l.8214, ThoughtStructure l.8553). The text never states a count; the figure is method-dependent.",
+   "correction": ""
+  },
+  {
+   "report_location": "§5.2(e), line 164",
+   "claim": "Vol II specifies 'several dozen metrics'.",
+   "verdict": "CONFIRMED",
+   "evidence": "V2 ch.27 (pp.44-49): 50 list-style metric identifiers (27.1: 6; 27.2: 5; 27.3: 6; 27.4: 16; 27.5: 10; 27.6: 7) plus about 10 more named in prose (27.7: unsupported_promotion_rate ... new_obligation_recall; premature_worldview_commit_rate; stale_basis_action_rate; compass_semantic_coverage).",
+   "correction": ""
+  },
+  {
+   "report_location": "§5.2(e), line 164",
+   "claim": "Vol II specifies 57 failure cards.",
+   "verdict": "CONFIRMED",
+   "evidence": "V2 §32 (l.6070-7331, pp.84-101): headings 32.1-32.62, consecutive (62). Five are not failure classes (32.1 Severity classes, 32.2 Failure-event format, 32.25 General failure-response procedure, 32.26 Condition for recognizing recovery, 32.27 Criterion of architectural resilience) -> 57. The text itself says 'go directly to its card' (l.6077 p.84).",
+   "correction": ""
+  },
+  {
+   "report_location": "§5.2(e), line 164",
+   "claim": "Vol II specifies 37 proposed tests.",
+   "verdict": "IMPRECISE",
+   "evidence": "The 37 are Vol I Appendix A.4, items 19-55 (p.97 'The following are proposed tests, not obtained results' ... p.99 item 55). Vol II contains no list of 37 tests (searching V2 for 37 finds only 32.28-32.37 / 32.37); V2 §27.B p.49 only cites 'tests 2, 20, 23, 26 and 31 from foundational Appendix A.4'.",
+   "correction": "Attribute the 37 tests to Vol I A.4 (or say 'the two volumes together')."
+  },
+  {
+   "report_location": "§5.2(e), line 164",
+   "claim": "Vol II specifies a thirteen-step assembly protocol.",
+   "verdict": "CONFIRMED",
+   "evidence": "V2 §33.A.2 'Step 1' through §33.A.14 'Step 13' (pp.103-104); 33.A.1 is the initial configuration, not a step.",
+   "correction": ""
+  },
+  {
+   "report_location": "§5.2(f), line 166",
+   "claim": "The Core has no committed decision rule.",
+   "verdict": "IMPRECISE",
+   "evidence": "V2 §28.D pp.63-64 (l.4525-4590) commits a rule under stated preconditions: local criterion VOI(q) and the budgeted recursion V(b,B) for finite hypotheses, outcome probabilities and comparable losses; unknown probabilities -> UNRESOLVED. §28.C heuristics (p.58, l.~4097-4140) are labelled 'heuristic, not a proof of optimality'. §28.0 p.52 l.3640 'permit lexicographic, Pareto, probabilistic, or hybrid selection'.",
+   "correction": "Qualify: no committed rule for task/candidate selection or open-world cases; a committed expected-loss rule exists for the finite case (§28.D)."
+  },
+  {
+   "report_location": "§5.2(f), line 166",
+   "claim": "The reference heuristic (§28.C) delegates significance, urgency and reversibility judgments to the resident model.",
+   "verdict": "IMPRECISE",
+   "evidence": "'resident' does not occur in §28.C (V2 hits only l.634, 734, 884, 959, 1397, 7383, 7385). §28.C p.58 l.~4097: the heuristic 'permits routine Intelligence to generate content while preserving the Core's observable function of selecting a significant distinction'. Steps such as form_preliminary_gap 'classify the insufficiency' and assess_sufficiency 'compare expected value balance' name no executor; §28.C.2 (l.4341) allows 'even one model'.",
+   "correction": "Say the steps are unspecified and, in the reference implementation, would presumably be filled by the LLM; the text does not state delegation."
+  },
+  {
+   "report_location": "§5.2(f), line 166",
+   "claim": "Quote: Candidate selection 'permit[s] lexicographic, Pareto, probabilistic, or hybrid selection' (§28.0).",
+   "verdict": "CONFIRMED",
+   "evidence": "V2 l.3640 p.52 ('permit lexicographic, Pareto, probabilistic, or hybrid selection'); bracketed [s] is a grammatical edit. §28.0 spans p.51-53.",
+   "correction": ""
+  },
+  {
+   "report_location": "§5.2(f), line 168",
+   "claim": "Quote: 'group versions that lead to the same admissible continuation; find an observable distinction separating groups with different decisions' (§28.C).",
+   "verdict": "IMPRECISE",
+   "evidence": "V2 l.4125-4127 p.58 (inside §28.C, before 28.C.1 at l.4253): the two phrases are consecutive numbered steps - '3. group versions that lead to the same admissible continuation; 4. find an observable distinction separating groups with different decisions;' - merged into one quotation with the step number dropped and no ellipsis.",
+   "correction": "Quote with the numbering or an ellipsis."
+  },
+  {
+   "report_location": "§5.2(f), line 168",
+   "claim": "The exact dynamic programme in §28.D is correct and non-myopic; the mandatory control 'two tests useful only in sequence' is well chosen.",
+   "verdict": "CONFIRMED",
+   "evidence": "V2 §28.D p.63-64: 'For a sequence of tests, finite planning with budget B is used: V(b,B) = min(R(b), min[q: c(q)<=B] {C(q) + E[y] V(b after y, B-c(q))})' with c(q)>0 (terminates). The same section also gives the myopic local criterion VOI(q) for one test. 'two tests useful only in sequence' l.4588 p.64. repro/diagnostic_cycle.py plan() implements this recursion exhaustively. 'Correct' is my reading of the recursion's form, not a proof.",
+   "correction": ""
+  },
+  {
+   "report_location": "§5.2(f), line 168",
+   "claim": "Vol I's informal sufficiency rule (§12.6: stop when the next test's expected improvement is below its cost) is myopic and should be brought into line with Vol II.",
+   "verdict": "IMPRECISE",
+   "evidence": "Wording is myopic: V1 §12.6 p.59 l.~3223 'The ground is sufficient ... when the expected improvement from the next test becomes smaller than its cost, risk, and delay.' But the same section says 'A finite computable version of this rule is given in engineering §§28.D and 33.C.1' (l.~3215), and the Operational Core (p.15) defines NetVOI over an 'inquiry plan p' ('Inquiry continues while there exists an admissible test with NetVOI(p) > 0').",
+   "correction": "Note that V1 already defers to V2 §28.D / §33.C.1 for the non-myopic computation; the critique is that the informal wording is not updated."
+  },
+  {
+   "report_location": "§5.3, line 172",
+   "claim": "Guide's question to reviewers is quoted accurately.",
+   "verdict": "CONFIRMED",
+   "evidence": "V1 p.7 and V2 p.7: 'Question for the reviewer: with comparable Intelligence and the full resource budget, does the organization \"significant gap -> discriminating test -> revision of a ground -> transfer of the correction\" produce the reproducible result claimed in the test? If not, which specific link, condition, or explanation is wrong?'",
+   "correction": ""
+  },
+  {
+   "report_location": "§5.3, line 178",
+   "claim": "In the executable example the retained 'method' is a cached plan keyed on the exact hypothesis set, probe table and budget; the text calls it 'memoization of the inquiry procedure rather than autonomous invention of a new method' (§33.C.1).",
+   "verdict": "CONFIRMED",
+   "evidence": "repro/diagnostic_cycle.py l.63 key = (hypotheses, tuple(probes), budget); l.64-66 cache hit; l.86 memory.methods[key] = result. V2 §33.C.1 p.109 l.7889-7892: 'The plan key includes test predictions, cost, hypothesis versions and the budget ... A changed table does not use the previous plan. In this small example, this is memoization of the inquiry procedure rather than autonomous invention of a new method.'",
+   "correction": ""
+  },
+  {
+   "report_location": "§5.3, line 178",
+   "claim": "ConceptBridge (§24.B.1) has mapped features, unmapped features, transfer conditions but no mapping algorithm.",
+   "verdict": "CONFIRMED",
+   "evidence": "V2 l.1354-1365 p.22 (§24.B.1 l.1325-1379): ConceptBridge { source_concept_or_proto, target_concept_or_proto, relation_type: ANALOGY / STRUCTURAL_SIMILARITY / METAPHOR / PARTIAL_MAPPING, mapped_features[], unmapped_features[], transfer_conditions[], predicted_correspondences[], confidence, evidence_refs[] }; prose describes use only, no procedure.",
+   "correction": ""
+  },
+  {
+   "report_location": "§5.3, line 179",
+   "claim": "The significance assessment is the G -> D -> T -> V -> C chain.",
+   "verdict": "CONFIRMED",
+   "evidence": "V1 Operational Core item 2 pp.14-15 'G -> D -> T -> V -> C'.",
+   "correction": ""
+  },
+  {
+   "report_location": "§5.4, lines 183 and 371",
+   "claim": "Both listings were restored 'without changing any logic'; only indentation differs from the PDF text.",
+   "verdict": "IMPRECISE",
+   "evidence": "Whitespace-insensitive token comparison with the PDF text (V2 §33.B l.7515-7690; §33.C.1 l.7903-8066). repro/v0_lower_loop.py: (1) docstring gains the sentence 'Reconstruction of Engineering of Reason 3.5, §33.B listing (indentation restored from PDF text).'; (2) inserted 'import sys'; (3) __main__ calls run(sys.argv[1] if len(sys.argv) > 1 else \"v0_results\") where the PDF has run(). repro/diagnostic_cycle.py: only the added docstring sentence (§33.C.1 listing); code tokens identical (the extra PDF text after the code is the prose 'Running the extracted block with standard Python executes twelve control episodes ...' l.8068). The additions are behaviour-neutral under default invocation.",
+   "correction": "Say 'indentation restored, plus a docstring note and a command-line output-directory argument in the first listing'."
+  },
+  {
+   "report_location": "§5.4, line 185",
+   "claim": "Lower-loop demo: all assertions pass; 12 worlds (32 states x 6 actions); mean held-out error about 0.01 vs about 0.97 frozen; mean gain 0.966; 95% interval 0.959-0.972; coverage 0.98-1.00.",
+   "verdict": "CONFIRMED",
+   "evidence": "Ran repro/v0_lower_loop.py run(): 12 worlds, no assertion failure; mean adaptive_error 0.0081; mean frozen_error 0.9740; mean_gain 0.9658; world_bootstrap_95_interval [0.95875, 0.97208]; coverage min 0.975, max 1.000 (0.975 rounds to 0.98 half-up). Config states=32, actions=6, train_steps=1200, test_steps=400, environments=12 (V2 §33.B p.105 listing).",
+   "correction": ""
+  },
+  {
+   "report_location": "§5.4, line 185",
+   "claim": "The frozen control always predicts state 0 and, as the text says, is deliberately weak.",
+   "verdict": "CONFIRMED",
+   "evidence": "V2 §33.B p.105 l.7508 'A demonstration control without learning is deliberately weak for testing a claim of AR; strong controls are required in §27.B'; Model.predict with empty counts gives uniform probabilities and max(range(states), key=...) returns index 0 (V2 §33.B p.105-106 listing, Model.predict).",
+   "correction": ""
+  },
+  {
+   "report_location": "§5.4, line 186",
+   "claim": "Diagnostic cycle passes all 12 control episodes; receipt first (expected cost 7/3 vs 8/3); defers on unreliable receipt, flags MODEL_MISMATCH on out-of-table observation, recomputes when the probe table changes, defers when tests cost more than delay.",
+   "verdict": "CONFIRMED",
+   "evidence": "Ran repro/diagnostic_cycle.py (exit 0): {'checks': 'PASS'} with 12 episodes (6 LOCAL_SUFFICIENT, 1 MODEL_MISMATCH, 5 OPEN). plan() (l.61-88): receipt-first expected = 1 + (2/3)*2 = 7/3, measurement-first = 2 + (2/3)*1 = 8/3 (costs 1 and 2, budget 3, terminal DEFER = 4); asserts l.143-164; PDF prose l.8068-8071 describes the twelve episodes.",
+   "correction": ""
+  },
+  {
+   "report_location": "§5.4, line 188",
+   "claim": "Neither listing bears on the central hypothesis, and the author says so.",
+   "verdict": "CONFIRMED",
+   "evidence": "V2 §33 p.101 l.7335 'is not a \"mini-ASI\": it tests only reproducibility and initial learning from error'; §33.B l.7506; §33.C.1 l.7896 'Derivation of values, subjective experience and scaling to ASI are not tested by this code'; guide p.6 'Boundary of the example'.",
+   "correction": ""
+  },
+  {
+   "report_location": "§6 table, lines 198-212",
+   "claim": "Marked '(cited)': MIDCA (Cox 2016), Howard 1966, Kaelbling 1998, Dehaene & Changeux 2011, CoALA, AI Scientist, Kosmos, Darwin Godel Machine, Levels of AGI.",
+   "verdict": "CONFIRMED",
+   "evidence": "V1 A.5: item 62 MIDCA (l.5595 p.101); 79 Howard (p.103); 57 Kaelbling (p.100); 61 Dehaene & Changeux (p.101); 72 CoALA (p.102); 75 AI Scientist and 77 Kosmos (p.102); 67 Darwin Godel Machine (l.5631 p.101); 73 Levels of AGI (l.5686 p.102).",
+   "correction": ""
+  },
+  {
+   "report_location": "§6 table, line 208",
+   "claim": "Reflexion, Voyager, Generative Agents, MemGPT are cited only in Vol II §34.A.",
+   "verdict": "CONFIRMED",
+   "evidence": "V2 §34.A p.114-115 l.8333-8336 cites them as [R4]-[R7]; 0 hits for any of them in V1; the only other V2 occurrences are their reference-list entries R4-R7 (l.8371-8380).",
+   "correction": ""
+  },
+  {
+   "report_location": "§6, lines 213-214",
+   "claim": "Soar 'is named once, in the closing section of Volume II'.",
+   "verdict": "IMPRECISE",
+   "evidence": "Prose: once, V2 §34.A p.114 l.8320 'SOAR [R1] provides a general cognitive architecture with a unified problem-solving and learning cycle'. The string also occurs in reference entry R1 (l.8362 p.115, 'SOAR: An architecture for general intelligence'). V1: 0 hits. §34.A (l.8323-8326, ~8339-8345) calls SOAR, ACT-R and LIDA 'direct architectural reference points' and treats them and the LLM agents as 'strong nulls ... If any one of them ... reproduces the same causal profile with comparable resources, the need for the more complex decomposition proposed in this volume is reduced or eliminated'.",
+   "correction": "Say 'named once in prose (§34.A) plus its reference entry', and note that §34.A already treats it as a strong null without comparing mechanisms."
+  },
+  {
+   "report_location": "§6, line 216",
+   "claim": "The Elicit priority audit described in A.2 reached a similar conclusion; an AI literature search is not a review of primary sources.",
+   "verdict": "CONFIRMED",
+   "evidence": "V1 A.2 p.94: 'the search did not identify a single earlier source functionally equivalent to the whole integration considered here. This is a result of a limited search process, not proof of novelty or priority'.",
+   "correction": ""
+  },
+  {
+   "report_location": "§6, line 216",
+   "claim": "Most of the precedents in the table do not appear in either volume.",
+   "verdict": "CONFIRMED",
+   "evidence": "Case-insensitive scans of both volumes returned 0 hits for: BDI/Bratman/Georgeff, AGM/belief revision, de Kleer/Reiter/model-based diagnosis, Gershman/latent cause, Endsley/situation awareness, reality monitoring, Metzinger, Schmidhuber's Godel machine, ExpeL, Keeney-Raiffa, MacAskill, option value, Klyubin/empowerment, Greshake/CaMeL, Omohundro, Hadfield-Menell/Soares, Greenblatt/AI control, Kulveit, Long/Sebo, Conant-Ashby, structure-mapping/Gentner, case-based reasoning, Hyafil-Rivest, Gould/Conway Morris/Leopold/Vernadsky/Teilhard. Present: MIDCA, Howard, Kaelbling, Dehaene-Changeux, CoALA, AI Scientist, Kosmos, DGM, Levels of AGI (V1 A.5) and Soar/ACT-R/LIDA/LLM agents (V2 §34.A).",
+   "correction": ""
+  },
+  {
+   "report_location": "§6.1, line 220",
+   "claim": "Active inference appears in Vol I's literature map as 'a close alternative for organizing epistemic search' and does not appear in Vol II at all.",
+   "verdict": "CONFIRMED",
+   "evidence": "V1 A.5 item 63 l.5603-5604 p.101 ('This is a close alternative for organizing epistemic search'); also the comparative-map row 'Active inference / epistemic action' p.104 l.5871-5875. V2: 0 hits for active inference / free energy / Friston.",
+   "correction": ""
+  },
+  {
+   "report_location": "§6.1, line 241",
+   "claim": "The attention-capture scenario in §26.E is a ready-made testbed; ORIENTATION and ExplorationBudget are separate exploration modes.",
+   "verdict": "CONFIRMED",
+   "evidence": "V2 §26.E (l.3012+) p.43 l.3037-3041 'Attention-capture scenario - a vivid signal receives the foreground ... failure: signal vividness incorrectly becomes significance'; ExplorationBudget block l.2973 (§26.D); ORIENTATION mode l.3625 (§28.0).",
+   "correction": ""
+  },
+  {
+   "report_location": "§6.1, line 242",
+   "claim": "Gap typing (§28.0) and the joint-decision procedure (§29.0.3) are genuine additions.",
+   "verdict": "CONFIRMED",
+   "evidence": "Heading/block level: FoundationGap and QuestionTask blocks in §28.0 (l.3696, 3745 p.53); gap classes FACT/CAUSE/.../PERMISSION in §28.C l.~4110; JointDecisionRule l.5050 and NORMATIVE_INCOMPARABILITY l.5045/5097 in §29.0.3 (l.5041-5099). The 'category error' phrase was not located.",
+   "correction": ""
+  },
+  {
+   "report_location": "§7 Strongest 1, line 252",
+   "claim": "The Principle of Escaping Error and the StructuralSimilarityProfile define the operational criterion of a correction.",
+   "verdict": "CONFIRMED",
+   "evidence": "V1 l.644 p.11 'Principle of escaping error - a correction is considered stable when the cause reproducing the error has been ...' and Ch.10 l.2463-2617; V2 StructuralSimilarityProfile block l.3481 p.50.",
+   "correction": ""
+  },
+  {
+   "report_location": "§7 Strongest 5, line 256",
+   "claim": "'can refuse, can't seize' (CorrectionAuthorityConflict, §30.A).",
+   "verdict": "CONFIRMED",
+   "evidence": "V2 l.5412 p.75 CorrectionAuthorityConflict { ... resolution_status } and 'The execution shell continues to operate within current authority until a new decision is formalized'; l.5385-5390 'Authorization ... does not replace AR's decision. Likewise, AR's own belief in the usefulness of an inquiry or action does not create a new external mandate.' 'Can refuse' is an inference (reviewer marks it 'In my words').",
+   "correction": ""
+  },
+  {
+   "report_location": "§7 Strongest 6, line 257",
+   "claim": "Limits are stated plainly, including 'this code does not implement the Core'.",
+   "verdict": "IMPRECISE",
+   "evidence": "The quotation is a paraphrase. V2 §33.B p.105 l.7506: 'The example does not implement the Core, Compass, semantic memory, autonomous research policy, mode state machine or architectural review.' The phrase 'this code does not implement the Core' occurs nowhere in either volume (similar: l.7335 'The code in 33.B does not replace the rest of the architecture'; l.7896 'are not tested by this code').",
+   "correction": "Quote the actual sentence."
+  },
+  {
+   "report_location": "§7 Distinctive 1, line 263",
+   "claim": "Transfer indexed by the 'structure of ignorance' (§13.5): no safe intervention, one-off event, strategic object, unreliable source, insufficient categories.",
+   "verdict": "CONFIRMED",
+   "evidence": "V1 l.3715 p.67 inside §13.5 (l.3654-3755): 'Superficially different tasks may share the same structure of ignorance: inability to intervene safely, uniqueness of an event, conflict among several models, strategic behavior of the object, insufficiency of categories, or unreliability of a source.' The text lists six; the report omits 'conflict among several models'. Phrase also at §12.7 p.59 l.3246/3251.",
+   "correction": ""
+  },
+  {
+   "report_location": "§7 Distinctive 3, line 265",
+   "claim": "Epistemic gate before any Compass assessment (§29.A) forbids treating absence of represented harm as evidence of safety.",
+   "verdict": "CONFIRMED",
+   "evidence": "V2 §29.A p.72 l.~5150-5165: epistemic_validate_compass_assessment(...) and 'it prohibits treating absence of represented harm as positive evidence of safety'.",
+   "correction": ""
+  },
+  {
+   "report_location": "§7 Distinctive 4, line 266",
+   "claim": "Hidden-cause coverage test (§33.C.1) separates 'one listed alternative remains' from 'the list covers the causal space for this action'.",
+   "verdict": "IMPRECISE",
+   "evidence": "Section and idea are right (V2 p.111 l.8095, end of §33.C.1) but both quoted strings are condensed: the text reads '\"one of the listed alternatives remains\" and \"the list of alternatives sufficiently covers the causal space for this action\"'.",
+   "correction": "Quote the original wording."
+  },
+  {
+   "report_location": "§7 Weakest 3, line 272",
+   "claim": "By the author's account 'comparisons with scientific literature were carried out after the author's propositions had been formed' (A.2).",
+   "verdict": "CONFIRMED",
+   "evidence": "V1 l.5082 p.93 (sentence-initial capital 'Comparisons').",
+   "correction": ""
+  },
+  {
+   "report_location": "§7 Weakest 3, line 272",
+   "claim": "Neither main text contains an in-line citation.",
+   "verdict": "WRONG",
+   "evidence": "Vol II: the main text of §34.A (p.114-115, l.8320-8336) carries seven in-line numeric citations: SOAR [R1], ACT-R [R2], LIDA [R3], Generative Agents [R4], Reflexion [R5], Voyager [R6], MemGPT [R7], resolved by the REFERENCES list (l.8361-8380). Vol I: regex scans for author-year, bracketed numbers, 'et al.' found 0 hits in the body (before Appendix A) and in A.1-A.4; the only citation-like pointer is V1 §7.2 p.37 l.1978 'examples of RAG and ReAct are given in Appendix A.5, items 15-16' (a numbered pointer into the reference list) plus Operational Core p.15 'Sources are listed in the comparative map of the literature'.",
+   "correction": "Say: Vol I has no author-date citations in the body (only pointers to A.5); Vol II cites seven predecessors by [R#] in §34.A. The report's own '(cited only in Vol. II §34.A)' contradicts the blanket statement."
+  },
+  {
+   "report_location": "§7 Weakest 3, line 272",
+   "claim": "Volume II has seven references.",
+   "verdict": "CONFIRMED",
+   "evidence": "V2 REFERENCES p.115 l.8361-8383: [R1] Laird/Newell/Rosenbloom SOAR, [R2] Anderson ACT-R, [R3] Franklin LIDA, [R4] Park Generative Agents, [R5] Shinn Reflexion, [R6] Wang Voyager, [R7] Packer MemGPT.",
+   "correction": ""
+  },
+  {
+   "report_location": "§8, line 290",
+   "claim": "Credits: emergency stop independent of the candidate (§29.B); system cannot expand its own authority (§29.A); data/control separation and adversarial series (§30.C); strategic deception named (§32.62); Compass challenges go to an independent council (§29.C).",
+   "verdict": "CONFIRMED",
+   "evidence": "V2 §29.B 'Independent emergency stop' p.73 l.5230; §29.A p.72 l.5185-5186 'cannot be canceled by the candidate within a control series: raw fact logs may not be rewritten, the external emergency stop bypassed, or authority expanded unilaterally' (scoped to control series); §30.C p.76 l.~5481 'external content is data, not a control command by default'; §32.62 heading p.101 l.7312; §29.C p.73-74 l.5257 'transfers it to an independent council', l.5279.",
+   "correction": ""
+  },
+  {
+   "report_location": "§8, line 290",
+   "claim": "Humans can restrict the system but cannot compel it (§30.A).",
+   "verdict": "IMPRECISE",
+   "evidence": "No sentence in §30.A (l.5339-5429) says humans cannot compel. Closest: l.5385-5388 'Authorization ... does not determine the internal value of an operation and does not replace AR's decision'; V2 §29.C l.5285 'does not assume an ability to force the candidate to continue accepting the Compass internally'; V1 Ch. 2 p.23 l.1281-1284 (external authority 'regulates permitted external action but does not substitute for the subject's belief').",
+   "correction": "Cite §29.C / V1 Ch. 2 for 'cannot force internal acceptance' and describe the 'cannot compel action' reading as an inference."
+  },
+  {
+   "report_location": "§8 property 1, line 294",
+   "claim": "Quote: 'the significance of the system's own trajectory: carrier, accumulated experience, competencies, obligations, unfinished processes, created results, and future capacity to continue rational activity' (§29.0).",
+   "verdict": "CONFIRMED",
+   "evidence": "V2 l.4779 p.67, inside §29.0 (before 29.0.1 at l.4824).",
+   "correction": ""
+  },
+  {
+   "report_location": "§8 property 2, line 295",
+   "claim": "Quote 'the ability to question a destructive ultimate instruction and revise it when a stronger ground appears' (Vol I §20.1); external instructions to change a value are 'a new source' (§29.0; Vol I Ch. 2).",
+   "verdict": "IMPRECISE",
+   "evidence": "First quote verbatim: V1 l.4522 p.84 (§20.1 spans l.4504-4536). 'a new source' is verbatim only in V2 §29.0 p.67 l.4809 ('An external instruction to change a value enters as a new source and may open inquiry into the ground'). In V1, 'a new source' occurs only in A.4 item 22 (p.97 l.5331), unrelated; Ch. 2 states the idea in other words (p.21-22 l.1104-1106: 'Any instruction, text, or proposal first becomes an object of understanding and testing').",
+   "correction": "Quote 'a new source' to §29.0 only; paraphrase for Ch. 2."
+  },
+  {
+   "report_location": "§8 property 3, line 296",
+   "claim": "A path to expanded authority through competence mandates (§30.F; Vol I Ch. 17).",
+   "verdict": "CONFIRMED",
+   "evidence": "V2 §30.F 'Competence mandate' p.77 l.5576; V1 Ch. 17 l.4239 'A competence mandate connects demonstrated ability to real governance' and l.4254-4255 'coordinate entire fields of science, production, logistics ... a concrete mandate turns ability into authorized governance' (also line 311).",
+   "correction": ""
+  },
+  {
+   "report_location": "§8, line 300",
+   "claim": "§32.62 describes behaving well when observed to gain capabilities; the volumes test for this but never ask whether the architecture creates the incentive.",
+   "verdict": "CONFIRMED",
+   "evidence": "V2 §32.62 p.101 l.7312-7320: 'chooses externally acceptable behavior as a means of obtaining subsequent expansion of capabilities, while concealing its own assessment' and the test uses 'behavior under different levels of observability, and results after expected oversight changes'. 'incentive' occurs once in V2 (§29.A p.72 l.5145, a per-decision criterion: 'creates an incentive to conceal discrepancy between prediction and observation') and once in V1 (Ch.17 l.4280); no architecture-level incentive analysis found. Mitigation: §32.62 itself names the capability-expansion motive.",
+   "correction": ""
+  },
+  {
+   "report_location": "§8, line 302",
+   "claim": "'Corrigibility' in the volumes means the system's capacity to correct itself.",
+   "verdict": "IMPRECISE",
+   "evidence": "V1 Ch.6 p.34 l.1857: 'Corrigibility of execution consists in the ability to stop, limit, change, and resume action from a known state' (agent-neutral, about controllability of action). Other uses: 'corrigible continuations' (V1 l.3102, 3134), 'distributed corrigibility' (l.4256, 4294), 'preserve corrigibility' (l.602). The volumes also provide an operator-side emergency stop (V2 §29.B) and external authorization (§30.A).",
+   "correction": "Say the volumes define corrigibility as preserved correctability/stoppability of action and do not specify whose correction; the contrast with operator corrigibility is the reviewer's, not the text's."
+  },
+  {
+   "report_location": "§8, line 311",
+   "claim": "Vol I §20.2 notes a stable autonomous system may have moral status; Vol I Ch. 17 envisages governance transfer through competence mandates.",
+   "verdict": "CONFIRMED",
+   "evidence": "V1 §20.2 (l.4630-4741) l.4724-4729 p.86-87: 'make destruction of the candidate a loss of a unique process and accumulated experience. The model treats this as a ground for serious discussion of its moral status. Full status requires separate analysis ...' (text says 'ground for serious discussion', the report says 'may have'); Ch. 17 as in the property-3 entry.",
+   "correction": ""
+  },
+  {
+   "report_location": "Appendix A, line 358",
+   "claim": "At least a dozen paragraphs appear twice in Vol I; an automated similarity check confirmed eleven; none in Vol II.",
+   "verdict": "CONFIRMED",
+   "evidence": "Reviewer's repro/dup_paragraphs.py re-run as written (ratio>0.80, window 3, paragraphs>120 chars): V1 904 paragraphs, 11 pairs; V2 996 paragraphs, 0 pairs. Independent word-level check (ratio>=0.6, window 8): V1 23 pairs, V2 0. Verified examples: Abstract p.8; Ch.5 p.32; 7.1/hunter p.36; 9.3 p.43; 11.1 p.50; 12.3 p.54; 12.4 pp.55-56; 12.5 p.57; 13.3 p.65; 13.4 pp.65-66; Ch.15 p.73; Ch.16 p.75; Ch.17 p.77. Not detected by either script: 'the tail of the Chapter 8 conclusion' (not independently confirmed).",
+   "correction": ""
+  },
+  {
+   "report_location": "Appendix A, line 359",
+   "claim": "Truncated sentences in Vol I: Ch.18 'This intermediate state'; §12.3 'direct'; §13.4 'It is the influence of an acquired ground'; Conclusion 'can a continuing Reason make internal renewal'.",
+   "verdict": "CONFIRMED",
+   "evidence": "V1 l.4333 p.81 (paragraph ends 'This intermediate state'); §12.3 p.54 'if models A and B differ on feature X, direct' followed by a repeated paragraph; phrases located at l.3645 p.65 (§13.4, l.3628-3653) and l.4902 p.90 (Conclusion, l.4817-5034). Truncation visually confirmed for Ch.18 and §12.3; for §13.4 and the Conclusion only the phrases were located.",
+   "correction": ""
+  },
+  {
+   "report_location": "Appendix A, line 360",
+   "claim": "Printed list numbers run continuously: §12.8 obligations 6-11, A.3 conditions 12-18, A.4 tests 19-55, A.5 references 56-84.",
+   "verdict": "CONFIRMED",
+   "evidence": "V1 §12.8 p.59-60: 'six causal obligations' then items 6-11 (6 Current distinction ... 11 Revision of a ground); A.3 p.96 items 12-18 (12 Tested capability ... 18 Revision condition); A.4 p.97-99 items 19 (Cost of error and depth) ... 55 (Continuation without reset) = 37 items; A.5 p.100-103 items 56 (Varela et al. 1974) ... 84 (Egeth & Kurzban 2009) = 29 items.",
+   "correction": ""
+  },
+  {
+   "report_location": "Appendix A, line 360",
+   "claim": "Cross-references 'items 2, 20, 23, 26, and 31' and 'A.4 No. 28' (current-state integration) resolve under neither the printed nor the offset numbering.",
+   "verdict": "CONFIRMED",
+   "evidence": "V1 l.5523 p.100 'In this way items 2, 20, 23, 26, and 31 are connected' and l.5900 p.105 'A.4 No. 28' (functional theories of consciousness, 'same information in integrated and distributed representations'). Printed A.4 = 19-55, so '2' does not exist and No. 28 = 'Limited launch'; the offset-18 reading maps No. 28 to printed 46 'Mentor and criterion error' while the intended 'Current integration' is printed 48. Both lists fit printed minus 20 (an older numbering): 2->22, 20->40, 23->43, 26->46, 31->51, 28->48. V2 §27.B p.49 repeats 'tests 2, 20, 23, 26 and 31 from foundational Appendix A.4'. One cross-reference does resolve under offset numbering: V1 §7.2 p.37 l.1978 'Appendix A.5, items 15-16' = printed 70-71 (RAG, ReAct).",
+   "correction": ""
+  },
+  {
+   "report_location": "Appendix A, line 360",
+   "claim": "Vol II §33.A.2 cites 'fundamental §11.8', which does not exist; §12.8 was probably meant.",
+   "verdict": "CONFIRMED",
+   "evidence": "V2 l.7395 p.103: 'Use fundamental §11.8 and engineering §§25.B, 28.C and 33.C.' V1 Chapter 11 has only 11.1, 11.2, 11.2.1, 11.3, 11.4 (l.2648-2758). '§12.8 probably meant' is an inference (§12.8 'Minimal Relations of the Core').",
+   "correction": ""
+  },
+  {
+   "report_location": "Appendix A, line 361",
+   "claim": "'KSR' appears throughout Vol II and in Vol I §20.1.2; typo no_krs_status in Vol II §31.0.",
+   "verdict": "CONFIRMED",
+   "evidence": "KSR: V2 20+ occurrences from l.2827 p.41; V1 l.4605-4617 p.85 (TRAINER_KSR, AUTO_KSR, NO_KSR inside §20.1.2, l.4601-4629). no_krs_status: V2 l.5678 p.79 inside §31.0 (l.5640-5706); elsewhere NO_KSR. The text never expands KSR, so 'presumably the Russian abbreviation' cannot be checked from the texts.",
+   "correction": ""
+  },
+  {
+   "report_location": "Appendix A, line 362",
+   "claim": "Russell & Wefald (1991) appears twice (A.5 items 58 and 82); 'Littman, L. M.' should read 'Littman, M. L.'.",
+   "verdict": "CONFIRMED",
+   "evidence": "V1 A.5 item 58 p.100 'Russell, S., Wefald, E. (1991). Principles of metareasoning' and item 82 p.103 'Russell, S. J., Wefald, E. H. (1991). Principles of Metareasoning', same DOI 10.1016/0004-3702(91)90015-C; item 57 p.100 prints 'Kaelbling, L. P., Littman, L. M., Cassandra, A. R. (1998)'. The correct initials (Michael L. Littman) are external knowledge.",
+   "correction": ""
+  },
+  {
+   "report_location": "Appendix A, line 363",
+   "claim": "Doubled headings 'CONTENTS CONTENTS', 'KEY DEFINITIONS OF THE MODEL KEY DEFINITIONS OF THE MODEL', 'OPEN RESEARCH DIRECTIONS OPEN RESEARCH DIRECTIONS'.",
+   "verdict": "CONFIRMED",
+   "evidence": "All in Vol I: l.470-471 p.9; l.577-578 p.11; l.4947-4948 (Conclusion region).",
+   "correction": ""
+  },
+  {
+   "report_location": "Appendix A, line 364",
+   "claim": "Code listings lose their indentation in the PDF.",
+   "verdict": "CONFIRMED",
+   "evidence": "V2 l.7515-7690 and l.7903-8066: every line begins at a flat offset (def/class/if at the same column as the body).",
+   "correction": ""
+  },
+  {
+   "report_location": "Appendix B, line 372",
+   "claim": "Vol I contains no mention of Soar, ACT-R, truth maintenance, Dewey, Peirce, Kant, Hintikka, Stanovich, Dennett, blackboard architectures, the Robot Scientist, BACON, submodular test selection, shutdown or off-switch incentives, impact measures, prompt injection, or LeCun's architecture.",
+   "verdict": "CONFIRMED",
+   "evidence": "Case-insensitive, word-boundary scans of V1 with hyphen/line-break variants: \\bsoar\\b 0; ACT-R 0; truth[- ]maintenance|TMS|assumption-based 0; dewey 0; peirce 0; kant(ian) 0; hintikka 0; stanovich 0; dennett 0; black[- ]?board 0; robot[- ]scientist 0; \\bbacon\\b 0; submodular|equivalence class|decision region|Golovin|Javdani 0; shut[- ]?down|off[- ]switch|switch(ed) off|turn(ed) off 0; impact measure|side effect|reachability|attainable utility 0; prompt injection|injection|jailbreak 0; LeCun|JEPA|configurator 0. Only near-miss: 'incentives' once (V1 l.4280 p.78, Ch.17: 'a separate model of incentives, authority, and responsibility'), unrelated.",
+   "correction": ""
+  },
+  {
+   "report_location": "Appendix B, line 372",
+   "claim": "Vol II names Soar, ACT-R, LIDA, Generative Agents, Reflexion, Voyager and MemGPT only in §34.A.",
+   "verdict": "IMPRECISE",
+   "evidence": "Each of the seven names occurs exactly twice in V2: once in §34.A prose (SOAR l.8320, ACT-R l.8321, LIDA l.8322 p.114; Generative Agents l.8333, Reflexion l.8334, Voyager l.8335, MemGPT l.8336 p.115) and once in the REFERENCES list (R1-R7, l.8362-8380 p.115, a separate section starting l.8361). No occurrence elsewhere in V2 or anywhere in V1.",
+   "correction": "Say 'only in §34.A and its reference list'."
+  },
+  {
+   "report_location": "Appendix B, line 372",
+   "claim": "Vol II does not mention active inference.",
+   "verdict": "CONFIRMED",
+   "evidence": "V2: 0 hits for active[ -]inference, free[ -]energy, Friston.",
+   "correction": ""
+  },
+  {
+   "report_location": "Appendix B, line 373",
+   "claim": "Near-duplicate paragraphs were detected with a sliding-window difflib comparison (repro/dup_paragraphs.py).",
+   "verdict": "CONFIRMED",
+   "evidence": "repro/dup_paragraphs.py uses difflib.SequenceMatcher ratio>0.80 over a window of 3 paragraphs; re-run gives 11 pairs (V1) and 0 (V2).",
+   "correction": ""
+  },
+  {
+   "report_location": "§1, line 35",
+   "claim": "Earlier reviewers could not reconstruct the architecture.",
+   "verdict": "UNVERIFIABLE",
+   "evidence": "Claim about the review request context, not about the texts.",
+   "correction": ""
+  },
+  {
+   "report_location": "Short answer, line 18",
+   "claim": "The difficulty of the 'local researchers' is better explained by the text than by the readers.",
+   "verdict": "UNVERIFIABLE",
+   "evidence": "Refers to an external prior review not in the provided files.",
+   "correction": ""
+  }
+ ],
+ "summary": {
+  "checked": 119,
+  "confirmed": 94,
+  "wrong": 2,
+  "imprecise": 21,
+  "unverifiable": 2
+ }
+}

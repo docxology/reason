@@ -1,0 +1,13 @@
+# graft's local graph cache — regenerable, not committed (run `graft build`).
+/graft/
+
+# Local tool state and editor droppings.
+.claude/
+**/.claude/
+.DS_Store
+__pycache__/
+*.pyc
+
+# Output of the restored §33.B listing when run without an output directory
+# (`make verify` writes it under $TMPDIR instead).
+v0_results/

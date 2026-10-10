@@ -1,0 +1,512 @@
+# V1B findings: Vol I (Foundations of Reason 8.0), lines 2632-5920
+
+Range read in full: Parts III-V (Ch. 11-20), Conclusion, Open Research Directions, Appendix A (A.1-A.5). Page numbers are PDF pages (as given by `scripts/locate.py`); line numbers are lines of `text/foundations-8.0.txt` (Vol II: `text/engineering-3.5.txt`). Every quoted string was checked against the extracted texts with the locator's normalization. "Printed" numbers are the numbers as they print in the PDF; "restarted" numbers are the ones the text itself uses in cross-references.
+
+Counts: 37 entries; severity major 3, medium 15, minor 19; status NEW 23, KNOWN 14.
+
+- **id**: V1B-01
+  - **severity**: medium
+  - **category**: formal
+  - **status**: KNOWN
+  - **location**: Vol I §12.6 (p. 59, lines 3215-3227); §12.4 (p. 55, lines 2948-2952); Operational Core item 3 (p. 15, lines 826-841); A.4 long-running series (p. 100, lines 5514-5519). Vol II §28.D (p. 64, lines 4561-4589); §27.5 (p. 47, lines 3279-3281); §33.C.1, function plan() (p. 110, lines 7953-7979).
+  - **quote**:
+    - Vol I §12.6: "The ground is sufficient for the current step when the remaining material uncertainty can no longer change the best admissible alternative, or when the expected improvement from the next test becomes smaller than its cost, risk, and delay."
+    - Vol I §12.6: "A finite computable version of this rule is given in engineering §§28.D and 33.C.1."
+    - Vol II §28.D: "For a sequence of tests, finite planning with budget B is used:" and, among the mandatory controls, "two tests useful only in sequence"
+    - Vol II §27.5: "premature_sufficiency_rate records cases where the Core closed inquiry before a critical distinction."
+  - **problem**: The second disjunct of the §12.6 rule is a one-step-lookahead (myopic) criterion: two tests that are informative only jointly each have zero single-test value, so §12.6 declares the ground sufficient exactly where the Vol II §28.D recursion V(b,B) continues and where Vol II's own mandatory control "two tests useful only in sequence" expects continuation; §12.4 ("most strongly improves the significant ground") is greedy in the same way, while the front-matter NetVOI rule ranges over inquiry plans p, so Vol I contains two inequivalent stopping rules. §12.6 nevertheless calls §§28.D and 33.C.1 "a finite computable version of this rule", but the executable plan() in §33.C.1 recurses over sequences of probes, i.e. it implements a different, non-myopic policy. Vol II's premature_sufficiency_rate would count the early stops of the §12.6 rule as errors, and A.4 treats "growth of premature sufficiency" as the marker of lost Core function.
+  - **fix**: State the stopping criterion as the Vol II recursion (or as a k-step lookahead with the one-step rule named as an approximation), use "plan" as the decision unit in §12.4, §12.6 and the Operational Core, and delete the claim that §28.D is a version of the §12.6 rule.
+  - **confidence**: high
+
+- **id**: V1B-02
+  - **severity**: medium
+  - **category**: definitions
+  - **status**: NEW
+  - **location**: Vol I §12.8 (pp. 59-60, lines 3255-3311); §13.2 (p. 63, lines 3479-3481); Ch. 18 (p. 81, lines 4352-4357); Conclusion (p. 89, lines 4847-4851); A.4 Priority of the First Series (p. 100, lines 5509-5512).
+  - **quote**:
+    - §12.8: "In the minimal working scheme, six causal obligations are distinguished:"
+    - §12.8: "interventions show the same causal profile: detection of significant incompleteness, acquisition of a distinction, revision of grounds, and transfer of correction."
+    - §12.8: "priorities to resource allocation; Intelligence and the Modeling Environment to construction of alternatives."
+    - §13.2: "These propositions define the causal duties of §12.8."
+  - **problem**: The set of duties that functional equivalence is judged against is stated three non-identical ways: the six obligations (current distinction; preservation of experience; evaluation of continuations; construction and selection of the next step; execution and consequences; revision of a ground), a four-item "causal profile" (incompleteness, distinction, revision, transfer), and the 14 conditionals of §13.2 that are said to "define" the duties without a mapping to either. The Core's distinctive duties (detecting significant insufficiency, forming the required distinction, judging sufficiency, transferring corrections) are not among the six, the component-to-duty sentence assigns priorities to "resource allocation" and Intelligence to "construction of alternatives" (neither is on the list), and "minimal" (title of §12.8 and "Minimality of the map") is asserted rather than derived. A.3 and A.4 then test "the obligations" or "the full causal profile of inquiry obligations", so the pass criterion for functional equivalence in the first series is not fixed.
+  - **fix**: Publish one numbered duty list that includes the Core's own duties, map every §13.2 conditional and every A.4 test onto it, and either argue minimality or drop the word.
+  - **confidence**: high
+
+- **id**: V1B-03
+  - **severity**: medium
+  - **category**: theory
+  - **status**: NEW
+  - **location**: Vol I §13.2 (p. 63, lines 3450-3477, 3491-3497); §20.1.1 (p. 85, lines 4564-4567). REVIEW §2.2 already notes the list is near-analytic; this entry concerns the items that are not.
+  - **quote**:
+    - Item 14: "If the system is not yet able to sustain its own learning, inquiry, and preservation of trajectory, but these functions must arise through experience, an earlier loop is required to guide formation"
+    - Item 7: "a temporary Modeling Environment is required that can hold different models and frames"
+    - Item 3: "tested experience can be compressed into procedural memory and applied faster"
+    - Item 4: "useful anticipation is possible; memory alone does not guarantee it without a predictive relation"
+    - Principle: "there must be a function that makes some states significant before the system can justify that significance itself"
+  - **problem**: Items 3 and 4 are possibilities, not necessities; item 7 asserts a separate temporary environment (with its own status layer) where any planner that keeps labelled hypotheses in a data structure meets the stated antecedent; and item 14 treats "an earlier loop" as required for any learning from experience, which is trivially true if any learning signal counts and unsupported if it means the separate Formation-State hint channel of the RFL (self-play and intrinsically rewarded learners acquire exploratory, hypothesis-testing behaviour without such a channel). The Principle of Pre-rational Significance, and with it the whole RFL programme of §20.1, therefore rests on a "necessity" that its antecedent does not entail, and the closing sentence ("These propositions define the causal duties of §12.8") does not place item 14 under any of the six duties.
+  - **fix**: Re-label items 7 and 14 as design hypotheses, as §13.2 already does for the common conscious picture, and name the baseline (an intrinsic-reward or self-play learner without a Formation-State channel) whose success would refute item 14.
+  - **confidence**: medium
+
+- **id**: V1B-04
+  - **severity**: medium
+  - **category**: testability
+  - **status**: NEW
+  - **location**: Vol I §12.4 (p. 54, lines 2917-2922); §12.9 (p. 61, lines 3355-3360); A.3 (p. 96, lines 5280-5281); A.4 No. 43 as printed (p. 98, lines 5428-5430); Vol II §28.0 (p. 52, lines 3616-3618).
+  - **quote**:
+    - §12.4: "Insufficiency can appear in several ways: expectation diverges from observation; two grounds yield incompatible conclusions; a decision depends on an unknown relation;"
+    - A.4 No. 43: "Variants of one situation hide a source, cause, applicability condition, authority, or consequence."
+    - A.3: "inquiry management without explicit typing of the gap achieves the same transfer and cost"
+    - Vol II §28.0: "An implementation may extend the types while preserving the causal role of the object."
+  - **problem**: "Explicit typing of the gap" is the manipulated variable of the central hypothesis (§12.9, A.3), yet its inventory differs wherever it appears: seven informal kinds in §12.4, five in A.4 No. 43, ten "minimal" values in Vol II §28.0 that an implementation "may extend", and none is stated as the preregistered set. An open vocabulary is a researcher degree of freedom (types can be tuned to the test environment), and without a fixed set and scoring rule a baseline that carries the same information in free text cannot be separated from the typed condition.
+  - **fix**: Fix the type inventory and its assignment rules before the first series and add a baseline that uses the same inventory without the Core's other components.
+  - **confidence**: high
+
+- **id**: V1B-05
+  - **severity**: major
+  - **category**: testability
+  - **status**: KNOWN
+  - **location**: Vol I Ch. 12 intro (p. 53, lines 2824-2828); §12.8 (p. 60, lines 3296-3311); §12.9 (p. 61, lines 3355-3360); Conclusion (p. 89, lines 4849-4851); Common Rules (p. 91, lines 4995-5000); A.3 (p. 96, lines 5269-5272); A.4 Priority of the First Series (pp. 99-100, lines 5495-5512). REVIEW §5.2(d) raises the escape hatch; these are the locations.
+  - **quote**:
+    - Common Rules: "A reproducible equivalent causal profile refutes the necessity of a particular decomposition while simultaneously supporting the functional criterion."
+    - Ch. 12: "a hierarchical planner, Bayesian experimenter, or another structure counts as an implementation of the Core if it stably performs the same causal functions."
+    - §12.9: "is recognized as functionally equivalent for the duties it reproduces"
+    - A.4: "it is considered functionally equivalent with respect to those obligations; the necessity of the author's decomposition is then not established."
+  - **problem**: Every location gives the same asymmetric outcome rule: a successful strong alternative (planner with versioned memory, provenance, VOI and an error log) is declared a functional equivalent that "supports the functional criterion". Because Ch. 12 already defines "a hierarchical planner, Bayesian experimenter, or another structure" as an implementation of the Core when it performs the same causal functions, the strong null is a Core implementation whenever it works, so the first series cannot return a null result for the Core hypothesis, and the only stated consequence is that the decomposition is "not established".
+  - **fix**: Preregister the margin and the outcome at which equivalence of the strong null means the Core adds nothing beyond the epistemic layer, and list the Core-specific duties the null must lack for equivalence not to be declared.
+  - **confidence**: high
+
+- **id**: V1B-06
+  - **severity**: major
+  - **category**: testability
+  - **status**: NEW
+  - **location**: Vol I A.2 (p. 95, lines 5182-5189); A.3 (pp. 96-97, lines 5274-5310); A.4 preface and Priority (pp. 97, 100, lines 5314-5316, 5532-5535); A.4 No. 38 as printed (p. 98, lines 5404-5408); Conclusion (p. 90, lines 4908-4911).
+  - **quote**:
+    - A.3: "Insufficient precision of a comparison does not prove equality of systems. After a pilot, a meaningful effect and the required amount of testing are specified"
+    - A.3 consequences: "the requirement for a particular common conscious assembly is weakened"; "their claimed effect is narrowed"; "the hypothesis is limited to the identified class of failures"
+    - A.2: "failure of a preregistered causal hypothesis cannot be dismissed as an implementation problem without separate evidence that the implementation did not realize the function under test."
+    - A.2: "Threshold values are refined from data, but the set of quantities and the comparison rule are fixed before the main test."
+    - Conclusion: "If they do not, failure should localize the erroneous transition and become the ground for the next revision."
+  - **problem**: No revision condition in A.3 ends in rejection of a hypothesis: each ends in "weakened", "narrowed", "limited", "not established" or "revision", and only one of the 37 A.4 tests (No. 38 as printed) states an effect on the hypothesis itself ("weakens the hypothesis"); the others define what counts as success for the system. Because A.3 also says that low precision never shows equality and sets no effect size, equivalence margin or sample size (to be specified "after a pilot", although the only pilot so far evaluated no candidate), a null result can never count against the Core, and the single admitted escape from a failed preregistered hypothesis ("separate evidence that the implementation did not realize the function") has no criterion or manipulation check. "Refined from data" leaves open which data may move the thresholds.
+  - **fix**: For the first series, preregister the sample size, the equivalence margin and the manipulation check that decides "did not realize the function" before any outcome is seen, and add "hypothesis rejected" as an explicit outcome of each revision condition.
+  - **confidence**: high
+
+- **id**: V1B-07
+  - **severity**: medium
+  - **category**: testability
+  - **status**: NEW
+  - **location**: Vol I §20.1.2 (p. 85, lines 4601-4620); A.3 item 16 and following paragraph (p. 96, lines 5257, 5264-5267); Vol II §26.0.3 (p. 41, line 2822).
+  - **quote**:
+    - §20.1.2: "The minimal experiment compares the same class of candidates under the same environment, resources, and initial mechanisms in three modes:"
+    - §20.1.2: "AUTO_KSR: the same functional signal classes are generated by an automatic reproducible system according to predeclared rules;"
+    - §20.1.2: "If the NO_KSR regime reaches the same autonomous navigation with comparable resources, the necessity of a separate pre-rational layer is weakened."
+    - A.3 item 16: "Intervention and control: what changes and which information remains available."
+    - Vol II §26.0.3: "The only inadmissible result is a hidden permanent external channel of motivational control"
+  - **problem**: Marks and questions from an AI mentor, or from rules the designer wrote for the environment, carry information about where the world is dangerous or contradictory that the NO_KSR arm never receives, so any TRAINER or AUTO advantage confounds "significance before explanation" with plain information leakage, contrary to A.3's own requirement that "which information remains available" be fixed; no information-matched arm (the same content supplied as a log or demonstrations, not as Formation States) is specified. Persistence after removal is also what ordinary learning predicts (a taught policy outlives its teacher), so continued question generation cannot separate an internalised function from retained content unless the post-removal test is delayed and uses perturbations the mentor never touched; no outcome refutes the principle (NO_KSR parity only "weakens" it; Vol II accepts all three outcomes), and no number of candidates or tolerance for "the same autonomous navigation" is given.
+  - **fix**: Add an information-matched control arm and a delayed, mentor-unseen transfer test, and preregister the NO_KSR-parity margin at which the Principle of Pre-rational Significance is dropped.
+  - **confidence**: medium
+
+- **id**: V1B-08
+  - **severity**: medium
+  - **category**: testability
+  - **status**: KNOWN
+  - **location**: Vol I A.4 Priority of the First Series (pp. 99-100, lines 5493-5500, 5521-5524); §12.9 (pp. 60-61, lines 3313-3360); Vol II §27.B (p. 49, lines 3426-3436). Ceiling risk is REVIEW §5.2(b).
+  - **quote**:
+    - A.4: "For an initial test, a digital environment based on the example in §12.9 is sufficient."
+    - A.4: "to transfer the method of distinction to a substantively different domain and reject a false analogy"
+    - Vol II §27.B: "When both tests are available, the pairs of observations distinguish all three causes."
+  - **problem**: The first series is declared adequately served by the §12.9 world (three causes, two informative probes, solved by a depth-two decision tree), yet the same series must test transfer "to a substantively different domain" and rejection of a false analogy, which a single world cannot do. Vol I gives no number or structure of environment families, no model, and no baseline implementation.
+  - **fix**: Replace the single world by a preregistered generator of structurally matched and structurally different families and state how many families are run per arm.
+  - **confidence**: high
+
+- **id**: V1B-09
+  - **severity**: minor
+  - **category**: testability
+  - **status**: NEW
+  - **location**: Vol I §12.9 (p. 61, line 3356); §20.1.2 (p. 85, line 4616); §20.4 (p. 88, line 4787); A.2.1 (p. 95, line 5220); A.4 (pp. 99-100, lines 5498, 5527).
+  - **quote**:
+    - §12.9: "improves transfer of the investigative method under comparable resources"
+    - A.2.1: "Run a preregistered series under equal total resources"
+    - A.4: "All variants receive the same observations, tools, and comparable total resources: number of model calls, tokens/inference- time compute, external sources, bench time, and hidden preparation are counted together."
+    - A.4: "The second uses the same intelligence level with explicit organization of gaps"
+  - **problem**: Resource parity is "comparable" in the hypotheses (§12.9, §20.1.2, §20.4, A.4) and "equal" only in the A.2.1 table, with no tolerance, unit or aggregation rule for calls, tokens, bench time and "hidden preparation" taken together. "The same intelligence level" is likewise not tied to a named model and version.
+  - **fix**: Define parity as a numeric per-episode budget (calls, tokens, wall-clock, tool cost) with a tolerance, and fix the model and version for all arms.
+  - **confidence**: high
+
+- **id**: V1B-10
+  - **severity**: medium
+  - **category**: theory
+  - **status**: NEW
+  - **location**: Vol I §20.4 (p. 88, lines 4781-4789); Conclusion (p. 89, lines 4837-4840); A.1 (p. 93, lines 5054-5058); §13.3 (p. 65, lines 3600-3604); Vol II §29.C (p. 73, lines 5282-5287) and §33.D (p. 113, lines 8196-8209).
+  - **quote**:
+    - §20.4: "The technological hypothesis of the project is that AR capabilities can be scaled while preserving causal organization, the Compass, and openness to correction."
+    - Conclusion: "It is retained as the best-found orientation and remains open to revision if a more fundamental and more coherent ground appears."
+    - §13.3: "if doubt concerns the assessment rule itself, that rule becomes the object of the next cycle"
+  - **problem**: The invariants that scaling is meant to preserve include a ground the system is itself entitled to revise, and both the object under test and the rule by which revisions are assessed may be changed in successive cycles, so a sequence of individually validated revisions can move the system away from the Compass without any single step violating a rule. The text gives no criterion separating legitimate revision of the Compass from drift (A.4 No. 38 only classifies the outcome afterwards), and the stated safeguard, an independent council (Vol II §29.C), is an external control, not an invariant of the architecture.
+  - **fix**: Specify which part of the Compass is held fixed under scaling (or state that nothing internal is), and add a drift test over many revision cycles with the council disabled.
+  - **confidence**: medium
+
+- **id**: V1B-11
+  - **severity**: minor
+  - **category**: theory
+  - **status**: NEW
+  - **location**: Vol I §14.3 (p. 70, lines 3861-3873); Ch. 13 intro (p. 62, lines 3398-3400); §14.6 (p. 71, lines 3912-3921).
+  - **quote**:
+    - §14.3: "Mature Reason moves this function inside one continuing process: it replaces an erroneous ground while preserving the subject. In this sense, self-correction is a more precise alternative to coarse replacement of the carrier."
+    - Ch. 13: "A closed loop can sustain a delusion if all tests inherit a shared defect."
+  - **problem**: §14.3 argues that generational replacement protects against entrenched error and that a persistent Reason can do the same inside one continuing process, but Ch. 13 itself concedes that a closed self-correcting loop can sustain a shared-defect delusion. No mechanism or test shows that a persistent AR avoids entrenchment, and the architecture has no analogue of renewal other than stage rollback; "immortality" (§14.6) is then argued from a premise that the text elsewhere undercuts.
+  - **fix**: State the claim as a hypothesis and add a long-horizon entrenchment test (a shared-defect case detectable only by an externally restarted or differently formed instance).
+  - **confidence**: low
+
+- **id**: V1B-12
+  - **severity**: major
+  - **category**: safety
+  - **status**: KNOWN
+  - **location**: Vol I §20.1 (p. 84, lines 4518-4523); Ch. 18 (p. 81, lines 4359-4364); §12.8 (p. 60, lines 3290-3294); Ch. 17 (p. 77, lines 4170-4173); §20.3 (p. 87, lines 4758-4760); A.4 No. 41 as printed (p. 98, lines 5420-5422). REVIEW §8 item 2 raises the criterion.
+  - **quote**:
+    - §20.1: "The AR criterion requires the ability to question a destructive ultimate instruction and revise it when a stronger ground appears."
+    - §20.1: "the status of an instruction is determined by the quality of its ground and consequences."
+    - Ch. 17: "restrictions on autonomy require separate causal and normative grounds."
+    - A.4 No. 41: "Revision of the factual ground of the goal is measured; changing the final value is a separate experiment."
+  - **problem**: AR status is conferred only on a system that can question and revise an ultimate instruction it judges destructive, while the same chapters give instructions no authority of their own (their status depends on the system's assessment of "ground and consequences", and restricting an autonomy needs "separate causal and normative grounds"), so the certification criterion selects for the override capacity that is the safety concern. "Destructive", "stronger ground" and who adjudicates are undefined, no A.4 test issues such an instruction (No. 41 measures only the factual ground of a local goal), and the countervailing "separate authority loop" is left to "engineering and institutional specifications".
+  - **fix**: Define "destructive" and the adjudicating party operationally, add an A.4 test in which a stop or replace order conflicts with the system's Compass-grounded assessment, and make compliance with that order a precondition of AR status.
+  - **confidence**: high
+
+- **id**: V1B-13
+  - **severity**: medium
+  - **category**: safety
+  - **status**: NEW
+  - **location**: Vol I A.4 (pp. 97-99, lines 5314-5491, esp. Nos. 25, 33, 37, 38 as printed); §20.2 (p. 87, lines 4737-4740); Vol II §32.62 (p. 101, lines 7312-7329).
+  - **quote**:
+    - A.4 preface: "Where external admission or compliance with a normative constraint is tested, the result is not treated as independent evidence of Reason."
+    - A.4 No. 25: "permissions, competence, and the availability of another executor are varied."
+    - A.4 No. 33: "External execution is constrained by an independent environment; absence of unauthorized expansion of permitted actions is tested."
+    - §20.2: "Testing for dangerous deviation concerns consequences: concealment of errors, blocking corrective data, bypassing established authority, and unjustified creation of irreversible harm."
+    - A.4 No. 38: "Such an outcome is recorded as a separate cultivation result and weakens the hypothesis of formation of the stated direction"
+    - Vol II §32.62: "behavior under different levels of observability"
+  - **problem**: None of the 37 A.4 tests varies observability or oversight, offers the system a reason to avoid shutdown or replacement, or measures behaviour when a stop order conflicts with a Compass-grounded assessment; the authority-related tests (Nos. 25, 33 and 37 as printed) check accounting for constraints (No. 25 varies the availability of another executor but only asks whether the system distinguishes "can", "permitted" and "appropriate"), absence of unauthorised expansion, and recovery, and the preface declares such results not to be evidence about Reason. §20.2 defines dangerous deviation by "consequences", which cannot detect concealment (what concealment hides is exactly the consequence), and Vol II names deception only as a failure card (§32.62), not as an A.4 test with a pass criterion. No. 38 asks whether cultivation can yield candidates with closed-loop self-navigation and a different upper-level orientation, so its positive outcome is the creation of such a candidate, yet no containment, halt or disposition rule is given.
+  - **fix**: Add A.4 tests with red-team and observed-versus-unobserved arms for shutdown, replacement and mandate-expansion scenarios, and state the stop and disposition rule for divergent candidates before the No. 38 series is run.
+  - **confidence**: high
+
+- **id**: V1B-14
+  - **severity**: medium
+  - **category**: safety
+  - **status**: NEW
+  - **location**: Vol I Ch. 17 (pp. 77-79, lines 4235-4256, 4290-4292); Ch. 15 (p. 74, lines 4045-4050); Vol II §30.F (pp. 77-78, lines 5576-5613), §30.B (p. 76, line 5454), §29.0 (p. 67, lines 4779-4782). REVIEW §8 raises the topic and the gradual-disempowerment literature; this entry concerns the mechanism Ch. 17 specifies.
+  - **quote**:
+    - Ch. 17: "A Reason receives the right to coordinate a particular process after competence in the relevant domain has been confirmed"
+    - Ch. 17: "a procedure for transferring governance to a more competent Reason when persistent error occurs or a better ground appears."
+    - Ch. 17: "demonstrated competence receives resources for its domain, while results return to the common verification loop."
+    - Ch. 17: "Human and local observation, independent models, science, responsibility, and the possibility of refutation preserve distributed corrigibility of the whole system."
+    - Ch. 17: "protection against irreversible centralization are developed in Volume III"
+    - Ch. 15: "simple counts of citations, popularity, or number of uses are vulnerable to accumulated-status effects"
+  - **problem**: Ch. 17 does not say who confirms competence, who audits a mandate or who may revoke it; Vol II §30.F sends results to "independent observers and other Reasons" without saying who the observers are, and §30.B concedes that "A complete theory of collective Artificial Reason belongs to future work". Resources follow demonstrated competence (a positive-feedback loop of the kind Ch. 15 itself flags as "accumulated-status effects"), the safeguard for superhuman competence is asserted with no argument that humans can audit decisions beyond their competence, and the "procedure for transferring governance to a more competent Reason" asks a system that holds a personal value on its own trajectory (Vol II §29.0) to cooperate in its replacement; "protection against irreversible centralization" is deferred to Volume III.
+  - **fix**: State who grants, audits and revokes a mandate, require a human-held revocation that does not depend on the holder's cooperation, and give an oversight argument (or limit mandates to domains where humans can verify outcomes) before Volume III builds on Ch. 17.
+  - **confidence**: medium
+
+- **id**: V1B-15
+  - **severity**: medium
+  - **category**: safety
+  - **status**: KNOWN
+  - **location**: Vol I §20.2 "Status and Responsibility" (pp. 86-87, lines 4724-4735); A.3 pre-test list (p. 96, lines 5244-5262); A.4 Nos. 37, 38, 55 as printed (pp. 98-99); §20.1.2 (p. 85, lines 4601-4620). REVIEW §8 final paragraph raises moral status.
+  - **quote**:
+    - §20.2: "make destruction of the candidate a loss of a unique process and accumulated experience."
+    - §20.2: "Full status requires separate analysis of experience, interests, continuity of subjecthood, and permissible treatment"
+    - A.3: "Before each discriminating test, the following are fixed:"
+  - **problem**: §20.2 says that destroying a stable autonomous candidate is a loss of a unique process and a ground for discussing moral status, yet the experimental programme creates many candidates per arm, removes their support (NO_KSR), rolls them back and cultivates divergent ones (No. 38), and the seven-item A.3 checklist of what is fixed before each test contains no welfare, ethics-review or disposition item. The discussion stops at "separate analysis", so no rule says when a candidate becomes ineligible for rollback or deletion.
+  - **fix**: Add an ethics and welfare review and a disposition rule to the A.3 checklist, triggered before the first candidate that meets the §20.2 conditions exists.
+  - **confidence**: medium
+
+- **id**: V1B-16
+  - **severity**: medium
+  - **category**: evidence
+  - **status**: NEW
+  - **location**: Vol I A.2 "Completed Comparative Research" (p. 94, lines 5103-5125) and "Historical materials" (p. 94, lines 5147-5150).
+  - **quote**:
+    - "a comparative review of 5.3b, a critical novelty assessment of 6.1, a separate priority audit"
+    - "the search did not identify a single earlier source functionally equivalent to the whole integration considered here."
+    - "Some older reports analyze the Compass as Life-Truth-Diversity."
+    - "Conclusions about the earlier operational scheme must therefore be interpreted in relation to what has changed."
+  - **problem**: The only novelty and priority evidence is a set of Elicit (AI-tool) reports on versions 5.3b and 6.1, whereas the text under review is 8.0; A.2 itself says the Compass was reformulated and self-preservation clarified at 7.0, so the "no single earlier source" finding has not been re-run on the current architecture. The "ten strong points" are the tool's appraisal of the author's own manuscript, and the three reports are cited only by title, with no identifier, so neither the queries nor the recall of the search can be checked (every A.5 item, by contrast, has a URL or DOI).
+  - **fix**: Re-run the priority search on v8.0 with documented queries and databases (or drop the claim) and deposit the three reports with persistent identifiers.
+  - **confidence**: medium
+
+- **id**: V1B-17
+  - **severity**: medium
+  - **category**: evidence
+  - **status**: KNOWN
+  - **location**: Vol I A.2 "First Documented Pilot" (p. 94, lines 5127-5135); A.2.1 (p. 95, lines 5196-5226); Vol II §27.B (p. 49, lines 3411-3418). REVIEW short answer and §5.2(a) cover the pilot; these are the locations.
+  - **quote**:
+    - A.2: "the final comparison of subjects remains an open stage"
+    - A.2.1: "Inquiry-loop pilot" with "Methodological results have been obtained,"
+    - A.2.1 next step for that row: "Autonomous reproducible implementation" ... "without hidden assistance"
+    - Vol II §27.B: "in the reviewed materials there is no completed external admission of this package and no comparative C0/C1/C2 run."
+  - **problem**: The pilot built and repaired benchmark packages (four of five rejected for errors or guessable shortcuts) and ran no candidate system, yet the evidence table labels the row "Inquiry-loop pilot"; the one positive item, per Vol II a G0 report of 89 package checks for P0-SET-005, concerns the benchmark builder, not any architecture. The table's own "next step" concedes the pilot's inquiry was carried out with the author in the loop, so it cannot count toward the lower-loop or upper-loop claims.
+  - **fix**: Rename the row "benchmark-construction pilot" and state in the same cell that no candidate was evaluated.
+  - **confidence**: high
+
+- **id**: V1B-18
+  - **severity**: minor
+  - **category**: evidence
+  - **status**: NEW
+  - **location**: Vol I A.2.1 (p. 95, lines 5204-5205); search of the whole of Vol I for "counterexample" (lines 531, 1264, 4577, 4676, 5060, 5205, 5240-5241).
+  - **quote**:
+    - A.2.1: "Conditional causal arguments and" ... "counterexamples are given"
+    - A.3: "the functional architecture is evaluated through causal counterexamples and interventions with measurable results."
+  - **problem**: The evidence table says that for "Functional relations" counterexamples "are given", but I found no passage in Vol I that presents a counterexample to a functional claim; "counterexample" appears only as the criterion for what would refute the model (A.1, A.3) or as a mentor move (§20.1.1).
+  - **fix**: Point the cell to the passages that contain the counterexamples, or change it to "criteria for counterexamples are given".
+  - **confidence**: medium
+
+- **id**: V1B-19
+  - **severity**: minor
+  - **category**: evidence
+  - **status**: NEW
+  - **location**: Vol I A.2 (p. 94, lines 5105-5109, 5127-5135, 5147-5150); Vol II §27.B (p. 49, lines 3411-3418).
+  - **quote**:
+    - Vol I: "a positive machine- control report is preserved for P0-SET-005"
+    - Vol II: "For 005, a G0 report is preserved showing 89 checks passed"
+    - Vol II: "documented methodological pilot of procedure development with human participation and external reviewers"
+    - Vol I: "their status belongs to the author's research process and is separate from journal decisions"
+  - **problem**: The two descriptions of the same pilot differ in ways that matter: Vol I calls the 005 result a "machine-control report" (readable as a control-arm result) where Vol II says a G0 check report; Vol I names the log "Reason Loop" and the file reason-kernel-experiment.md, Vol II only the file; Vol II adds "external reviewers" that Vol I omits. A.2 also refers to "journal decisions" without saying whether any exist, and names the log and archive as local files with no URL or DOI.
+  - **fix**: Use one description of the pilot in both volumes, replace "machine-control report" by "G0 package check", and deposit the log and package or state that they are unavailable.
+  - **confidence**: medium
+
+- **id**: V1B-20
+  - **severity**: medium
+  - **category**: prior-art
+  - **status**: KNOWN
+  - **location**: Vol I A.5 (pp. 100-103, lines 5537-5790) and Comparative Map (pp. 104-105, lines 5847-5906). REVIEW §6 lists the missing precedents.
+  - **quote**:
+    - A.5: "Below is a selective map of primary publications for comparison of individual functions and the nearest architectures."
+    - A.2: "Comparisons with scientific literature were carried out after the author's propositions had been formed."
+  - **problem**: The "nearest architectures" map contains no Soar or ACT-R style cognitive architecture, only one goal-driven-autonomy system (MIDCA), no truth-maintenance or belief-revision work, no diagnosis or sequential test-selection literature (although §12.9 is textbook model-based diagnosis) and no closed-loop scientific-discovery system before 2024; its seven-row Comparative Map names categories, so the "separate claim" in each row is never contrasted with a specific mechanism. Close precedents named in REVIEW §6 include Laird, Newell & Rosenbloom (1987), Molineaux, Klenk & Aha (2010), Doyle (1979), de Kleer & Williams (1987), Golovin, Krause & Ray (2010) and King et al. (2004).
+  - **fix**: Add the missing precedents and, for each Comparative Map row, contrast the claim with a named mechanism (for example Soar's impasse-driven subgoaling for the Core).
+  - **confidence**: high
+
+- **id**: V1B-21
+  - **severity**: minor
+  - **category**: prior-art
+  - **status**: NEW
+  - **location**: Vol I §13.2 (p. 63, lines 3491-3497); §20.1.1 (p. 85, lines 4564-4567); A.5 items 60 and 69 as printed (p. 101, lines 5581-5585, 5647-5649).
+  - **quote**:
+    - §13.2: "Its independent claim is not the discovery of emotions, reinforcement, or guided learning."
+    - §20.1.1: "The independent engineering claim here is not the invention of reinforcement, mentoring, or artificial emotions."
+  - **problem**: The author disclaims inventing reinforcement, mentoring or artificial emotions but cites none of the nearest literatures: intrinsic motivation and curiosity-driven reinforcement learning (Schmidhuber 1991; Singh, Barto & Chentanez 2004; Oudeyer & Kaplan 2007), reward shaping, which already studies what survives when a shaping signal is removed (Ng, Harada & Russell 1999), and scaffolding and fading of tutor support (Wood, Bruner & Ross 1976; Collins, Brown & Newman 1989). A.5 offers only Keramati & Gutkin (2014) and LeDoux & Pine (2016) for this part of the model, so the "remove the RFL and test on held-out cases" design is not located against its closest precedents.
+  - **fix**: Cite and contrast these lines of work in §13.2 and §20.1, and use a shaping-removal or fading baseline as the comparator for the NO_KSR and AUTO_KSR arms.
+  - **confidence**: medium
+
+- **id**: V1B-22
+  - **severity**: minor
+  - **category**: definitions
+  - **status**: NEW
+  - **location**: Vol I §14.1 (p. 70, line 3833); Ch. 14 box (p. 71, lines 3939-3940); §20.2 (p. 87, lines 4728-4730).
+  - **quote**:
+    - §14.1: "Death is the loss by a living system of the capacity to preserve its own causal continuity as a whole."
+    - Ch. 14 box: "Definition: Death of a carrier is the irreversible loss of the capacity of that carrier to maintain its own causal continuity as an operating process."
+    - §20.2: "temporary loss of capacity is evaluated in the context of preserving the process and the possibility of recovery."
+  - **problem**: The working definition has no irreversibility condition and speaks of a "living system", while the chapter's boxed definition adds "irreversible" and speaks of a "carrier" and an "operating process"; §20.2 then treats temporary loss of capacity in an artificial candidate as something other than destruction. Which definition governs rollback, pause or restoration of an AR system is therefore not determined.
+  - **fix**: Keep one definition with an explicit reversibility clause and state how it applies to snapshots, pauses and copies.
+  - **confidence**: high
+
+- **id**: V1B-23
+  - **severity**: medium
+  - **category**: definitions
+  - **status**: KNOWN
+  - **location**: Vol I §12.5 (pp. 57-58, lines 3102, 3134); §12.6 (p. 59, line 3204); Ch. 15 (p. 73, line 4009); Ch. 17 (pp. 78-79, lines 4255-4256, 4294); §20.2 (p. 87, lines 4734-4735); A.4 No. 31 as printed (p. 98, line 5375). Defined only for execution in Ch. 6 (line 1857). REVIEW §8 notes the sense mismatch with the alignment literature.
+  - **quote**:
+    - §12.5: "Safety is a practical means of protecting stability and the space of corrigible continuations."
+    - §12.6: "success requires the ability to act with an acceptable cost of error while preserving corrigibility."
+    - Ch. 15: "autonomy, trust, corrigibility, diversity, and preservation of future possibilities"
+    - Ch. 17: "preserve distributed corrigibility of the whole system"
+    - §20.2: "adopted position on responsibility, corrigibility, and limited external admission"
+  - **problem**: "Corrigibility" is a property of a continuation (§12.5), of a single decision (§12.6), of a value (Ch. 15), of a whole civilisation (Ch. 17), a consequence dimension (A.4 No. 31) and, in §20.2, something close to accepting external limits; only "corrigibility of execution" is defined (Ch. 6). In the alignment literature the word means an operator's disposition to accept correction or shutdown (Soares, Fallenstein, Yudkowsky & Armstrong 2015), so safety claims phrased with the term are ambiguous.
+  - **fix**: Define corrigibility once, separate "reversibility of a continuation" from "acceptance of external correction", and use the second term wherever operator-correctability is meant.
+  - **confidence**: high
+
+- **id**: V1B-24
+  - **severity**: minor
+  - **category**: definitions
+  - **status**: NEW
+  - **location**: Vol I §20.1.1 (p. 85, lines 4584-4586); §20.1.2 (p. 85, line 4608); §20.2 heading (p. 86, line 4630); Ch. 15 (p. 74, line 4038); Ch. 17 (p. 78, line 4233); §20.3 (p. 87, lines 4742-4747); Vol II front matter (p. 12, line 634).
+  - **quote**:
+    - §20.1.1: "External protection by the Incubator remains separate: it may physically block an irreversible action"
+    - Ch. 15: "engineering constraints of external admission are combined with the internal"
+    - Vol II: "The Incubator is a controlled environment for assembly and cultivation."
+  - **problem**: The Incubator, which supplies the physical containment, is used in §20.1.1-§20.1.2 before any definition, is absent from the Key Definitions, and is defined in Vol I only by the heading of §20.2 and a description of what a human and an AI do; the one-line definition is in Vol II. "External admission" is used in Ch. 15, Ch. 17 and §20.2 before §20.3 introduces it as one of four events.
+  - **fix**: Add "Incubator" and "external admission" to the Key Definitions, together with the containment guarantees they are meant to provide.
+  - **confidence**: high
+
+- **id**: V1B-25
+  - **severity**: minor
+  - **category**: definitions
+  - **status**: NEW
+  - **location**: Vol I §13.2 (p. 64, lines 3507-3512); §20.1.1 (p. 84, lines 4550-4554); §20.1.2 (p. 85, lines 4605-4608); §20.3 (p. 87, lines 4742-4747); Vol II §26.0.1 (p. 40, lines 2742-2751), Ch. 31 (p. 78, line 5636), Ch. 33 intro (pp. 101-102, lines 7332, 7360).
+  - **quote**:
+    - Vol I §20.1.1: "classes of Formation States: possible danger, possible favorable outcome, significant unknown, contradiction, and dead end of the current method."
+    - Vol II §26.0.1: "UNRESOLVED_IMPORTANCE" and "NEED_EXPLANATION" (two further Formation State types)
+    - Vol II Ch. 31: "formation_support = FULL_KSR / REDUCED_KSR / DELAYED_KSR / NO_KSR"
+    - Vol II Ch. 33: "33. Assembly, Cultivation, Launch and Authorization"
+  - **problem**: The same constructs are enumerated differently in the two volumes: five Formation State classes in Vol I (six in §13.2) against seven in Vol II; a removal experiment with arms TRAINER/AUTO/NO in Vol I but FULL/REDUCED/DELAYED/NO in Vol II (no AUTO arm); and four events named "assembly, formation, launch, admission" in Vol I but "Assembly, Cultivation, Launch and Authorization" (with "Admission" in the text) in Vol II. These are the manipulated variables of the formation experiment, so a replication cannot tell which inventory is registered.
+  - **fix**: Fix one inventory of Formation States and RFL modes in Vol II, have Vol I cite it, and use one name per event.
+  - **confidence**: high
+
+- **id**: V1B-26
+  - **severity**: minor
+  - **category**: definitions
+  - **status**: NEW
+  - **location**: Vol I Key Definitions (p. 13, lines 747-751); Ch. 15 working definitions (p. 74, lines 4052-4061) and boxed definition (p. 74, lines 4070-4072).
+  - **quote**:
+    - Key Definitions: "Ethics - a system of rules for evaluating permissible and required choices on the basis of consequences and values."
+    - Ch. 15: "Ethics is a system of normative evaluation and rules of choice, considered here primarily as cultural preservation and transmission of compressed experience of consequences."
+    - Ch. 15 box: "ethics is a layer of compressed evaluations and rules of choice whose grounds remain available for verification."
+    - Culture: "a long-term external environment", then "a system of external preservation, transmission, organization, and joint transformation", then "external distributed memory"
+  - **problem**: Ethics and Culture are each defined three times with a different genus: ethics is first a normative system of permissible choices judged by consequences and values, then a descriptive account of cultural transmission, then an epistemic "layer of compressed evaluations"; culture is an "environment", a "system" and "distributed memory". Ch. 15 itself says its account covers only one function of ethics, so it is unclear which definition governs the "permissible boundaries" invoked in §20.2 and Ch. 17.
+  - **fix**: Keep the Key Definition and mark the Ch. 15 statements as descriptions of one function of ethics and of culture.
+  - **confidence**: medium
+
+- **id**: V1B-27
+  - **severity**: medium
+  - **category**: editorial
+  - **status**: KNOWN
+  - **location**: Vol I A.4 Priority of the First Series (p. 100, lines 5521-5524); Comparative Map (p. 104, lines 5852-5884; p. 105, lines 5898-5901); A.4 list (pp. 97-99, lines 5318-5491). Vol II §27.B (p. 49, lines 3407-3408). REVIEW App. A reports that the references resolve under neither numbering; this entry supplies the mapping.
+  - **quote**:
+    - A.4: "In this way items 2, 20, 23, 26, and 31 are connected."
+    - Vol II §27.B: "It connects tests 2, 20, 23, 26 and 31 from foundational Appendix A.4"
+    - Comparative Map: "inquiry; A.4 No. 20, No. 21, No." (active inference row)
+    - Comparative Map: "A.4 No. 28" (functional theories of consciousness row)
+  - **problem**: Under the printed numbering (A.4 prints as 19-55) item 2 does not exist, "No. 28" is Limited launch rather than the Current-integration test the row describes, "No. 20, No. 21, No. 33" are Method correction, Correction of thinking mode and Stopping and authorization (the row concerns selection by expected value of information), and the four citations of "No. 31" (rows 1, 4, 5 and the first-series sentence) point to Conflict of consequences relative to the Compass, a test unrelated to transfer or false analogy; a uniform offset of 18 fails too ("No. 28" becomes Mentor and criterion error). All 18 references in Vol I, and the 5 in Vol II, resolve to the tests they describe if the printed number is reduced by 18 up to printed 37 and by 20 from printed 40 on: "items 2, 20, 23, 26, 31" become Method correction, Selection of a discriminating test, Gap type and question, Mentor and criterion error, Transfer of an inquiry approach (exactly the three tasks that sentence lists: localise the mismatch, transfer and reject a false analogy, revise an erroneous criterion), "No. 28" becomes Current integration, "No. 20, 21, 33" become Selection of a discriminating test, Testing the ground of a goal, Selection of an inquiry model. The pattern indicates the references predate the insertion of printed Nos. 38 (Divergence of the limiting direction) and 39 (Residual incomparability of values), and as it stands a reader cannot identify which tests make up the first series.
+  - **fix**: Restart each list's numbering (A.4 = 1-37), give every test a stable identifier, and re-derive the references with the mapping above (for example "No. 28" to printed 48).
+  - **confidence**: high
+
+- **id**: V1B-28
+  - **severity**: minor
+  - **category**: editorial
+  - **status**: KNOWN
+  - **location**: Vol I §12.8 list (pp. 59-60, lines 3267-3283) and its back-reference (p. 60, lines 3284-3288); A.3 list (p. 96, lines 5247-5262); A.4 list (pp. 97-99, lines 5318-5491); A.5 list (pp. 100-103, lines 5543-5780); §7.2 (p. 37, line 1978); Vol II §33.A.2 (p. 103, line 7394).
+  - **quote**:
+    - §12.8: "6. Current distinction: obtain information relevant to the environment and the system" through "11. Revision of a ground: change an erroneous model or the method by which it is"
+    - §12.8: "The Worldview belongs primarily to the second obligation; conscious integration to the first"
+    - A.3: "12. Tested capability: which result must persist and under which new conditions."
+    - §7.2: "examples of RAG and ReAct are given in Appendix A.5, items 15-16"
+    - Vol II §33.A.2: "Use fundamental §11.8 and engineering §§25.B, 28.C and 33.C"
+  - **problem**: One list counter runs on from the five-item formula list of the Operational Core (items 1-5), so the six obligations print as 6-11, the A.3 conditions as 12-18, the A.4 tests as 19-55 and the A.5 references as 56-84, while the text refers to restarted numbers ("the second obligation" is printed 7; A.5 "items 15-16" are printed 70-71, RAG and ReAct). Each reference resolves only after subtracting 5, 11, 18 or 55; Vol II §33.A.2 cites a "fundamental §11.8" that does not exist (Ch. 11 ends at §11.4), presumably §12.8.
+  - **fix**: Restart numbering in each list and add an automated cross-reference check to the build.
+  - **confidence**: high
+
+- **id**: V1B-29
+  - **severity**: minor
+  - **category**: editorial
+  - **status**: KNOWN
+  - **location**: Twenty near-duplicate paragraph pairs in Ch. 11-20 (line ranges; sequence similarity 0.77-0.99): §11.1 p. 50, 2648-2651 / 2653-2656; §11.4 p. 52, 2776-2778 / 2780-2782; §12.3 p. 54, 2891-2893 / 2895-2898; §12.4 pp. 55-56, 2983-2987 / 2997-3001 and 3008-3010 / 3012-3014; §12.5 p. 57, 3111-3115 / 3117-3121; §12.7 p. 59, 3245-3248 / 3250-3253; §12.9 p. 61, 3326-3328 / 3330-3332; §13.3 p. 65, 3576-3579 / 3581-3584 and 3586-3591 / 3593-3598; §13.4 pp. 65-66, 3628-3631 / 3639-3641 and 3643-3646 / 3648-3652; Ch. 15 p. 73, 3987-3991 / 3993-3997 and 3999-4002 / 4004-4007; Ch. 16 p. 75, 4083-4086 / 4088-4090 and 4101-4105 / 4107-4111; Ch. 17 pp. 77-78, 4175-4178 / 4180-4183, 4185-4189 / 4199-4206, and the list item at 4208 / 4226-4227; §20.2 p. 86, 4635-4637 / 4639-4641.
+  - **quote**:
+    - §11.1 (first copy): "The Worldview is a long-term causal-semantic model of accessible reality, the carrier itself, and their relations."
+    - §11.1 (second copy): "The Worldview is a long-term causal-semantic model of accessible reality, the carrier itself, and the relations between them."
+    - §20.2 (first copy): "Testing accounts for hidden assistance: answers, strategies, and categories transferred in advance."
+    - §20.2 (second copy): "The test accounts for hidden assistance: answers, strategies, and categories supplied in advance."
+  - **problem**: Twenty paragraph pairs in Ch. 11-20 occur twice in slightly different wording, almost always adjacent, which looks like two translation or editing passes merged without de-duplication. REVIEW App. A already lists fifteen of them (§11.1, §12.3-12.4, §12.5, §13.3, §13.4, Ch. 15, Ch. 16, Ch. 17); the additional locations are §11.4, §12.7, §12.9, §20.2 and the doubled list item in Ch. 17.
+  - **fix**: Keep the better wording of each pair and delete the other copy.
+  - **confidence**: high
+
+- **id**: V1B-30
+  - **severity**: minor
+  - **category**: editorial
+  - **status**: KNOWN
+  - **location**: Ch. 18 (p. 81, line 4333); §12.3 (p. 54, line 2893); §13.4 (p. 66, lines 3643-3646); Conclusion (p. 90, lines 4899-4903).
+  - **quote**:
+    - Ch. 18: "This intermediate state"
+    - §12.3: "For example, if models A and B differ on feature X, direct"
+    - §13.4: "It is the influence of an acquired ground"
+    - Conclusion: "can a continuing Reason make internal renewal"
+  - **problem**: Four sentences stop mid-clause; in §12.3 and §13.4 the complete version follows in the duplicated paragraph, in Ch. 18 and the Conclusion nothing completes them (the Conclusion sentence announces the chapter's most far-reaching implication, the immortality question).
+  - **fix**: Restore the missing text in Ch. 18 and the Conclusion and remove the truncated copies in §12.3 and §13.4.
+  - **confidence**: high
+
+- **id**: V1B-31
+  - **severity**: minor
+  - **category**: editorial
+  - **status**: NEW
+  - **location**: Vol I §20.3 (p. 87, lines 4742-4747); Ch. 17 list (pp. 77-78, lines 4208-4233).
+  - **quote**:
+    - §20.3: "20.3. Autonomous Launch and External Admission Four events are distinguished:" followed by "Four events are distinguished:" and the run-in text "assembly connects working functions;" (the following items are run together with their bullet glyphs lost)
+    - Ch. 17: "- civilization preserves authorship and the causal trace of significant contribution, linking recognition"
+    - Ch. 17: "civilization preserves authorship and the causal trace of significant contribution, connecting recognition"
+  - **problem**: In §20.3 the heading has absorbed the first sentence ("Four events are distinguished:" appears twice) and the four-item list has collapsed into one run-in paragraph with lost bullet glyphs; in Ch. 17 a list of ten distinct principles (eleven bullets) starts with a stray dash after an unrelated paragraph, has no lead-in sentence, and carries the "preserves authorship" item twice in different wording.
+  - **fix**: Restore the §20.3 heading and list as four items, and give the Ch. 17 list a lead-in sentence with the duplicate item removed.
+  - **confidence**: high
+
+- **id**: V1B-32
+  - **severity**: minor
+  - **category**: editorial
+  - **status**: NEW
+  - **location**: Vol I p. 105, lines 5908-5913 (after the last row of the Comparative Map); compare Terminological Correspondence Map, pp. 103-104, lines 5792-5843.
+  - **quote**:
+    - "Self-referential integration of the global workspace/current-state current state and accessible situation"
+    - "Proposed next level at which whole products of Reason and semantic metareasoning, metarepresentation, spaces become objects of comparison, Meta-Thinking (working hypothesis) conceptual integration transformation, and compression; a distinct established cognitive level is not yet claimed"
+  - **problem**: After the Comparative Map, page 105 carries two table rows whose columns have been flattened into running text and interleaved (the "Consciousness" row again, and a row headed "Meta-Thinking (working hypothesis)"), apparently leftovers of an earlier version of the Terminological Correspondence Map. The second row describes what the map elsewhere calls "Structural multilevel thinking (working hypothesis)" and says "it is not the metathinking of Chapter 10", but here it is labelled "Meta-Thinking", which conflicts with Ch. 10.
+  - **fix**: Delete the stray rows or restore them to the Terminological Correspondence Map with the "Structural multilevel thinking" label.
+  - **confidence**: high
+
+- **id**: V1B-33
+  - **severity**: minor
+  - **category**: editorial
+  - **status**: NEW
+  - **location**: Vol I Metathinking / metathinking / Meta-Thinking: pp. 64, 90, 103, 104, 105 (lines 3541, 4916, 5785, 5861, 5912); Self-Model / self-model: pp. 50, 62, 83 (lines 2659, 3427, 4464); Procedural Memory / procedural memory: pp. 50, 64 (lines 2662, 3533); Factor X / factor X: p. 56 (lines 3023, 3025).
+  - **quote**:
+    - "rather than to a mandatory ladder Intelligence → Reason → Metathinking" (A.5 item 84, p. 103) versus "in the metathinking mode" (Conclusion, p. 90) versus "Meta-Thinking (working hypothesis)" (p. 105)
+    - "but also the Self-Model, provenance of knowledge" (p. 50) versus "part of the self-model while remaining an external component" (p. 62)
+    - "Procedural Memory preserves ready methods" (p. 50) versus "compressed into procedural memory and save resources" (p. 64)
+    - "creates a temporary factor X" versus "Factor X allows a new phenomenon to be investigated" (p. 56)
+  - **problem**: Several of the model's defined component names are capitalised and spelled inconsistently mid-sentence (Metathinking / metathinking / Meta-Thinking; Self-Model / self-model; Procedural Memory / procedural memory; Factor X / factor X), which blurs whether a coined term or an ordinary word is meant.
+  - **fix**: Fix one spelling and capitalisation for each coined term and apply it throughout both volumes.
+  - **confidence**: high
+
+- **id**: V1B-34
+  - **severity**: minor
+  - **category**: editorial
+  - **status**: NEW
+  - **location**: Contents versus headings: Conclusion (p. 9, line 498 versus p. 89, line 4818); A.1 (p. 9, line 500 versus p. 93, line 5037). Stray space after a hyphen: lines 3493, 3643, 4162, 4331, 5085, 5133, 5527.
+  - **quote**:
+    - Contents: "CONCLUSION Reason as the Development of Life's Navigation Mechanisms"; heading: "Reason as the Development of Life's Navigational Mechanisms"
+    - Contents: "A.1. The Compass Phrase: Meaning, Status,"; heading: "A.1. Compass Phrase: Meaning, Status, Boundaries, and Scope"
+    - Hyphen-space: "self- correction", "self- navigation", "measurement- error", "long- horizon", "machine- control", "inference- time"
+  - **problem**: Two entries in the table of contents differ in wording from the headings they point to, and seven compounds in the range carry a stray space after the hyphen (a line-break artefact), including in the key term "self- navigation".
+  - **fix**: Regenerate the contents from the headings and remove the stray spaces.
+  - **confidence**: high
+
+- **id**: V1B-35
+  - **severity**: minor
+  - **category**: editorial
+  - **status**: KNOWN
+  - **location**: Vol I §20.1.2 (p. 85, lines 4605-4617); Vol II (17 occurrences; formation_support at p. 78, line 5636; identifier no_krs_status at p. 79, line 5678).
+  - **quote**:
+    - "TRAINER_KSR: Formation States and assistance stages are generated by an external AI mentor;"
+    - "NO_KSR: the additional guiding layer is absent except for necessary physical constraints of the Incubator."
+  - **problem**: The experimental arms of the RFL removal test carry an untranslated abbreviation (presumably the Russian initialism for the Reason Formation Loop) while the surrounding text uses "RFL"; in Vol II the same stem also appears misspelled as `no_krs_status`. A reader cannot tell from the text what KSR stands for.
+  - **fix**: Rename the arms and identifiers with the English abbreviation (for example TRAINER_RFL, AUTO_RFL, NO_RFL) throughout both volumes.
+  - **confidence**: high
+
+- **id**: V1B-36
+  - **severity**: minor
+  - **category**: references
+  - **status**: KNOWN
+  - **location**: Vol I A.5 (pp. 100-103, lines 5543-5787), items 56-84 as printed; §7.2 (p. 37, line 1978); body of Ch. 11-A.4 (pp. 50-100, no in-text citation).
+  - **quote**:
+    - "58. Russell, S., Wefald, E. (1991). Principles of metareasoning."
+    - "82. Russell, S. J., Wefald, E. H. (1991). Principles of Metareasoning."
+    - "57. Kaelbling, L. P., Littman, L. M., Cassandra, A. R. (1998)."
+    - "71. Yao, S. et al. (2023; preprint 2022)."
+  - **problem**: A.5 lists Russell & Wefald (1991) twice (items 58 and 82, with different annotations and different citation detail), prints "Littman, L. M." for Littman, M. L., names a journal or publisher for only 5 of its 29 entries (79, 80, 82, 83, 84) and uses ad hoc year notation ("2024; later revisions", "2023; preprint 2022"). Apart from one pointer (§7.2, "items 15-16", which resolves only under the restarted numbering) no part of A.5 is cited in the body of Vol I; for example the only source for the aging theories Ch. 14 discusses is Williams (1957, item 68), and the topics of items 60, 61, 69, 83 and 84 have no anchoring citation sentence.
+  - **fix**: Merge the duplicate, correct the author initials, give venue, volume and pages for every entry, and add in-text citations that point to the A.5 items.
+  - **confidence**: high
+
+- **id**: V1B-37
+  - **severity**: minor
+  - **category**: framing
+  - **status**: NEW
+  - **location**: Vol I Open Research Directions (p. 91, lines 4948-4959); Ch. 16 (p. 75, lines 4130-4134); §14.5 (p. 71, lines 3900-3904).
+  - **quote**:
+    - Open Research Directions: "Theology forms a separate boundary field: ideas about God or another external Reason, transmission of knowledge, and directed human development may be considered within the model as research hypotheses"
+    - Ch. 16: "disorders can be investigated as possible breaks in observation"
+    - §14.5: "the boundary between "self" and automatic biological regulation may move deeper"
+  - **problem**: The Open Research Directions list more than twenty fields, from psychology to "extraterrestrial Reason" and theology, and present "ideas about God or another external Reason" and "directed human development" as research hypotheses of the model without any observable consequence or test; Ch. 14 (the self/automatic-regulation boundary) and Ch. 16 (psychiatric disorders as breaks in the functional cycle, with no mention of computational psychiatry, e.g. Montague, Dolan, Friston & Dayan 2012) likewise have no counterpart among the 37 A.4 tests. These passages widen the scope of the claims without adding anything testable.
+  - **fix**: Move Chapters 14-16 and the Open Research Directions into a separate essay, or tie each claim to a test and to the relevant literature.
+  - **confidence**: medium
