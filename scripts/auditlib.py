@@ -14,6 +14,18 @@ Each audit file is markdown with a small front-matter block of `key: value` line
     github_issue: 12
     ---
 
+The body opens with "# ID · title" and then has these level-two sections, in order:
+
+    ## Claims under review      the author's claims the issue responds to, quoted verbatim, one
+                                list item each, labelled **Vol I|II <section>, p. N:** (an issue
+                                about how the text is printed uses "## Passages under review")
+    ## Finding                  what is wrong or missing, in prose
+    ## Evidence                 further passages, data and credits ("Already in the text")
+    ## Why it matters
+    ## Ideas & possible recommendations   at least two options, offered rather than prescribed
+    ## Resolved when            checklist
+    ## Related                  links into REVIEW.md and other issues
+
 The files are the single source of truth: the index (docs/audit/README.md) and the
 GitHub issues are generated from them.
 """
@@ -34,7 +46,19 @@ AREAS = {
 REQUIRED = ("id", "title", "severity", "area", "volumes", "sections", "review", "status")
 STATUSES = {"open", "acknowledged", "resolved", "wontfix"}
 
+FIRST_SECTIONS = ("Claims under review", "Passages under review")
+SECTIONS = ("Finding", "Evidence", "Why it matters", "Ideas & possible recommendations",
+            "Resolved when", "Related")
+LABEL = re.compile(r"\*\*([^*]+?):\*\*")
+CITATION = re.compile(r"\bVol(?:ume)?s? I{1,2}\b.*\bpp?\. ?\d+")
+QUOTATION = re.compile(r'"[^"]{4,}"|\u201c[^\u201d]{4,}\u201d|`[^`]*\s[^`]*`')
+
 FRONT = re.compile(r"\A---\n(.*?)\n---\n", re.S)
+
+
+def items(section_text):
+    """Top-level list items of a section, each with its indented continuation lines."""
+    return [chunk for chunk in re.split(r"\n(?=- )", "\n" + section_text) if chunk.startswith("- ")]
 
 
 class AuditFile:
@@ -64,6 +88,14 @@ class AuditFile:
         value = self.meta.get("github_issue", "")
         return int(value) if value.isdigit() else None
 
+    def sections(self):
+        """The level-two sections of the body, in order, as (heading, text) pairs."""
+        chunks = re.split(r"^## (.+)\n", self.body, flags=re.M)
+        return [(chunks[i].strip(), chunks[i + 1]) for i in range(1, len(chunks), 2)]
+
+    def section(self, heading):
+        return next((text for name, text in self.sections() if name == heading), "")
+
     def sort_key(self):
         order = list(SEVERITIES).index(self.meta["severity"])
         return order, self.id
@@ -83,6 +115,31 @@ class AuditFile:
             found.append(f"file name does not start with '{self.id}-'")
         if not self.body.startswith(f"# {self.id} "):
             found.append(f"body must open with '# {self.id} ...'")
+        found += self.structure_problems()
+        return found
+
+    def structure_problems(self):
+        found = []
+        sections = self.sections()
+        names = [name for name, _ in sections]
+        if not names or names[0] not in FIRST_SECTIONS:
+            return [f"first section must be one of {FIRST_SECTIONS}, found {names[:1]}"]
+        if tuple(names[1:]) != SECTIONS:
+            found.append(f"sections after '{names[0]}' must be {list(SECTIONS)}, found {names[1:]}")
+        if self.body.split("\n## ", 1)[0].strip() != self.body.splitlines()[0].strip():
+            found.append("nothing may stand between the title and the first section")
+        claims = items(sections[0][1])
+        if not claims:
+            found.append(f"'{names[0]}' has no list items")
+        for item in claims:
+            labels = [" ".join(label.split()) for label in LABEL.findall(item)]
+            head = " ".join(item.split())[:70]
+            if not labels or not all(CITATION.search(label) for label in labels):
+                found.append(f"item needs a bold 'Vol I|II <section>, p. N:' label: {head}")
+            if not QUOTATION.search(item):
+                found.append(f"item quotes nothing from the volumes: {head}")
+        if len(items(self.section("Ideas & possible recommendations"))) < 2:
+            found.append("'Ideas & possible recommendations' needs at least two list items")
         return found
 
     def set_meta(self, key, value):

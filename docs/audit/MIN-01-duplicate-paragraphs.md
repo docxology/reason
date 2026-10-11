@@ -4,7 +4,7 @@ title: Near-duplicate paragraphs in Volume I
 severity: minor
 area: editorial
 volumes: I
-sections: Vol I Abstract, Ch. 5, §9.3, §11.1, §12.3, §12.4, §12.5, §13.3, §13.4, Ch. 15, Ch. 16, Ch. 17
+sections: Vol I Abstract, Ch. 5, §9.3, §11.1, §12.3, §12.4, §12.5, §12.9, §13.3, §13.4, Ch. 15, Ch. 16, Ch. 17
 review: Appendix A
 status: open
 github_issue: 47
@@ -12,13 +12,36 @@ github_issue: 47
 
 # MIN-01 · Near-duplicate paragraphs in Volume I
 
-**Finding.** Volume I prints at least a dozen paragraphs twice in slightly different wording,
-usually one directly after the other, as if two edit or translation passes had been merged
-without removing the older copy. An automated check (`repro/dup_paragraphs.py`: paragraphs
-over 120 characters, `difflib` similarity above 0.80 within a window of three) confirms
-eleven pairs; the Abstract's repeated statement of the technological hypothesis and the
-truncated first copies in §12.3, §13.4 and Chapter 18 (MIN-02) are further instances. The same
-check finds none in Volume II.
+## Passages under review
+
+- **Vol I Abstract, p. 8:** "The technological hypothesis is that available mechanisms of
+  Intelligence can be organized into a causally closed cycle: current state → significant gap →
+  alternatives → discriminating test → evidence → revision of grounds → action → consequences →
+  next state." The next paragraph restates it: "The technological hypothesis is that available
+  intellectual mechanisms can be organized into a causally closed cycle: current state →
+  significant insufficiency of a ground → required distinction → alternatives → discriminating
+  test → evidence → revision of the ground → action → consequences → next state."
+- **Vol I §12.9, p. 61:** "Priorities determine urgency and admissibility of continuation. The
+  Core opens the gap [...] Intelligence constructs versions and available tests. The Modeling
+  Environment maintains their different expectations:" The next paragraph reads: "Priorities
+  determine urgency and whether continuation is admissible. The Core opens the gap [...]
+  Intelligence constructs versions and available tests. The Modeling Environment holds their
+  differing expectations:"
+- **Vol I Ch. 17, p. 77:** "civilization preserves authorship and the causal trace of
+  significant contribution, linking recognition, learning, and additional resources to
+  verifiable useful results"; **Vol I Ch. 17, p. 78:** "civilization preserves authorship and
+  the causal trace of significant contribution, connecting recognition, learning, and
+  additional resources with verifiable useful results".
+
+## Finding
+
+Volume I prints at least a dozen paragraphs twice in slightly different wording, usually one
+directly after the other, as if two edit or translation passes had been merged without removing
+the older copy. The passages above are three of them. An automated check
+(`repro/dup_paragraphs.py`: paragraphs over 120 characters, `difflib` similarity above 0.80
+within a window of three) confirms eleven pairs; the Abstract's repeated statement of the
+technological hypothesis and the truncated first copies in §12.3, §13.4 and Chapter 18 (MIN-02)
+are further instances. The same check finds none in Volume II.
 
 ## Evidence
 
@@ -52,10 +75,14 @@ Readers meet the same idea twice in different words and must work out whether th
 difference is meaningful. It lengthens the volume and signals that the text has not had a
 final editorial pass, which lowers reviewers' confidence in the rest.
 
-## Recommendation
+## Ideas & possible recommendations
 
-Keep one copy of each pair (usually the later, fuller one) and run a similarity check
-before each release.
+- **Keep one copy of each pair.** The later, fuller copy is usually the better one to keep.
+  Where the two copies differ in substance, as in the two statements of the technological
+  hypothesis in the Abstract, the author would choose the wording he intends.
+- **Run a similarity check before each release.** A check such as `repro/dup_paragraphs.py`
+  could be run on every release candidate, so that a merge of drafts that leaves both copies in
+  place is caught before publication.
 
 ## Resolved when
 

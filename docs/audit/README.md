@@ -6,6 +6,13 @@ same ID. The files are the source of truth; this index and the issues are genera
 them by `scripts/audit_index.py` and `scripts/file_issues.py`. The full argument is in
 [`REVIEW.md`](../../REVIEW.md).
 
+Each file opens with the claims under review: the author's statements the issue responds
+to, quoted verbatim with volume, section and PDF page (for an issue about how the text is
+printed, the passages under review). It then gives the finding, further evidence, why it
+matters, ideas and possible recommendations (always more than one), and what would resolve
+the issue. `make verify` checks that every quotation occurs in the volumes, on the page it
+cites.
+
 **Severity scale**
 
 - **Major**: undermines a central claim, the testability of the programme, or safety. It
@@ -54,10 +61,10 @@ Page and line numbers refer to the English PDFs in `sources/` and the `-layout` 
 | [MED-13](MED-13-stopping-rule-myopic.md) | The one-step stopping test recurs where §28.D says it fails | formal | I, II | §5.2(f) | [#21](https://github.com/docxology/reason/issues/21) |
 | [MED-14](MED-14-active-inference-engagement.md) | Active inference, the closest formal competitor, is engaged only in an appendix | prior-art | I, II | §6.1 | [#22](https://github.com/docxology/reason/issues/22) |
 | [MED-15](MED-15-version-churn.md) | The text is revised faster than evidence accumulates | provenance | I, II | §7, §9, §10.1 | [#23](https://github.com/docxology/reason/issues/23) |
-| [MED-16](MED-16-moral-status-ethics-review.md) | Moral status is raised, but rollback, branching and deletion have no ethics procedure | safety | I, II | §8 | [#24](https://github.com/docxology/reason/issues/24) |
+| [MED-16](MED-16-moral-status-ethics-review.md) | Moral status is raised, but rollback, branching and destruction of candidates have no ethics procedure | safety | I, II | §8 | [#24](https://github.com/docxology/reason/issues/24) |
 | [MED-17](MED-17-governance-transfer.md) | Competence mandates lack an issuer, auditor and revocation path, and their aggregate effect is unanalysed | safety | I, II | §8 | [#25](https://github.com/docxology/reason/issues/25) |
 | [MED-18](MED-18-corrigibility-sense.md) | "Corrigibility" means correctability, not deference to an operator | definitions | I, II | §8 | [#26](https://github.com/docxology/reason/issues/26) |
-| [MED-19](MED-19-model-filled-significance.md) | Significance assessments filled by the language model have no accuracy test | architecture | I, II | §5.3 | [#27](https://github.com/docxology/reason/issues/27) |
+| [MED-19](MED-19-model-filled-significance.md) | Significance has no measure, and its model-filled fields are scored only through outcomes | architecture | I, II | §5.3 | [#27](https://github.com/docxology/reason/issues/27) |
 | [MED-20](MED-20-readability.md) | Coined vocabulary and length are the main barrier to review | editorial | I, II | §7, §10.9, Appendix A | [#28](https://github.com/docxology/reason/issues/28) |
 | [MED-21](MED-21-compass-two-criteria-grounding.md) | The Compass has two non-equivalent top-level criteria, and its grounding clause is analytic or false | theory | I, II | §2.3 | [#29](https://github.com/docxology/reason/issues/29) |
 | [MED-22](MED-22-gap-taxonomies.md) | Unreconciled taxonomies of gap type | definitions | I, II | §5.3 | [#30](https://github.com/docxology/reason/issues/30) |
@@ -75,7 +82,7 @@ Page and line numbers refer to the English PDFs in `sources/` and the `-layout` 
 | [MED-34](MED-34-component-controls-lack-baselines.md) | Component controls lack baselines, outcomes and degenerate-policy checks | testability | II | §5.2(a) | [#42](https://github.com/docxology/reason/issues/42) |
 | [MED-35](MED-35-load-bearing-terms-defined-late-or-twice.md) | Load-bearing terms are defined late, inconsistently or not at all | definitions | I | §2.1, Appendix A | [#43](https://github.com/docxology/reason/issues/43) |
 | [MED-36](MED-36-revision-ladder-single-locus.md) | The revision ladder assumes a single causal locus, and its escalation rules conflict | theory | I, II | §7 | [#44](https://github.com/docxology/reason/issues/44) |
-| [MED-37](MED-37-no-containment-for-divergent-candidates.md) | No containment or disposition rule for candidates that diverge from the Compass | safety | I, II | §8 | [#45](https://github.com/docxology/reason/issues/45) |
+| [MED-37](MED-37-no-containment-for-divergent-candidates.md) | No disposition rule, and only partial containment, for candidates that diverge from the Compass | safety | I, II | §8 | [#45](https://github.com/docxology/reason/issues/45) |
 | [MED-38](MED-38-failure-catalogue-not-a-detector.md) | The failure catalogue cannot be applied as a detector | safety | II | §8 | [#46](https://github.com/docxology/reason/issues/46) |
 
 ## Minor (20)

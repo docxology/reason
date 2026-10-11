@@ -12,32 +12,40 @@ github_issue: 13
 
 # MED-05 · Intelligence and Reason are roles, not kinds, and the boundary belongs across episodes
 
-**Finding.** Stated narrowly, the Intelligence/Reason distinction is the most useful idea in
-the series: generating solutions within a frame versus regulating which questions are worth
-asking, which distinction a decision depends on, when the ground is sufficient and how
-corrections persist. Both volumes allow one model to play both roles and make the verdict
-depend on a system boundary declared in advance, so these are causal roles, not kinds of
-system. A frontier reasoning model that selects informative questions within an episode
-already does what Reason does, within that episode. The distinction does its real work
-across episodes (corrections that persist, calibrated sufficiency, the next task
+## Claims under review
+
+- **Vol I Key Definitions (Intelligence), p. 11:** "the boundary with Reason does not lie in the
+  mere capacity to revise, but in who determines what should be revised, why, and on what
+  grounds relative to the continuing trajectory."
+- **Vol II §28.C.2, p. 61:** "Generation and control may therefore use the same computational
+  substrates and even one model if the causal roles are experimentally distinguishable."
+- **Vol I §7.3, p. 37:** "One mechanism may both construct alternatives and participate in
+  selecting the next question."
+- **Vol I §7.2, p. 37:** "Three roles occupy different causal positions. Resident Intelligence
+  continuously constructs alternatives inside the AR candidate. An external tool provides a
+  separate result through an observable interface. A trainer helps assemble and teach the
+  candidate until the required autonomy appears. The same technology may be used in all three
+  roles; test results apply to the system boundary declared in advance."
+
+## Finding
+
+Stated narrowly, the Intelligence/Reason distinction is the most useful idea in the series:
+generating solutions within a frame versus regulating which questions are worth asking, which
+distinction a decision depends on, when the ground is sufficient and how corrections persist.
+Both volumes allow one model to play both roles (Vol I §7.3, Vol II §28.C.2) and make the
+verdict depend on a system boundary declared in advance (Vol I §7.2), so these are causal
+roles, not kinds of system. A frontier reasoning model that selects informative questions
+within an episode already does what Reason does, within that episode. The distinction does its
+real work across episodes (corrections that persist, calibrated sufficiency, the next task
 originating from the system's own open commitments), and the Key Definitions do not put the
 boundary there. They put it in "who determines what should be revised", which a single model
 cannot settle.
 
 ## Evidence
 
-- **Vol I Key Definitions, p. 11:** the boundary with Reason "does not lie in the mere capacity
-  to revise, but in who determines what should be revised, why, and on what grounds relative
-  to the continuing trajectory".
-- **Vol I §7.3, p. 37:** "One mechanism may both construct alternatives and participate in
-  selecting the next question"; §7.2: "test results apply to the system boundary declared in
-  advance".
-- **Vol II §28.C.2, p. 61:** "Generation and control may therefore use the same computational
-  substrates and even one model if the causal roles are experimentally distinguishable."
 - **Already in the text (Vol II §31.11 and §31.A, pp. 83–84):** closure is a four-valued status
   (`FORMING / CANDIDATE / CONFIRMED / LOST`), and `CONFIRMED` is tied to a `ReadinessProfile` of
-  minimum and maximum thresholds on continuous metrics, "published before results are
-  examined".
+  minimum and maximum thresholds on continuous metrics, "published before results are examined".
 
 ## Why it matters
 
@@ -47,15 +55,21 @@ current evaluations rarely measure. The ReadinessProfile already makes closure a
 continuous measures; reporting the label rather than the profile would hide partial progress
 and regressions.
 
-## Recommendation
+## Ideas & possible recommendations
 
-Replace "who determines" by the criterion the tests actually use (which component's output
-fixes the next question when the two are made separately intervenable), and make
-cross-episode properties the explicit location of the boundary. Report the continuous
-ReadinessProfile scores as the primary result and the closure label as derived. The metrics
-proposed for Reason (`premature_sufficiency_rate`, `decision_relevant_distinction_yield`,
-`correction_persistence_rate`, `false_completeness_rate`, `open_gap_persistence`,
-`post_task_continuation_rate`) could form a benchmark suite in their own right.
+- **Use the criterion the tests actually use.** The definition could replace "who determines"
+  with that criterion: which component's output fixes the next question when the two are made
+  separately intervenable. §28.C.2 already ties the boundary to roles that are experimentally
+  distinguishable.
+- **Place the boundary across episodes.** Cross-episode properties could be named as the
+  explicit location of the boundary: corrections that persist, calibrated sufficiency, and the
+  next task originating from the system's own open commitments.
+- **Report the profile first.** Results could present the continuous ReadinessProfile scores as
+  the primary result, with the closure label derived from them.
+- **Use the Reason metrics as a benchmark.** The metrics proposed for Reason
+  (`premature_sufficiency_rate`, `decision_relevant_distinction_yield`,
+  `correction_persistence_rate`, `false_completeness_rate`, `open_gap_persistence`,
+  `post_task_continuation_rate`) could form a benchmark suite in their own right.
 
 ## Resolved when
 

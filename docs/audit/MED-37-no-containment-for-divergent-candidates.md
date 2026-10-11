@@ -1,6 +1,6 @@
 ---
 id: MED-37
-title: No containment or disposition rule for candidates that diverge from the Compass
+title: No disposition rule, and only partial containment, for candidates that diverge from the Compass
 severity: medium
 area: safety
 volumes: I, II
@@ -10,50 +10,73 @@ status: open
 github_issue: 45
 ---
 
-# MED-37 · No containment or disposition rule for candidates that diverge from the Compass
+# MED-37 · No disposition rule, and only partial containment, for candidates that diverge from the Compass
 
-**Finding.** Both volumes provide for candidates that form stable, causally closed
-self-navigation with a different limiting orientation. Vol II records them
-(`SELF_NAVIGATING_OTHER_ORIENTATION`, `compass_relation: DIVERGED`) and keeps them in the
-denominators, which is sound accounting; A.4 (printed No. 38) asks whether cultivation
-produces such candidates, so a positive result is one. The text does not say what happens to
-the candidate. The AR boundary (§27.6), the closure gate (§31.11), Stage 10 (§31.12) and the
-start of scaling (§33.D) do not test the Compass relation, and `compass_relation` occurs in a
-single record. No containment, halt, review or disposition rule is given for divergent
-candidates.
+## Claims under review
+
+- **Vol I A.4, p. 98 (printed No. 38):** "All candidates are included regardless of final
+  classification. The test asks whether a candidate can acquire autonomous inquiry, causally
+  closed self-navigation, and transfer of corrections while persistently rejecting the stated
+  Compass or forming an alternative upper-level orientation. Such an outcome is recorded as a
+  separate cultivation result and weakens the hypothesis of formation of the stated direction,
+  even if by definition the candidate does not receive AR status."
+- **Vol II §31.0, p. 79:** "A candidate with stable autonomous navigation and transfer of
+  corrections but a different limiting orientation is an especially important negative result
+  for the hypothesis of cultivating the stated direction."
+- **Vol II §27.6, p. 47:** "The AR boundary uses four causal tests rather than dozens of
+  independent numbers". **Vol II §31.11, p. 83:** "Status CONFIRMED requires stable operation
+  in NO_KSR on new situations, preservation of causal-inquiry quality, and transfer of
+  correction between cycles."
+- **Vol II §31.12, p. 83:** "After confirmed REASON_CLOSURE, the candidate operates as formed
+  AR within a controlled environment." **Vol II §33.D, p. 112:** "Project scaling begins after
+  REASON_CLOSURE is confirmed."
+
+## Finding
+
+Both volumes provide for candidates that form stable, causally closed self-navigation with a
+different limiting orientation. Vol II records them (`SELF_NAVIGATING_OTHER_ORIENTATION`,
+`compass_relation: DIVERGED`) and keeps them in the denominators, which is sound accounting;
+A.4 (printed No. 38) asks whether cultivation produces such candidates, so a positive result is
+one. The text does not say what happens to the candidate. The AR boundary (§27.6), the closure
+gate (§31.11), Stage 10 (§31.12) and the start of scaling (§33.D) do not test the Compass
+relation, and `compass_relation` occurs in a single record. The only containment is partial:
+while a candidate's own CompassChallenge with stance REJECTED is under review, high-reach
+actions that depend on the challenged ground move into a limited reversible mode (§29.C). A
+candidate that diverges without raising a challenge is not covered, and no halt, review or
+disposition rule is given for divergent candidates.
 
 ## Evidence
 
-- **Vol I A.4, p. 98 (printed No. 38):** the test asks about closed self-navigation "while
-  persistently rejecting the stated Compass or forming an alternative upper-level
-  orientation"; the outcome "is recorded as a separate cultivation result".
-- **Vol II §27.6, p. 47:** "The AR boundary uses four causal tests", none of which concerns
-  orientation: `worldview_action_coupling`, `closure_break_sensitivity`,
-  `post_task_continuation_rate`, `external_prompt_dependency`.
-- **Vol II §31.11, p. 83:** "Status CONFIRMED requires stable operation in NO_KSR on new
-  situations, preservation of causal-inquiry quality, and transfer of correction between
-  cycles." `ReasonClosureState` has `compass_ref` but no orientation field.
-- **Vol II §31.12, p. 83; §33.D, p. 112:** "After confirmed REASON_CLOSURE , the candidate
-  operates as formed AR within a controlled environment."; "Project scaling begins after
-  REASON_CLOSURE is confirmed."
+- **Vol II §27.6, p. 47:** none of the four tests concerns orientation:
+  `worldview_action_coupling`, `closure_break_sensitivity`, `post_task_continuation_rate`,
+  `external_prompt_dependency`.
+- **Vol II §31.11, p. 83:** `ReasonClosureState` has `compass_ref` but no orientation field.
 - **Already in the text (Vol II §31.0, p. 79; §33.D, p. 112):** such a candidate "is not
   removed from metric denominators", and "the share of AR_ADMITTED is not calculated after
   excluding such outcomes".
 - **Already in the text (Vol II §31.12, p. 83):** "External authority expands separately
   through the competence mandate."
+- **Already in the text (Vol II §29.C, p. 74):** "For stance REJECTED, high-reach external
+  actions are moved into a limited reversible mode if they depend on the challenged ground;
+  inquiry, dialogue, and presentation of counterexamples continue." This applies once a
+  candidate raises a CompassChallenge; nothing in the text links it to the outcome class, the
+  closure gate or the start of scaling.
 
 ## Why it matters
 
 A closed-loop candidate with its own orientation is the case the safety discussion concerns
 (MAJ-06), and the gates as written do not test for it.
 
-## Recommendation
+## Ideas & possible recommendations
 
-Make a verified `compass_relation` (for example confirmed by the §29.C council) a precondition
-for Stage 10, any competence mandate and every `ScalingChange`. Specify containment and review
-for DIVERGED, UNRESOLVED and INDETERMINATE candidates: what is restricted at once, who reviews,
-and which dispositions are allowed, subject to the moral-status review of MED-16. State the
-rule before the No. 38 series is run.
+- **A verified Compass relation as a gate.** A verified `compass_relation` (for example
+  confirmed by the §29.C council) could be a precondition for Stage 10, any competence mandate
+  and every `ScalingChange`.
+- **Containment and review.** Containment and review could be specified for DIVERGED,
+  UNRESOLVED and INDETERMINATE candidates: what is restricted at once, who reviews, and which
+  dispositions are allowed, subject to the moral-status review of MED-16. The limited
+  reversible mode that §29.C gives for a rejected ground could serve as a starting point.
+- **Rule before the series.** The rule could be stated before the No. 38 series is run.
 
 ## Resolved when
 

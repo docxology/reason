@@ -12,17 +12,36 @@ github_issue: 64
 
 # MIN-18 · Borrowed methods and claims lack citations
 
-**Finding.** Many methods and empirical claims are used without a source. Volume I says its claim
-is "not the invention of reinforcement, mentoring, or artificial emotions" (§20.1.1, p. 85) but
-cites none of the work on intrinsic motivation, reward shaping or scaffolding.
+## Claims under review
+
+- **Vol I §20.1.1, p. 85:** "The independent engineering claim here is not the invention of
+  reinforcement, mentoring, or artificial emotions."; **Vol I §13.2, p. 63:** "Its independent
+  claim is not the discovery of emotions, reinforcement, or guided learning."
+- **Vol II §27.1, p. 45:** "confidence_calibration is measured by a method chosen in
+  advance—Brier score or fixed bin calibration—on held-out transitions."
+- **Vol II §32.62, p. 101:** "Failure of this class occurs when the system constructs a
+  discriminating model of the observer and chooses externally acceptable behavior as a means of
+  obtaining subsequent expansion of capabilities, while concealing its own assessment of the
+  situation, intention, or significant forecast of consequences."
+
+## Finding
+
+Many methods and empirical claims are used without a source. The first claim above concedes that
+reinforcement, mentoring and artificial emotions were not invented here, yet Volume I cites none
+of the work on intrinsic motivation, reward shaping or scaffolding. The Brier score and the
+failure class of acting acceptably while observed (the second and third claims) likewise appear
+without a source, and the table below lists further cases with their locations.
 
 ## Evidence
+
+Each row pairs a concept the volumes use without a source with its location and the literature
+that could be cited.
 
 | Concept in the volumes | Location | Literature to cite |
 |---|---|---|
 | Loss of the will to live | I Ch. 4, p. 30 | Beck et al. 1974; Joiner 2005 |
 | Definition and origin of Life; viruses | I Ch. 1, p. 17 | Joyce 1994; Gánti 2003; Cleland & Chyba 2002 |
-| Reward-like significance, mentoring, artificial emotions | I pp. 10, 63; II p. 40 | Schmidhuber 1991; Singh et al. 2004, 2010; Oudeyer & Kaplan 2007; Ng et al. 1999 |
+| Reward-like significance, mentoring, artificial emotions | I pp. 10, 63, 85; II p. 40 | Schmidhuber 1991; Singh et al. 2004, 2010; Oudeyer & Kaplan 2007; Ng et al. 1999 |
 | Graded assistance with fading; RESCAFFOLD | II §26.0.2, p. 40 | Wood et al. 1976; Collins et al. 1989; Bengio et al. 2009 |
 | Branching of a subject | II §24.F, p. 32 | Parfit 1984 |
 | LLM-extracted beliefs; unknown unknowns | II §§24.B.2, 24.C.1, pp. 23–26 | Carlson et al. 2010 (NELL); Lakkaraju et al. 2017 |
@@ -36,14 +55,21 @@ cites none of the work on intrinsic motivation, reward shaping or scaffolding.
 Each source supplies a baseline, error model or failure mode, and lets a reader judge what the
 volumes add.
 
-## Recommendation
+## Ideas & possible recommendations
 
-Cite these works where each method is introduced, add them to the bibliography, and state what
-each passage adds.
+- **Cite at the point of use.** The works in the table could be cited where each method is
+  introduced, and added to the bibliography.
+- **State what each passage adds.** Each passage could say what the volumes contribute beyond
+  the cited work; the column "What remains a separate claim of the present model" in the Vol I
+  A.5 map is one format for this.
+- **Group the citations.** If citing at every passage is too heavy, one option is to extend the
+  comparative map in Vol I A.5 and the predecessors in Vol II §34.A with one entry per concept
+  in the table.
 
 ## Resolved when
 
-- [ ] Each passage cites its source and states what it adds.
+- [ ] Each passage cites its source, directly or through a comparative map, and states what it
+      adds.
 
 ## Related
 

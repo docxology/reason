@@ -15,18 +15,19 @@ A pre-empirical research programme with an unusually strong evaluation plan, emb
 speculative natural philosophy. It is not pseudoscience: it states its own failure
 conditions and keeps unfavourable outcomes in its denominators. It is not yet a tested
 theory either, because nothing in it is evidence that the architecture works. It deserves
-one preregistered experiment comparing the Core against a strong agent stack at equal
-compute, with a stated effect size and a stated condition under which the Core is
-abandoned, before any further revision of the text.
+experimental development. The review's ideas for that begin with a preregistered experiment
+comparing the Core against a strong agent stack at equal compute, with a stated effect size
+and a stated condition under which the Core is abandoned, and a pause in revising the text
+until such an experiment has run.
 
 ## What is here
 
 | Path | Contents |
 |---|---|
-| [`REVIEW.md`](REVIEW.md) | The full review: answers to the author's seven questions, a reconstruction of the architecture, the prior-art comparison including active inference, a safety analysis, the scientific status, and a concrete first experiment |
-| [`docs/audit/`](docs/audit/README.md) | The issue register: 66 issues (8 major, 38 medium, 20 minor), one file each with evidence, page references and a resolution criterion, each mirrored by a GitHub issue with the same ID |
+| [`REVIEW.md`](REVIEW.md) | The full review: answers to the author's seven questions, a reconstruction of the architecture, the prior-art comparison including active inference, a safety analysis, the scientific status, and ideas and possible recommendations, including a concrete first experiment. Each section opens with the claims it responds to, quoted from the volumes with volume, section and page |
+| [`docs/audit/`](docs/audit/README.md) | The issue register: 66 issues (8 major, 38 medium, 20 minor), each mirrored by a GitHub issue with the same ID. Every file opens with the claims under review, quoted with volume, section and page, then gives the finding, evidence, ideas and possible recommendations, and a resolution criterion |
 | [`repro/`](repro/README.md) | The two Python listings from Vol II with their indentation restored, and the duplicate-paragraph check |
-| [`scripts/`](scripts/) | Quote locator, number check, audit-register index and issue filing |
+| [`scripts/`](scripts/) | Quote locator, quotation and page-citation checks, number check, audit-register index and issue filing |
 | [`notes/`](notes/) | Reading notes, the Zenodo publication history, and the raw outputs of the independent audit passes |
 | [`sources/`](sources/README.md) | The two English PDFs under review (CC BY-NC 4.0, unmodified) with SHA-256 checksums |
 | [`text/`](text/README.md) | Text extracted from the PDFs; every quotation, page and line number is taken from it |
@@ -39,10 +40,12 @@ make verify
 
 This checks the restored listings against the printed code, runs them and the
 duplicate-paragraph check, and then fails if any number quoted in `REVIEW.md` disagrees
-with what the scripts produce, if any quotation in the register or the raw audit files is
-not in the volumes, if the register is malformed or its index stale, if a raw finding is
-not mapped to a register issue, or if the PDFs do not match their checksums. Outputs go to `$TMPDIR/reason-verify/`. Python 3.10 or later, standard library
-only. `make text` regenerates `text/` (needs poppler's `pdftotext`); `make zenodo`
+with what the scripts produce; if any quotation in `REVIEW.md`, the register or the raw
+audit files is not in the volumes, or a quotation in `REVIEW.md` or the register is not on
+the page it cites; if a register file does not open with its quoted claims or offers fewer
+than two ideas; if the register's index is stale or a raw finding is not mapped to a
+register issue; or if the PDFs do not match their checksums. Outputs go to
+`$TMPDIR/reason-verify/`. Python 3.10 or later, standard library only. `make text` regenerates `text/` (needs poppler's `pdftotext`); `make zenodo`
 refreshes the publication history (needs network).
 
 To find any quotation in the volumes:

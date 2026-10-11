@@ -37,14 +37,20 @@ for vol, name in (("I", "foundations-8.0"), ("II", "engineering-3.5")):
     TEXTS[vol] = tuple(canon(v) for v in (flat, flat2, flat2.replace("- ", "-")))
 
 
-def found(fragment):
+def parts(fragment):
+    """The canonical pieces of a quotation; "[...]", "..." and "…" mark gaps between them."""
     needle = locate.normalize(fragment).strip(" .,;:")
     needle = needle.replace("&gt;", ">").replace("&lt;", "<").replace("&amp;", "&")
     needle = canon(needle)
-    parts = [p.strip() for p in re.split(r"\s*(?:\[\.\.\.\]|\.\.\.|…)\s*", needle) if p.strip()]
+    return [p.strip() for p in re.split(r"\s*(?:\[\.\.\.\]|\.\.\.|…)\s*", needle) if p.strip()]
+
+
+def found(fragment):
+    """The volumes ("I", "II") in which every piece of the quotation occurs."""
+    parts_ = parts(fragment)
     hits = set()
     for vol, variants in TEXTS.items():
-        if all(any(p in v or p.lower() in v.lower() for v in variants) for p in parts):
+        if all(any(p in v or p.lower() in v.lower() for v in variants) for p in parts_):
             hits.add(vol)
     return hits
 

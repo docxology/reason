@@ -30,6 +30,7 @@ audit:
 
 quotes:
 	$(PY) scripts/check_audit_quotes.py
+	$(PY) scripts/check_review_quotes.py
 	$(PY) scripts/check_raw_quotes.py $(RAW)/V1A.md $(RAW)/V1B.md $(RAW)/V2A.md $(RAW)/V2B.md $(RAW)/V2C.md
 
 sha:

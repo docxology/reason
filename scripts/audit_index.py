@@ -23,6 +23,13 @@ same ID. The files are the source of truth; this index and the issues are genera
 them by `scripts/audit_index.py` and `scripts/file_issues.py`. The full argument is in
 [`REVIEW.md`](../../REVIEW.md).
 
+Each file opens with the claims under review: the author's statements the issue responds
+to, quoted verbatim with volume, section and PDF page (for an issue about how the text is
+printed, the passages under review). It then gives the finding, further evidence, why it
+matters, ideas and possible recommendations (always more than one), and what would resolve
+the issue. `make verify` checks that every quotation occurs in the volumes, on the page it
+cites.
+
 **Severity scale**
 
 - **Major**: undermines a central claim, the testability of the programme, or safety. It
@@ -67,9 +74,11 @@ def render(audits):
 
 
 APPENDIX = "## Appendix C: Issue register"
-INTRO = ("Each issue has a standalone file in [`docs/audit/`](docs/audit/README.md) with evidence, "
-         "page references and a resolution criterion, and a GitHub issue with the same ID. "
-         "The section references in parentheses point back into this review.")
+INTRO = ("Each issue has a standalone file in [`docs/audit/`](docs/audit/README.md) that quotes the "
+         "claims under review with volume, section and page, then gives the finding, evidence, "
+         "ideas and possible recommendations, and a resolution criterion; each is mirrored by a "
+         "GitHub issue with the same ID. The section references in parentheses point back into "
+         "this review.")
 
 
 def review_block(audits):
