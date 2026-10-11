@@ -4,9 +4,10 @@
 Usage: python3 -I scripts/check_raw_quotes.py notes/audit-raw/V1A.md [...]
 
 Entries are markdown lists whose `**quote**` field holds one or more quoted strings (straight
-or curly double quotes, or backticks) separated by " | " or ";". Files whose name starts with
-V1 default to Volume I, V2 to Volume II. A quote counts as found if its normalized text
-(whitespace, typographic punctuation, a trailing ellipsis) occurs in either volume.
+or curly double quotes, or backticks) separated by " | " or ";". A quote counts as found if,
+after normalization (whitespace, typographic punctuation, quote nesting, bullets, hyphenated line
+breaks), every part of it occurs in one volume; "[...]" and "..." mark gaps between parts.
+Exits 1 if any quote is not found, so `make verify` fails on a miss.
 """
 import importlib.util
 import re
@@ -67,7 +68,7 @@ def main(paths):
                     bad += 1
                     print(f"NOT FOUND {ident.group(1)}: {' '.join(fragment.split())[:120]}")
     print(f"\n{total - bad}/{total} quoted fragments found verbatim (normalized)")
-    return 0
+    return 1 if bad else 0
 
 
 if __name__ == "__main__":
