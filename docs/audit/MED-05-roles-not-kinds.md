@@ -7,6 +7,7 @@ volumes: I, II
 sections: Vol I Key Definitions, §7.2, §7.3; Vol II §28.C.2, §31.11, §31.A
 review: §3
 status: open
+github_issue: 13
 ---
 
 # MED-05 · Intelligence and Reason are roles, not kinds, and the boundary belongs across episodes

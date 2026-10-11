@@ -7,6 +7,7 @@ volumes: I, II
 sections: Vol I A.5 (item 63 and the comparative map); Vol II (absent)
 review: §6.1
 status: open
+github_issue: 22
 ---
 
 # MED-14 · Active inference, the closest formal competitor, is engaged only in an appendix

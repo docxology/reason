@@ -7,6 +7,7 @@ volumes: I
 sections: Vol I Abstract, Ch. 5, §9.3, §11.1, §12.3, §12.4, §12.5, §13.3, §13.4, Ch. 15, Ch. 16, Ch. 17
 review: Appendix A
 status: open
+github_issue: 47
 ---
 
 # MIN-01 · Near-duplicate paragraphs in Volume I

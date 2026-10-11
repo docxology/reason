@@ -7,6 +7,7 @@ volumes: I, II
 sections: Vol I Ch. 12, §12.8, §12.9, Common Rules (p. 91), A.3, A.4; Vol II §25.D, §27.6, §27.B, §31.5, §34.A
 review: §5.2(d), §9, §10.2
 status: open
+github_issue: 20
 ---
 
 # MED-12 · The failure condition for the Core is stated only qualitatively

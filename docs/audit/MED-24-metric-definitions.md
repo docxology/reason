@@ -7,6 +7,7 @@ volumes: II
 sections: Vol II Ch. 27 (§27.1–§27.7), §27.A, §27.B, §24.C, §31.A
 review: §5.2(c)
 status: open
+github_issue: 32
 ---
 
 # MED-24 · Many metrics lack formulas, denominators and thresholds

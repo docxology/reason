@@ -7,6 +7,7 @@ volumes: I, II
 sections: Vol I Part II, Ch. 7, Ch. 12, A.2, A.5; Vol II §34.A, References
 review: §6, §6.1, §7, Appendix B
 status: open
+github_issue: 7
 ---
 
 # MAJ-07 · The closest prior work is missing from the chapters

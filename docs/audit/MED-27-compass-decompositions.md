@@ -7,6 +7,7 @@ volumes: II
 sections: Vol II §24.C, §26.A, §27.3, §29.0.1, §29.A
 review: §2.3
 status: open
+github_issue: 35
 ---
 
 # MED-27 · Three operational decompositions of the Compass coexist without a mapping

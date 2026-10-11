@@ -7,6 +7,7 @@ volumes: I, II
 sections: Vol I guide §8, §7.2, A.4, A.5; Vol II Ch. 23, §24.A.1, §27.B, §28.B, §33.A.2, Appendix B
 review: Appendix A
 status: open
+github_issue: 50
 ---
 
 # MIN-04 · Cross-references that do not resolve

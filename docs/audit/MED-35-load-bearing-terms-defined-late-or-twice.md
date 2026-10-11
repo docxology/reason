@@ -7,6 +7,7 @@ volumes: I
 sections: Vol I Key Definitions, guide §1, §6, §12.4, Ch. 6, Ch. 14, Ch. 15, §20.1.1
 review: §2.1, Appendix A
 status: open
+github_issue: 43
 ---
 
 # MED-35 · Load-bearing terms are defined late, inconsistently or not at all

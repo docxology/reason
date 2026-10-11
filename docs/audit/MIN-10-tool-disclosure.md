@@ -7,6 +7,7 @@ volumes: I, II
 sections: Vol I A.2; PDF metadata of both volumes
 review: Appendix B
 status: open
+github_issue: 56
 ---
 
 # MIN-10 · No statement of the tools used for drafting, translation and typesetting

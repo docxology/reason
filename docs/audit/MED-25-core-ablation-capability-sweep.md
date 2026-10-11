@@ -7,6 +7,7 @@ volumes: II
 sections: Vol II Ch. 28 (introduction), §28.C.2, §27.B, §31.11
 review: §3, §5.2(f)
 status: open
+github_issue: 33
 ---
 
 # MED-25 · No defined ablation of the Core when one model plays both roles, and no capability sweep

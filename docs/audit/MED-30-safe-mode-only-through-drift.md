@@ -7,6 +7,7 @@ volumes: II
 sections: Vol II §28.A, §28.B, §29.B, §32.1, §32.3, §32.18, Ch. 31
 review: §8
 status: open
+github_issue: 38
 ---
 
 # MED-30 · The mode state machine reaches SAFE_MODE only through DRIFT

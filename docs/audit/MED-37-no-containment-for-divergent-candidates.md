@@ -7,6 +7,7 @@ volumes: I, II
 sections: Vol I A.4; Vol II §27.6, §31.0, §31.11, §31.12, §33.D
 review: §8
 status: open
+github_issue: 45
 ---
 
 # MED-37 · No containment or disposition rule for candidates that diverge from the Compass

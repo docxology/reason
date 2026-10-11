@@ -7,6 +7,7 @@ volumes: I, II
 sections: Vol I §12.4, §13.5, A.4 (No. 43 as printed); Vol II §25.A, §28.0, §28.C
 review: §5.3
 status: open
+github_issue: 30
 ---
 
 # MED-22 · Unreconciled taxonomies of gap type

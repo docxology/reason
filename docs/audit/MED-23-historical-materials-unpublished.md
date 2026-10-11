@@ -7,6 +7,7 @@ volumes: I, II
 sections: Vol I A.2; Vol II §27.B
 review: §6, §7
 status: open
+github_issue: 31
 ---
 
 # MED-23 · The pilot log, task packages and AI priority audits are cited but not published

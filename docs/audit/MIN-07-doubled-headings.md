@@ -7,6 +7,7 @@ volumes: I
 sections: Vol I Contents, Key Definitions, Part II, Ch. 16, Open Research Directions
 review: Appendix A
 status: open
+github_issue: 53
 ---
 
 # MIN-07 · Headings printed twice and lists collapsed

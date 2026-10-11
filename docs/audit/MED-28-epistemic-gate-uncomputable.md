@@ -7,6 +7,7 @@ volumes: II
 sections: Vol II §24.C.1, §24.D.3, Ch. 26, §29.A, §30.A
 review: §8
 status: open
+github_issue: 36
 ---
 
 # MED-28 · The epistemic gate and EpistemicMargin cannot be computed

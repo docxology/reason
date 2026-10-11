@@ -7,6 +7,7 @@ volumes: II
 sections: Vol II §29.0, §29.0.1, §29.0.2
 review: §4.2(d)
 status: open
+github_issue: 16
 ---
 
 # MED-08 · Initial values are designer-chosen, so cultivation tests calibration rather than value formation

@@ -7,6 +7,7 @@ volumes: I, II
 sections: Vol I §12.8, A.3, A.4, A.5
 review: Appendix A
 status: open
+github_issue: 49
 ---
 
 # MIN-03 · Lists are numbered across sections or restart mid-list

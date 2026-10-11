@@ -7,6 +7,7 @@ volumes: II
 sections: Vol II Ch. 23, §24.B.2, §24.D.2, Ch. 26, §27.1, §31.2, §32.3, §33.C.1
 review: §5.4
 status: open
+github_issue: 63
 ---
 
 # MIN-17 · Defects in pseudocode, parameters and the reproducibility rule

@@ -7,6 +7,7 @@ volumes: II
 sections: Vol II §21.B, §22.0, §22.A, §22.A.1, §24.B.2, §32.32
 review: §4.2(c)
 status: open
+github_issue: 15
 ---
 
 # MED-07 · Inherited ontology cannot yet be told apart from an "own" Worldview

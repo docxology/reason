@@ -7,6 +7,7 @@ volumes: I, II
 sections: Vol I A.3, A.4, Abstract, guide; Vol II Ch. 27, §27.B, §31.1, §31.A
 review: §5.2(a), §10.2
 status: open
+github_issue: 19
 ---
 
 # MED-11 · The first series has the right slots but no preregistered instance

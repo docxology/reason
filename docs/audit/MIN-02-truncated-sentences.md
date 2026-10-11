@@ -7,6 +7,7 @@ volumes: I
 sections: Vol I §12.3, §13.4, Ch. 18, Conclusion
 review: Appendix A
 status: open
+github_issue: 48
 ---
 
 # MIN-02 · Truncated sentences in Volume I

@@ -7,6 +7,7 @@ volumes: II
 sections: Vol II §33.B, §33.C, §33.C.1
 review: §5.4, Appendix A
 status: open
+github_issue: 54
 ---
 
 # MIN-08 · The printed code listings cannot be run as printed, and their checks are weaker than described

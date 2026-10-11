@@ -7,6 +7,7 @@ volumes: I, II
 sections: Vol I guide Step 7, Operational Core; Vol II §28.0, §28.B, §28.C, §28.C.2, §28.D, §33.C.1
 review: §5.2(f), §5.3
 status: open
+github_issue: 3
 ---
 
 # MAJ-03 · The Core's only committed decision rule covers closed, fully specified problems

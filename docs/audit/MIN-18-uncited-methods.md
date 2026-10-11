@@ -7,6 +7,7 @@ volumes: I, II
 sections: Vol I Introduction, Ch. 1, Ch. 4, §13.2, §20.1.1; Vol II §§24.B.2, 24.C.1, 24.F, 26.0, 26.0.2, 27.1, 27.A, 29.0.1–29.0.3, Ch. 32, §33.D, App. B
 review: §6
 status: open
+github_issue: 64
 ---
 
 # MIN-18 · Borrowed methods and claims lack citations

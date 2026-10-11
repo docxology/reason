@@ -7,6 +7,7 @@ volumes: I, II
 sections: Vol I A.5; Vol II References
 review: Appendix A, Appendix B
 status: open
+github_issue: 52
 ---
 
 # MIN-06 · Bibliography errors and incomplete entries

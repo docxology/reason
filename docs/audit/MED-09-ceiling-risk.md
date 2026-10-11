@@ -7,6 +7,7 @@ volumes: I, II
 sections: Vol I §12.9, A.4; Vol II §27.B, §33.C.1
 review: §5.2(b), §10.2
 status: open
+github_issue: 17
 ---
 
 # MED-09 · The first environment risks a ceiling effect, and no external benchmark is planned

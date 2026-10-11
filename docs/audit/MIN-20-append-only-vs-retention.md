@@ -7,6 +7,7 @@ volumes: II
 sections: Vol II §21.A, Ch. 24, §29.A, §32.9, §32.25.A
 review: Appendix A
 status: open
+github_issue: 66
 ---
 
 # MIN-20 · The log is called append-only, but a retention policy allows deletion

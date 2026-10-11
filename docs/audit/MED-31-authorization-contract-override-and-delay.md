@@ -7,6 +7,7 @@ volumes: II
 sections: Vol II §29.A, §29.B, §30.A, §33.C
 review: §8
 status: open
+github_issue: 39
 ---
 
 # MED-31 · The authorization contract lets the external gate override internal refusal and delays restrictions

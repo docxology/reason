@@ -7,6 +7,7 @@ volumes: I, II
 sections: Vol I Key Definitions, Ch. 2, A.1; Vol II §29.A
 review: §2.3
 status: open
+github_issue: 29
 ---
 
 # MED-21 · The Compass has two non-equivalent top-level criteria, and its grounding clause is analytic or false

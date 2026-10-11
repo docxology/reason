@@ -7,6 +7,7 @@ volumes: I, II
 sections: Zenodo concept records 17957561 and 22975036; Vol I A.2
 review: §7, §9, §10.1
 status: open
+github_issue: 23
 ---
 
 # MED-15 · The text is revised faster than evidence accumulates

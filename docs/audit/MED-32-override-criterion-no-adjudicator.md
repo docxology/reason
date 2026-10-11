@@ -7,6 +7,7 @@ volumes: I
 sections: Vol I Ch. 2, §20.1, A.4
 review: §8
 status: open
+github_issue: 40
 ---
 
 # MED-32 · The AR override criterion and the licence for irreversible loss lack an adjudicator

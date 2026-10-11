@@ -7,6 +7,7 @@ volumes: I, II
 sections: Vol I Ch. 13, §13.3, §14.3, §20.4, Conclusion; Vol II §28.C.3, §28.D, §29.C, §31.10
 review: §4.3, §8
 status: open
+github_issue: 41
 ---
 
 # MED-33 · Cumulative drift of criteria is unbounded, and a persistent AR has no guard against entrenchment

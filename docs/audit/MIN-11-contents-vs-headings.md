@@ -7,6 +7,7 @@ volumes: I, II
 sections: Vol II Contents (pp. 7–10) against Chs. 25–34
 review: Appendix A
 status: open
+github_issue: 57
 ---
 
 # MIN-11 · Contents pages disagree with the headings they list

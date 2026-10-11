@@ -7,6 +7,7 @@ volumes: I, II
 sections: Vol II Chs. 21–33; Vol I A.4 (Priority of the First Series)
 review: §5.2(e), §10
 status: open
+github_issue: 58
 ---
 
 # MIN-12 · Many record types are never used, and no minimal component slice is named

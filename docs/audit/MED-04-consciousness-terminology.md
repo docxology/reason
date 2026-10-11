@@ -1,12 +1,13 @@
 ---
 id: MED-04
-title: '"Consciousness" and "causal" carry meanings that invite misreading'
+title: "Consciousness" and "causal" carry meanings that invite misreading
 severity: medium
 area: definitions
 volumes: I, II
 sections: Vol I Key Definitions, Ch. 9, §11.1, A.5; Vol II §25.A, §25.B, §31.0, Appendix A
 review: §2.5
 status: open
+github_issue: 12
 ---
 
 # MED-04 · "Consciousness" and "causal" carry meanings that invite misreading

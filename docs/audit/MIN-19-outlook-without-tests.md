@@ -7,6 +7,7 @@ volumes: I, II
 sections: Vol I §14.5, Ch. 16, Open Research Directions; Vol II Appendix B
 review: §9
 status: open
+github_issue: 65
 ---
 
 # MIN-19 · Outlook sections present hypotheses without tests

@@ -7,6 +7,7 @@ volumes: I, II
 sections: Vol I Ch. 10; Vol II §28.B, §28.C.3, §31.10, §32.14, §32.20
 review: §7
 status: open
+github_issue: 44
 ---
 
 # MED-36 · The revision ladder assumes a single causal locus, and its escalation rules conflict

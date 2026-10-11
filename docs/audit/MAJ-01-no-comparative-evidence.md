@@ -7,6 +7,7 @@ volumes: I, II
 sections: Vol I A.2, A.2.1, A.4; Vol II §27.B
 review: §5.2(a), §7, §9
 status: open
+github_issue: 1
 ---
 
 # MAJ-01 · No comparative evidence yet for the central hypothesis

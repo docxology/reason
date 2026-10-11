@@ -7,6 +7,7 @@ volumes: I, II
 sections: Vol I Ch. 15, Ch. 17; Vol II §29.0, §30.B, §30.F, §33.D
 review: §8
 status: open
+github_issue: 25
 ---
 
 # MED-17 · Competence mandates lack an issuer, auditor and revocation path, and their aggregate effect is unanalysed

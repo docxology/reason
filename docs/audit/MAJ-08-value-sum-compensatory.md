@@ -7,6 +7,7 @@ volumes: II
 sections: Vol II §24.C, §29.0, §29.0.1, §29.0.2, §29.0.3, §29.A
 review: §4.2(d), §8
 status: open
+github_issue: 8
 ---
 
 # MAJ-08 · The value sum is compensatory and risk-neutral, and the critical-loss safeguard is undefined

@@ -7,6 +7,7 @@ volumes: I, II
 sections: Vol I Key Definitions; Vol II title page, §21, §§24.B.2, 24.D, 25.C, 26.C, §33.D, App. A.2
 review: Appendix A
 status: open
+github_issue: 62
 ---
 
 # MIN-16 · Abbreviations and names are used without definition

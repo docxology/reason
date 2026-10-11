@@ -7,6 +7,7 @@ volumes: I
 sections: Vol I Key Definitions, Ch. 4, §12.8, §13.2, A.2, A.2.1
 review: §2.2
 status: open
+github_issue: 9
 ---
 
 # MED-01 · The model's necessities are mostly near-analytic, and its two empirical ones overreach

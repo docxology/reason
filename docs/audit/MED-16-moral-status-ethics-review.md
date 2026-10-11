@@ -7,6 +7,7 @@ volumes: I, II
 sections: Vol I §20.2, A.3, A.4; Vol II §24.F, §26.0.1, §31.C, §32.23, §32.25.A, §33.A
 review: §8
 status: open
+github_issue: 24
 ---
 
 # MED-16 · Moral status is raised, but rollback, branching and deletion have no ethics procedure

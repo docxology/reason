@@ -7,6 +7,7 @@ volumes: I, II
 sections: Vol I guide, §7.2, Conclusion, A.5; Vol II §§22.A, 26.0.1, 27.6, 28.0, 28.C, 29.0.2, 29.A, 32.46, Ch. 33, App. A
 review: Appendix A
 status: open
+github_issue: 61
 ---
 
 # MIN-15 · Defined terms change name and capitalization

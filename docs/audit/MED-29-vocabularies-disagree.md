@@ -7,6 +7,7 @@ volumes: I, II
 sections: Vol I §20.1.1; Vol II §24.A.1, §24.D, §25.D, §26.0.1, §27.6, §28.C, §29.C, §31.0, §31.7, §31.11, §33.C, App. A.2
 review: §5.2(e)
 status: open
+github_issue: 37
 ---
 
 # MED-29 · Status vocabularies, enumerations and outcome classes disagree across sections

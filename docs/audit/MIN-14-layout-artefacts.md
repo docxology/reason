@@ -7,6 +7,7 @@ volumes: I, II
 sections: Vol I Ch. 7, Ch. 10, A.5, throughout; Vol II §28.A, §30.C, §31.10–31.11, Ch. 32, §33.A
 review: Appendix A
 status: open
+github_issue: 60
 ---
 
 # MIN-14 · Layout artefacts: raw diagram source, stray rules, leaked markup and flattened tables

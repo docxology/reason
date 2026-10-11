@@ -1,12 +1,13 @@
 ---
 id: MED-03
-title: '"Reason" names both a functional profile and a normative orientation'
+title: "Reason" names both a functional profile and a normative orientation
 severity: medium
 area: definitions
 volumes: I, II
 sections: Vol I Key Definitions, Ch. 2, §12.8, §13.1, A.1, A.3; Vol II §31.0
 review: §2.4, §3
 status: open
+github_issue: 11
 ---
 
 # MED-03 · "Reason" names both a functional profile and a normative orientation

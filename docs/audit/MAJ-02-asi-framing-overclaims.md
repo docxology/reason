@@ -7,6 +7,7 @@ volumes: I, II
 sections: Zenodo titles; Vol I §20.4, A.2.1; Vol II title page, Purpose, Ch. 31, Ch. 33, §33.D
 review: §4.3, §7, §10.5
 status: open
+github_issue: 2
 ---
 
 # MAJ-02 · The titles promise ASI technology; the content gives no path to ASI

@@ -7,6 +7,7 @@ volumes: I, II
 sections: Vol I §7.2, §7.3; Vol II §24.A.1, §24.B.2, Ch. 27, Ch. 32, §33.A
 review: §4.2(b)
 status: open
+github_issue: 14
 ---
 
 # MED-06 · The language-to-structure bridge has no measured error model

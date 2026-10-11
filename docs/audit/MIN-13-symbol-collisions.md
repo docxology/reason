@@ -7,6 +7,7 @@ volumes: I, II
 sections: Vol I guide §3, Operational Core; Vol II §28.0, §28.A, §28.B, §28.D, §29.0.1, Ch. 30
 review: Appendix A
 status: open
+github_issue: 59
 ---
 
 # MIN-13 · Symbols collide across formulas, and the formulas are not typeset

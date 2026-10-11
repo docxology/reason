@@ -7,6 +7,7 @@ volumes: I, II
 sections: Vol I Operational Core (significance trace); Vol II §24.C, §27.5, §28.0, §29.0
 review: §5.3
 status: open
+github_issue: 27
 ---
 
 # MED-19 · Significance assessments filled by the language model have no accuracy test

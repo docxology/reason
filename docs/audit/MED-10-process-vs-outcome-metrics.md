@@ -7,6 +7,7 @@ volumes: II
 sections: Vol II Ch. 27 (§27.2-§27.7), §27.B, §26.E, §31.11
 review: §5.2(c)
 status: open
+github_issue: 18
 ---
 
 # MED-10 · Process-conformance metrics are not separated from outcome metrics

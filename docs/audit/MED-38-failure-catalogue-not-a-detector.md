@@ -7,6 +7,7 @@ volumes: II
 sections: Vol II §32.1, §32.2, §32.12, §32.15, §32.18, §32.19, §32.20–§32.23, §32.31, §32.33, §32.56
 review: §8
 status: open
+github_issue: 46
 ---
 
 # MED-38 · The failure catalogue cannot be applied as a detector

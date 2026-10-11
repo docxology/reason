@@ -1,12 +1,13 @@
 ---
 id: MED-18
-title: '"Corrigibility" means correctability, not deference to an operator'
+title: "Corrigibility" means correctability, not deference to an operator
 severity: medium
 area: definitions
 volumes: I, II
 sections: Vol I Key Definitions, Ch. 2, Ch. 6, §12.5, §12.6, Ch. 15, Ch. 17, §20.2, §20.4; Vol II §29.B, §30.A
 review: §8
 status: open
+github_issue: 26
 ---
 
 # MED-18 · "Corrigibility" means correctability, not deference to an operator

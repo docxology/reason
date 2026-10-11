@@ -7,6 +7,7 @@ volumes: I, II
 sections: Vol I §20.1.2; Vol II §26.0.3, §31.0, §33.A
 review: Appendix A
 status: open
+github_issue: 51
 ---
 
 # MIN-05 · Untranslated abbreviation "KSR" and inconsistent RFL mode names

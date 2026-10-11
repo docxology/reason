@@ -7,6 +7,7 @@ volumes: I, II
 sections: Vol I Compass Phrase, Ch. 2, A.1, A.2, A.3; Vol II §24.C, §28.0, §29.A, §29.C
 review: §2.3, §9
 status: open
+github_issue: 10
 ---
 
 # MED-02 · The Compass's derivation does no work in the engineering and faces the is-ought gap

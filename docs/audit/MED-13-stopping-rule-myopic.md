@@ -7,6 +7,7 @@ volumes: I, II
 sections: Vol I Operational Core, §12.6; Vol II §28.C, §28.D, §28.E, §29.0, App. A.1
 review: §5.2(f)
 status: open
+github_issue: 21
 ---
 
 # MED-13 · The one-step stopping test recurs where §28.D says it fails

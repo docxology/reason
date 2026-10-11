@@ -7,6 +7,7 @@ volumes: I, II
 sections: Vol I front matter (Principle of escaping error), §12.4, §12.7, §13.5; Vol II §24.B.1, §33.C.1, Ch. 34
 review: §5.3, §7
 status: open
+github_issue: 4
 ---
 
 # MAJ-04 · No mechanism that produces transfer of corrections and inquiry methods

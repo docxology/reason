@@ -7,6 +7,7 @@ volumes: I, II
 sections: Vol I Operational Core §1–§5; Vol II §28.D, App. A.1
 review: §2.1, §5.2(f)
 status: open
+github_issue: 34
 ---
 
 # MED-26 · The Operational Core formulas are incomplete and inconsistent with Vol II

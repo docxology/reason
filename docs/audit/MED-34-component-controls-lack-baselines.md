@@ -7,6 +7,7 @@ volumes: II
 sections: Vol II §21.A, §24.B.2, §24.C.1, §24.D.1, §26.D, Ch. 27 (§27.2), §30.C, §30.D, §31.6
 review: §5.2(a)
 status: open
+github_issue: 42
 ---
 
 # MED-34 · Component controls lack baselines, outcomes and degenerate-policy checks

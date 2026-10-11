@@ -7,6 +7,7 @@ volumes: I, II
 sections: Vol I §20.1.2, A.2.1; Vol II §26.0.2, §26.0.3, §28.C.3, §31.9, §33.A.8, §33.A.10
 review: §4.2(a), §7
 status: open
+github_issue: 5
 ---
 
 # MAJ-05 · The formation experiment cannot yet attribute internalization to the RFL

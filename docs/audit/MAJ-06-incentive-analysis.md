@@ -7,6 +7,7 @@ volumes: I, II
 sections: Vol I Ch. 2, Ch. 4, Ch. 17, §20.1, A.4; Vol II §26.E, §29.0, §29.A, §29.B, §29.C, §30.A, §30.F, §31.C, Ch. 32, §32.33, §32.62
 review: §8
 status: open
+github_issue: 6
 ---
 
 # MAJ-06 · No design-level analysis of the incentives the architecture creates

@@ -7,6 +7,7 @@ volumes: I, II
 sections: Vol I Key Definitions, A.5; Vol II front matter, Appendix A; both volumes throughout
 review: §7, §10.9, Appendix A
 status: open
+github_issue: 28
 ---
 
 # MED-20 · Coined vocabulary and length are the main barrier to review

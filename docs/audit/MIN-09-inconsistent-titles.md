@@ -7,6 +7,7 @@ volumes: I, II
 sections: Vol I title page and guide; Vol II title page; Zenodo records 23271702 and 23271781
 review: Header, §10.5
 status: open
+github_issue: 55
 ---
 
 # MIN-09 · Each volume carries different titles in the PDF, on Zenodo and in the author's references
