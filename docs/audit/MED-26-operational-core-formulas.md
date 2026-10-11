@@ -43,9 +43,12 @@ The Operational Core is offered as "a minimal language for engineering compariso
 it is incomplete: ΔL is undefined (VOI is described only as "the expected reduction in decision
 loss") and VOI is conditioned on a plan; the cycle has no term for the required distinction or
 the sufficiency verdict; and the transfer, regression and carrier-removal quantities leave
-their controls open. Vol II §28.D gives a working form, but it differs from Vol I (one cost
-term instead of four, a budgeted recursion instead of a stop-while-positive rule), and Appendix
-A.1 maps both onto one counterpart.
+their controls open. Vol II §28.D gives a working form, but it differs from Vol I: its local
+criterion names the cost of obtaining and processing data and the loss from delay and places
+harm "exactly once in costs or in the transition model", and its recursion folds cost and delay
+into one C(q), instead of Vol I's four terms (C_obs, C_comp, C_delay, R_irrev). For sequences of
+tests it uses a budgeted recursion rather than a stop-while-positive rule, and Appendix A.1 maps
+both onto one counterpart.
 
 ## Evidence
 
@@ -56,6 +59,9 @@ A.1 maps both onto one counterpart.
   is ambiguous, and "matched control" and "old" are not defined.
 - **Vol II §28.D, p. 64:** C(q) does not depend on the hypothesis and no transition model is
   given, although harm may be placed "in the transition model".
+- **Already in the text (Vol II §28.D, p. 64):** "Harm caused by the test itself is included
+  exactly once in costs or in the transition model."; "Here c(q)>0 is expenditure of a limited
+  resource, and C(q) is cost plus the additional price of delay on the loss scale."
 - **Vol II Appendix A.1, p. 116:** "VOI(p), NetVOI(p)" is mapped to "local value of information
   VOI(q)" and a "final policy".
 - **Already in the text (Vol I Operational Core §3, p. 15):** "These formalisms are not claimed

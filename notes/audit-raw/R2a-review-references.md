@@ -1,6 +1,6 @@
 # R2a: reference-list verification, REVIEW.md "References", Aamodt through Hesp, plus works cited or named in the body without a list entry
 
-Audited 2026-10-10. Source: `/Users/4d/.t3/projects/reason/REVIEW.md` (not modified). Part 1 range: Aamodt through Hesp, 27 entries, numbered below in list order. Part 2: every work, system, benchmark or tool that the body (everything before "## References") cites or names but the list does not contain.
+Audited 2026-10-10. Source: `REVIEW.md` (not modified). Part 1 range: Aamodt through Hesp, 27 entries, numbered below in list order. Part 2: every work, system, benchmark or tool that the body (everything before "## References") cites or names but the list does not contain.
 
 The file was being edited by others while I worked. Line numbers ("L...") in this note refer to the version with md5 `6b0eb3911aa4872f85e902532c77d24c` (437 lines, 65,060 bytes, modified 13:08), which was the current version at the end of the audit. Section anchors are given too, since they survive edits better.
 

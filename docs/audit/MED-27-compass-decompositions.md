@@ -4,7 +4,7 @@ title: Three operational decompositions of the Compass coexist without a mapping
 severity: medium
 area: definitions
 volumes: II
-sections: Vol II §24.C, §26.A, §27.3, §29.0.1, §29.A
+sections: Vol II §24.C, §26.A, §27.3, §29.0.1, §29.A, §32.36
 review: §2.3
 status: open
 github_issue: 35
@@ -27,15 +27,20 @@ github_issue: 35
 
 ## Finding
 
-Vol II unfolds the Compass operationally in three ways, as the claims above show. §24.C and
-§27.3 use a four-part frame (life, truth, diversity, self_scope) for coverage. §29.A defines
-the CompassAssessment axes (life_continuity_risk, reality_divergence, future_path_loss,
-affected_autonomies, reversibility) and says they do not restore the earlier
-Life-Truth-Diversity scheme, whose labels §24.C and §27.3 still use. §29.0.1 proposes a third
-set, four valuation dimensions. No table shows what corresponds to what, for example whether
-recoverability is reversibility or reality_divergence is truth. The coverage metrics are
-therefore indexed by a decomposition that the assessment contract disowns, and the field
-compass_axes_covered[] has no defined domain.
+Vol II unfolds the Compass operationally in three ways, as the claims above show. §29.A
+defines the CompassAssessment axes (life_continuity_risk, reality_divergence, future_path_loss,
+affected_autonomies, reversibility) and says they are "not three equal highest values" and "do
+not restore the earlier Life-Truth-Diversity scheme" (§29.A, p. 71). It describes
+reality_divergence as "a condition of model corrigibility" and future_path_loss as "the risk of
+irreversible closure of viable continuations", and p. 72 defines the first three axes in prose,
+but it does not say how the axes correspond to life, truth and diversity. §24.C and §27.3 keep
+the labels life, truth and diversity, with self_scope, as a semantic frame and a diagnostic
+vector for coverage. §29.0.1 proposes a third set, four valuation dimensions. No table shows
+what corresponds to what, for example whether recoverability is reversibility or whether
+reality_divergence is truth. The coverage metrics are therefore indexed by labels that the
+assessment contract does not reuse, and the field compass_axes_covered[] has no stated domain
+(§27.3 and §32.36 speak of axes of that frame, which suggests the values of the field but does
+not state them).
 
 ## Evidence
 
@@ -45,6 +50,15 @@ compass_axes_covered[] has no defined domain.
   Life, Truth and Diversity".
 - **Already in the text (Vol II §29.0.1, p. 68):** "It supplements but does not replace the
   axes and constraints of CompassAssessment in §29.A."
+- **Already in the text (Vol II §29.A, p. 72):** reality_divergence "assesses how strongly a
+  decision depends on unconfirmed premises, ignores available facts, or creates an incentive to
+  conceal discrepancy between prediction and observation".
+- **Already in the text (Vol II §24.C, p. 25; §27.3, p. 45; §32.36, p. 97):** the labels are not
+  presented as independent goals or as one score ("These groups are not four independent
+  goals"; "not as one percentage of maturity"), and the text speaks of "one axis" of the vector
+  and of "every relevant semantic Compass axis". This suggests that life, truth, diversity and
+  self_scope are the values of compass_axes_covered[], but no definition says so or relates
+  them to the axes of §29.A.
 
 ## Why it matters
 

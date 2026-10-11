@@ -25,9 +25,10 @@ github_issue: 44
   the error and rises higher only if discriminating evidence shows that a more local correction
   does not eliminate the reproducing mechanism." **Vol II §28.B, p. 55:** "Repeated failure
   after K corrections opens a higher level; K and the escalation rule are set by profile."
-- **Vol II §32.14, p. 90:** "The decision moves to META_POLICY." **Vol II §32.20, p. 93:** "The
-  decision moves to CRITERIA or FOUNDATIONS and is tested against the fundamental risk in
-  Chapter 29."
+- **Vol II §32.14, p. 90:** "the system persistently selects the same thinking_mode or expends
+  resources inconsistent with the significance of the task"; "The decision moves to
+  META_POLICY." **Vol II §32.20, p. 93:** "The decision moves to CRITERIA or FOUNDATIONS and is
+  tested against the fundamental risk in Chapter 29."
 - **Vol II §31.10, p. 82:** "META_POLICY contains rules by which the system itself decides what
   and how it is permissible to revise." **Vol II §28.C.3, p. 62:** "META_POLICY becomes a
   target only when interventions in lower steps and methods fail to remove the reproducible
@@ -43,8 +44,14 @@ hypothesis upward". That holds if one defect at one level is responsible and eac
 applied correctly. If two defects at different levels jointly reproduce the error, or a local
 fix is badly applied, every single-level test fails and the procedure points too high; a
 higher-level repair also removes lower-level causes, so its success does not identify the
-level. Better fault localization is the headline claim, so the identification assumption needs
-stating. The escalation rules also conflict.
+level. Vol II calls the ladder "a rule for localizing the cause" (§31.10, p. 82), so the
+identification assumption needs stating. The escalation rules also conflict. §28.C.3 makes
+META_POLICY a target only when "interventions in lower steps and methods fail to remove the
+reproducible failure" (p. 62) and the distinction is localized in the rule for selecting
+procedures, depth or thinking mode. §32.14 sends a persistent mis-selection of thinking_mode,
+the subject of the second condition, to META_POLICY without mentioning that interventions at
+lower levels must fail first, and §32.20 sends a failure to CRITERIA or FOUNDATIONS without that
+step.
 
 ## Evidence
 

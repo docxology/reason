@@ -4,7 +4,7 @@ title: Inherited ontology cannot yet be told apart from an "own" Worldview
 severity: medium
 area: architecture
 volumes: II
-sections: Vol II §21.B, §22.0, §22.A, §22.A.1, §24.B.2, §32.32
+sections: Vol II §21.A, §21.B, §22.0, §22.A, §22.A.1, §24.B.2, §31.A, §32.32
 review: §4.2(c)
 status: open
 github_issue: 15
@@ -34,15 +34,31 @@ github_issue: 15
 
 The policy is right: pretrained knowledge enters the Worldview only with provenance and after
 the candidate's own tests, so "own" is scoped to the candidate's causal history. Three things
-keep the claim from being testable. First, the dependency metrics are defined against the mentor
-channel only, while "internal" includes the pretrained resident model, so
-`internal_hypothesis_share` can approach 1 with no internalization; `llm_ablation_loss` and
-`dependency_gap` measure the same quantity; and the "preaccepted range" is never given. Second,
-the builder compiles an initial `ConceptRegistry` from the theory's own text, which contradicts
-the statement that the bootstrap supplies no ready dictionary and seeds the candidate's ontology
-with the vocabulary under test. Third, the hidden-inheritance test needs variables absent from
-"the initial corpus" (undefined) and from the mentor's "typical answers"; a variable can be
-absent from typical answers and still latent in the model's parameters.
+keep the claim from being testable. First, the "without LLM" tests refer to the mentor channel
+"unless another ablation is explicitly declared in the profile" (§22.0, p. 16), and "internal
+generation" includes "the routine model" (§22.0, p. 16), so `internal_hypothesis_share` can
+approach 1 with no internalization, although `hypothesis_origin` logs RESIDENT_INTELLIGENCE
+separately (§22.A, p. 17). The other interventions the text names, removing the routine LLM,
+which "tests component dependence" (§22.0, p. 16), and the SEMANTIC_ONLY, NEURAL_ASSISTED and
+HYBRID comparison (§24.B.2, p. 23), get no formula or margin. `llm_ablation_loss` and
+`dependency_gap` are defined almost identically (a with-minus-without-LLM difference, on
+control tasks versus under the same data and seed), and the text does not say how they differ.
+The "preaccepted range" is given no value or default, although §31.A lists
+`maximum_teacher_dependency_gap` among the parameters of a `ReadinessProfile` that "is
+published before results are examined" (p. 84).
+
+Second, the builder compiles an initial `ConceptRegistry` from the foundational theory, the
+engineering description and "marked sources of human knowledge" (§24.B.2, p. 23), keeping a
+source reference for every definition. That sits in tension with §21.B's statement that
+`concept_bootstrap` specifies how to create and connect new concepts "rather than a ready
+dictionary of the world" (p. 14), and it seeds the candidate's concept registry with the
+vocabulary under test. Third, the hidden-inheritance test needs variables absent from "the
+initial corpus and typical answers of the external LLM" (§22.A.1, p. 17); "initial corpus" is
+not defined in either volume, and the phrase does not say whether "of the external LLM" also
+qualifies it. The next sentence excludes "simple reformulation of an inherited schema" (p. 17),
+but a variable can be absent from typical answers and still latent in the model's parameters,
+which the text acknowledges, "Pretrained Intelligence may contain inherited human knowledge in
+its parameters" (§21.A, p. 13), and handles through provenance rather than through this test.
 
 ## Evidence
 
@@ -50,6 +66,9 @@ absent from typical answers and still latent in the model's parameters.
   Intelligence, while trust in it and its place in the Worldview are formed by the candidate's
   own causal history."
 - **Vol II §22.A.1, p. 17:** "In this section, LLM denotes the mentoring channel."
+- **Already in the text (Vol II §32.32, p. 97):** "A sharp decline after removing the routine
+  model is a component ablation and is not by itself a hidden dependency."; "Autonomy is
+  counted for the composition of components that actually produced and tested the result."
 
 ## Why it matters
 
@@ -59,11 +78,13 @@ point where it differs from a well-prompted agent.
 
 ## Ideas & possible recommendations
 
-- **Define dependence per named intervention.** Dependence could be defined for each
-  intervention (mentor off, resident model swapped, Core off), with a formula and a margin for
-  each.
-- **Declare the seeded registry as seeded knowledge.** The initial `ConceptRegistry` could be
-  labelled as seeded knowledge and included in the sanity check and in the inheritance test.
+- **Give each named intervention a formula and a margin.** The text already names mentor off
+  and routine LLM removed (§22.0) and SEMANTIC_ONLY / NEURAL_ASSISTED / HYBRID (§24.B.2); each
+  could get a formula and a margin, and further ablations such as swapping the resident model
+  or switching the Core off could be added.
+- **Declare the seeded registry as seeded knowledge.** The initial `ConceptRegistry`, whose
+  definitions already keep source references, could also be labelled as seeded knowledge and
+  included in the sanity check and in the inheritance test.
 - **Generate the test worlds.** The inheritance test could run in procedurally generated worlds
   whose variables are created at random for the experiment, against the same model prompted
   directly.

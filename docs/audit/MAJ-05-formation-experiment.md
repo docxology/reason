@@ -50,13 +50,16 @@ loss. Volume I designs a clean test (mentor-generated, automatic and absent guid
 start, then removal and held-out testing), and Volume II defines the three possible outcomes
 without choosing among them. Three gaps keep the test from attributing a result to the RFL.
 First, no learning rule is given: the text allows weights or adapters as one substrate and
-rightly refuses to credit a mere parameter update as revision, but never says what produces an
-internal `POSSIBLE_DANGER` or by which training signal. Second, Volume II does not carry the
-Volume I design: it applies four support levels in sequence to one candidate, drops the
-automatic arm, and redefines `NO_KSR` from a guiding layer that is absent to an external RFL
-that is "disabled during the control series", so no never-supported control remains. Third, the
-mentor ladder lets the mentor supply the discriminating feature and causal explanations, so a
-mentor arm that wins may be measuring tutoring, not pre-rational significance.
+rightly refuses to credit a mere parameter update as revision, but never says how the
+candidate's "own risk model" (the stated source of an internal `POSSIBLE_DANGER`) is learned,
+or by which training signal. Second, Volume II does not carry the Volume I design: it applies
+four support levels in sequence to one candidate, drops the automatic arm, and redefines
+`NO_KSR` from a guiding layer that is absent to an external RFL that is "disabled during the
+control series", so no never-supported control remains. Third, the mentor ladder lets the
+mentor supply the discriminating feature and causal explanations (after weaker levels fail
+within a predefined budget, with a re-test on a new case with less or no assistance, and with
+controls that include deliberately wrong mentor prompts), so a mentor arm that wins may still
+be measuring tutoring rather than pre-rational significance.
 
 ## Evidence
 
@@ -95,8 +98,8 @@ be excluded without the never-supported and information-matched arms.
 - **Split the mentor ladder.** The ladder could be split so that the signal-only levels (L0–L2)
   test pre-rational significance on their own.
 - **Name the learning locus and rule.** For the first candidate, the volumes could state where
-  learning happens (records, procedures or weights) and by what rule or training signal an
-  internal `POSSIBLE_DANGER` arises.
+  learning happens (records, procedures or weights) and by what rule or training signal the
+  risk model behind an internal `POSSIBLE_DANGER` is learned.
 
 ## Resolved when
 

@@ -1,6 +1,6 @@
 # R2b: reference-list verification, REVIEW.md "References", Hintikka through Turner
 
-Audited 2026-10-10. Source: `/Users/4d/.t3/projects/reason/REVIEW.md`, section "References" (not modified). Range: Hintikka through Turner, 33 entries, numbered below in list order.
+Audited 2026-10-10. Source: `REVIEW.md`, section "References" (not modified). Range: Hintikka through Turner, 33 entries, numbered below in list order.
 
 Method: arXiv IDs via `https://export.arxiv.org/api/query?id_list=<id>` (1806.01186, 2501.16946, 2411.00986, plus 1902.09725 and 1402.5886 as cross-checks); journal and chapter metadata via the Crossref API (DOI records); proceedings via PMLR, AAAI, CEUR-WS and publisher pages; books via Library of Congress records (LCCN), Crossref book DOIs and OUP/MIT listings; PsyArXiv record via the OSF API. Where a site blocks automated fetches (OpenReview, Springer link pages, MIT Press) I used a secondary source and say so.
 

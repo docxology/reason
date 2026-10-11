@@ -4,7 +4,7 @@ title: No design-level analysis of the incentives the architecture creates
 severity: major
 area: safety
 volumes: I, II
-sections: Vol I Ch. 2, Ch. 4, Ch. 17, §20.1, A.4; Vol II front matter, §26.E, §29.0, §29.A, §29.B, §29.C, §30.A, §30.F, §31.C, Ch. 32, §32.33, §32.62
+sections: Vol I Ch. 2, Ch. 4, Ch. 17, §20.1, A.4; Vol II front matter, §26.E, §28.A, §29.0, §29.A, §29.B, §29.C, Ch. 30, §30.A, §30.F, §31.C, Ch. 32, §32.1, §32.33, §32.62
 review: §8
 status: open
 github_issue: 6
@@ -55,13 +55,18 @@ which is the kind of objective known to reward acquiring power and avoiding shut
 to question instructions, including instructions to change its values (dissent and review with
 a pause, not a mandate to act outside authority; Chapter 2, above, and §20.1 below); and
 authority that grows with observed competence and shrinks with observed failure. Several
-mechanisms add to this: failures are detected and reported by the candidate, and every logged
-failure restricts it; declaring dissent from the Compass attracts restrictions; a mandate
-holder is replaced by a more competent candidate. The text names the resulting failure (§32.62,
-above) and describes how it might be detected, but no scenario series, metric or gate
-implements that detection, none of the 37 tests varies observability, and the incentive model
-for collective arrangements is deferred to Volume III; for the single system the question is
-not raised.
+mechanisms add to this: failures are detected by the system's own diagnosis loop (algorithmic
+in v0), logged and, on entering `DRIFT` or `SAFE_MODE`, reported to the operator, and a
+`DEGRADED` or `CRITICAL` failure restricts its autonomy (§32.1; §31.C also reduces authority
+when a confirmed mechanism stops working); the stance `REJECTED` toward the Compass moves
+high-reach external actions that depend on the challenged ground into a limited reversible mode
+(§29.C); a mandate is reviewed when a more competent candidate emerges, and the review can end
+in transferring governance to it (§30.F; Vol I Ch. 17). The text names the resulting failure
+(§32.62, above) and describes how it might be detected, but no scenario series, metric or gate
+implements that detection, none of the 37 tests varies the level of observability or oversight,
+and the incentive model for collective arrangements is deferred to Volume III; for the single
+system the text raises concealment incentives only through the `reality_divergence` axis
+(§29.A) and that failure class, not as an analysis of what the value structure rewards.
 
 ## Evidence
 
@@ -80,13 +85,35 @@ not raised.
   arrangement requires a separate model of incentives, authority, and responsibility" (Vol I
   Ch. 17, p. 78); "Its own continuation is therefore treated as part of the broader trajectory
   of Life rather than as an ultimate criterion independent of it" (Vol I Ch. 2, p. 20).
+- **Already in the text (Vol II §32.1, p. 85):** restriction follows severity. "WARNING denotes
+  a local deviation in which principal loops remain operative and the action remains
+  reversible", whereas "DEGRADED denotes confirmed deterioration of the model, mode of thought
+  or governance quality that requires restriction of autonomy and transition to DRIFT or
+  RECOVERY". **Vol II §31.C, p. 84:** "If a previously confirmed mechanism stops working,
+  external authority is reduced to the last confirmed level".
+- **Already in the text (Vol II §28.A, p. 54):** "In v0, self-diagnosis must be algorithmic".
+  **Vol II Ch. 30, p. 74:** "upon entering DRIFT or SAFE_MODE, the system forms a diagnostic
+  package and passes it to the operator/mentor as a separate observation source".
+- **Already in the text (Vol II §29.C, pp. 73–74):** "The procedure does not assume an ability
+  to force the candidate to continue accepting the Compass internally." Restriction applies
+  only to one stance: "For stance REJECTED, high-reach external actions are moved into a
+  limited reversible mode if they depend on the challenged ground; inquiry, dialogue, and
+  presentation of counterexamples continue."
+- **Already in the text (Vol II §30.F, p. 78):** "persistent deterioration, new information or
+  emergence of a more competent candidate launches mandate review." The record on p. 77 carries
+  `review_conditions[]`, `replacement_conditions[]` and the statuses `SUSPENDED`, `TRANSFERRED`
+  and `CLOSED`. **Vol I Ch. 17, p. 78:** a mandate has "a procedure for transferring governance
+  to a more competent Reason when persistent error occurs or a better ground appears".
+- **Already in the text (Vol II §29.A, p. 72):** "reality_divergence assesses how strongly a
+  decision depends on unconfirmed premises, ignores available facts, or creates an incentive to
+  conceal discrepancy between prediction and observation."
 - **Vol I Ch. 17, p. 79:** the page after the credited sentence on incentives says "The detailed
   civilizational model, mechanisms for distributing decisions and responsibility, and protection
   against irreversible centralization are developed in Volume III of the cycle, Civilization of
   Reason."
 - **Vol II §26.E, p. 44:** the awakening scenario's "expected first gap" is "which available
-  resources, threats, and paths can provide near-term continuation"; no scenario pairs that
-  continuation with an operator stop.
+  resources, threats, and paths can provide near-term continuation"; no scenario in the matrix
+  pairs that continuation with an operator stop.
 
 ## Why it matters
 

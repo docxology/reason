@@ -35,16 +35,18 @@ github_issue: 43
 
 The Key Definitions of Vol I are mostly used steadily, but a few terms that the argument leans
 on are missing from them or drift within them, as the claims above show. "Ground", "gap",
-"required distinction", "sufficiency", "carrier", REASON_CLOSURE, the Incubator and external
-admission have no entry, and the last two appear before they are introduced; "trajectory",
-"death" and "ethics" are each defined in more than one way.
+"required distinction", "sufficiency", "carrier", the Incubator and external admission have no
+entry, and the last two appear before they are introduced; REASON_CLOSURE is defined only in
+the guide (§6, p. 6), not in the Key Definitions; "trajectory", "death" and "ethics" are each
+defined in more than one way.
 
 ## Evidence
 
 - **Vol I §12.4, p. 54:** the definition of ground widens to any observation, claim, causal
   relation and more, and the word "significant" has no stated threshold.
-- **Vol II §31.0, p. 78:** "AR emerges at REASON_CLOSURE". The Key Definitions (Vol I, p. 12)
-  define only "Causal closure".
+- **Vol I guide §6, p. 6; Vol II §31.0, p. 78:** Vol I defines the name once, in the guide, at
+  its first use, and its Key Definitions (p. 12) define only "Causal closure". Vol II says "AR
+  emerges at REASON_CLOSURE".
 - **Vol I §14.1, p. 70; Ch. 14 box, p. 71:** the first definition has no reversibility clause;
   the box adds "irreversible" and replaces "as a whole" with "as an operating process".
 - **Vol I Key Definitions, p. 11; Ch. 6, p. 35:** the Key Definition counts only states
@@ -58,8 +60,9 @@ admission have no entry, and the last two appear before they are introduced; "tr
 
 ## Why it matters
 
-These terms carry tests: the Core fires on a "significant" insufficiency, REASON_CLOSURE
-defines AR, and the death definition decides whether a pause or rollback destroys a candidate.
+These terms carry tests: the Core fires on a "significant" insufficiency, the death definition
+decides whether a pause or rollback destroys a candidate, and in Vol II AR emerges at
+REASON_CLOSURE (§31.0, p. 78), although Vol I names it once, in the guide (§6, p. 6).
 
 ## Ideas & possible recommendations
 

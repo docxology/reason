@@ -1,6 +1,6 @@
 ---
 id: MIN-12
-title: Many record types are never used, and no minimal component slice is named
+title: Eleven record types are mentioned at most once after their definition, and no minimal component slice is named
 severity: minor
 area: testability
 volumes: I, II
@@ -10,7 +10,7 @@ status: open
 github_issue: 58
 ---
 
-# MIN-12 · Many record types are never used, and no minimal component slice is named
+# MIN-12 · Eleven record types are mentioned at most once after their definition, and no minimal component slice is named
 
 ## Claims under review
 
@@ -35,12 +35,13 @@ series: Volume I has a "Priority of the First Series" section, Volume II §27.B 
 it connects, and Chapter 27 gives each stage a short list of admission criteria. What is not
 named is the minimal set of components to build for that series, although the interfaces above
 are called mandatory and the upper mechanisms are said to be tested by it. Many records are
-never used again: of the 37 record types defined in Chapters 21–26, five
+barely used again: of the 37 record types defined in Chapters 21–26, five
 (`RevisionTransaction`, `ConceptEntry`, `CompassMeaningFrame`, `EpistemicArtifact`,
-`WorldviewLayer`) are not mentioned again by name anywhere in Volume II, and six more only
-once, so no metric, rule or test refers to them. One of the unused five, `EpistemicArtifact`,
-carries the epistemic-status discipline the review counts among the strongest parts of the
-work.
+`WorldviewLayer`) are not mentioned again by name anywhere in Volume II, so no metric, rule or
+test refers to them by name; six more (`ActionTrace`, `AttentionBeam`, `Capability`,
+`IdentityContinuity`, `InquiryIntent`, `VerificationDebt`) are mentioned by name only once
+more. One of the five, `EpistemicArtifact`, carries the epistemic-status discipline the review
+counts among the strongest parts of the work.
 
 ## Evidence
 
@@ -54,6 +55,13 @@ work.
 - **Vol II §24.D, p. 28:** `EpistemicArtifact` is defined ("Any construction capable of passing
   between modules or persisting across cycles carries its own epistemic status") and not named
   again.
+- **Already in the text (Vol II §24.E, p. 32; §§28.D–28.E, p. 64; §32.23, p. 94):** four of the
+  six records mentioned once more occur in rules or response procedures: "A change to
+  Capability accounts for context, repeatability [...] and alternative causes", "VerificationDebt
+  is created or updated", "reduce the number of parallel hypotheses and AttentionBeam items" and
+  "The system reconstructs IdentityContinuity from §24.F". The other two second mentions are in
+  the cycle of the semantic bridge (`InquiryIntent`, §24.B.2, p. 24) and in the argument for
+  `ThoughtTrace` (`ActionTrace`, §25.D, p. 38).
 
 ## Why it matters
 
@@ -71,8 +79,8 @@ grouping, sufficiency, and inquiry-method memory.
 - **Label the rest as optional.** The other records could be presented as optional design
   sketches, each tied to the hypothesis it would test.
 - **Drop or use the unused records.** As a cheaper first step, the five records that are never
-  mentioned again, and the six mentioned once, could be dropped, or each could be given a
-  metric, rule or test that refers to it.
+  mentioned again could be dropped, or each could be given a metric, rule or test that refers
+  to it; the six mentioned only once more could be checked the same way.
 
 ## Resolved when
 

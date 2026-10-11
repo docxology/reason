@@ -27,8 +27,14 @@ github_issue: 55
 
 ## Finding
 
-The same document appears under several titles, and its dates disagree with the publication
-record.
+Each title page places the volume in the three-volume series *Foundations of Reason* and gives
+a volume title: "VOLUME I. THE CAUSAL MODEL OF REASON" (Vol I, p. 8) and "THE ENGINEERING
+ARCHITECTURE OF REASON" (Vol II, p. 9). The short names differ from these: the running heads
+read "FOUNDATIONS OF REASON · 8.0" and "ENGINEERING OF REASON · 3.5", and the shared guide says
+"Foundations of Reason 8.0 and Engineering of Reason, Volume II, 3.5" (Vol I, p. 2). Within the
+PDFs the forms used for Volume I agree with each other, while Volume II's short name does not
+match the volume title on its own title page. The Zenodo records and the author's request to
+reviewers use further forms, and the dates disagree with the publication record.
 
 ## Evidence
 
@@ -40,8 +46,12 @@ record.
 
 - Both Zenodo records were published on 9 October 2026, a day before the date printed in the
   PDFs and in the shared guide.
-- Volume II's title page gives the series title first and the volume title second, while its
-  running head and the shared guide call the volume Engineering of Reason (all quoted above).
+- **Vol I A.2.1, p. 95:** the evidence-status table uses yet another form for Volume II,
+  "Engineering of Reason II v3.5".
+- **Already in the text (Vol II title page, p. 9):** the volume is placed in the series and tied
+  to Volume I by name and version: "FOUNDATIONS OF REASON — VOLUME II" and "Causal foundation:
+  Foundations of Reason, Volume I, version 8.0". Volume I's title page has the matching
+  "THE THREE VOLUMES OF FOUNDATIONS OF REASON" (Vol I, p. 8).
 
 ## Why it matters
 
@@ -50,9 +60,9 @@ titles refer to the same version.
 
 ## Ideas & possible recommendations
 
-- **One title per volume.** The same title could appear on the title page, in the running head
-  and the shared guide, in the Zenodo metadata and in citations. MAJ-02 discusses which title
-  to choose.
+- **One title per volume.** The volume title on the title page could be the title used in the
+  running head and the shared guide, in the Zenodo metadata and in citations, with *Foundations
+  of Reason* as the series title. MAJ-02 discusses which title to choose.
 - **One edition date.** The edition date printed in the PDFs and the guide could be aligned
   with the publication record.
 

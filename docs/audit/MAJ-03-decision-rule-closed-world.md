@@ -4,7 +4,7 @@ title: The Core's only committed decision rule covers closed, fully specified pr
 severity: major
 area: architecture
 volumes: I, II
-sections: Vol I guide Step 7, Operational Core; Vol II §28.0, §28.B, §28.C, §28.C.2, §28.D, §33.C.1
+sections: Vol I guide Step 7, Operational Core; Vol II §28.0, §28.B, §28.C, §28.C.2, §28.D, §28.E, §33.C.1
 review: §5.2(f), §5.3
 status: open
 github_issue: 3
@@ -48,20 +48,27 @@ strong agent (an unknown factor, a hidden cause that mimics a known one, a chann
 reliability) are exactly the cases the policy does not cover. There the heuristic names
 comparisons (expected value balance, whether residual uncertainty can change the best option,
 the benefit of the next test) without saying how they are computed, so in a language-model
-implementation the judgments fall to the model. The executable example shows the consequence:
-with one listed alternative left, it commits the repair.
+implementation the judgments fall to the model. Volume I's guide does state a rule for an
+incomplete set of alternatives (extend the model when an insufficiency is discovered; preserve
+uncertainty when no discriminating data are available), but the rule is qualitative: beyond
+flagging an observation that no listed alternative predicts, no procedure computes when the set
+is insufficient (`EpistemicMargin` names signals but gives no formula; see MED-28). The
+executable example shows the consequence: with one listed alternative left, it commits the
+repair.
 
 ## Evidence
 
 - **Vol II §28.D, p. 64:** the policy for a sequence of tests is "V(b,B) = min(R(b), min[q:
-  c(q)≤B] {C(q) + E[y] V(b after y, B−c(q))})". No complexity or approximation is discussed;
-  the only remark on size is "A finite set of plans and a finite budget exclude an infinite
-  branch."
+  c(q)≤B] {C(q) + E[y] V(b after y, B−c(q))})". No complexity bound or approximation is given
+  for this recursion; the only remark on size in §28.D is "A finite set of plans and a finite
+  budget exclude an infinite branch."
 - **Vol II §28.C, p. 58:** steps 3 and 4 of `refine_gap_and_required_distinction` read "group
   versions that lead to the same admissible continuation" and "find an observable distinction
   separating groups with different decisions".
 - **Vol I guide, p. 4:** "A single remaining version means only that it is unique within the
-  accepted set. The completeness of the set requires its own ground."
+  accepted set. The completeness of the set requires its own ground. If an insufficiency is
+  discovered, the model must expand; if no discriminating data are available, uncertainty is
+  preserved."
   **Vol II §33.C.1, p. 109:** "Initial hypotheses, loss functions and the sufficiency criterion
   are set by the designer"; run on an emulated hidden cause, the restored listing commits
   `REPAIR_D` after one probe.
@@ -69,6 +76,13 @@ with one listed alternative left, it commits the repair.
   irreversibility apply first." The invariant of determinate continuation adds: "Every class of
   incompleteness must have at least one admissible next transition that preserves causal
   history and later corrigibility" (§28.B, p. 56).
+- **Already in the text (Vol II §28.C, p. 58):** "An observation outside the predictions of
+  material current hypotheses creates UnknownFactor rather than forcing selection of the
+  nearest version". On cost, "Computation is economized primarily through the precision of
+  required_distinction [...] Limiting the number of branches is a resource safeguard after this
+  semantic compression, not a substitute for it", and **Vol II §28.E, p. 64:** under scarcity
+  the order of simplification includes "reduce the number of parallel hypotheses and
+  AttentionBeam items". Neither is a complexity bound for the §28.D recursion.
 - **Already in the text (Vol II §28.C.2, p. 61):** "Generation and control may therefore use
   the same computational substrates and even one model if the causal roles are experimentally
   distinguishable."

@@ -4,7 +4,7 @@ title: Contents pages disagree with the headings they list
 severity: minor
 area: editorial
 volumes: I, II
-sections: Vol II Contents (pp. 7–10) against Chs. 25–34
+sections: Vol II Contents (pp. 9–11) against Chs. 25–34
 review: Appendix A
 status: open
 github_issue: 57
@@ -43,15 +43,18 @@ and the body were translated separately.
 | 26.0.2 | AI mentor as a source of **prompting** | AI Mentor as a Source of **Guidance** |
 | 30.C | **Robustness** to adversarial inputs and data provenance | **Resistance** to adversarial inputs and data provenance |
 
-The remaining ten differ only in articles or capitalization (25.B.1, 25.C, 28.C.2, 28.C.3,
-28.E, 29.A, 31, 33.C, 34, and 28.B's capitalization). Reproduce by comparing the contents (text
-lines 425–535) with the numbered headings after line 662 of `text/engineering-3.5.txt`. Volume
-I has the same problem on a smaller scale: its contents omit "Open Research Directions", carry
-no page numbers, run several parts together into single paragraphs, and word the Conclusion and
-A.1 entries differently from their headings. Volume II's contents also omit §§27.1–27.7,
-31.1–31.12, 32.1–32.62 and 33.A.1–33.A.14, although the text sends readers to §31.11 and tells
-them to "go directly to" a failure card, and leave out the unnumbered closing section "On
-Verification of the Model" (p. 114).
+The table covers 11 of the 20 entries (28 and 28.B share a row). The remaining nine differ in
+articles, capitalization or a changed word: 25.B.1, 25.C, 28.C.2 and 34 in articles,
+capitalization or a possessive only; 28.C.3 (control / management), 28.E (shortage /
+scarcity), 29.A (evaluation / assessment), 31 ("of formation" / "in the Formation") and 33.C
+(Minimal / Minimum, "AR upper loop" / "Upper AR Loop") by a changed word or phrase. Reproduce
+by comparing the contents (text lines 425–535) with the numbered headings after line 662 of
+`text/engineering-3.5.txt`. Volume I has the same problem on a smaller scale: its contents omit
+"Open Research Directions", carry no page numbers, run several parts together into single
+paragraphs, and word the Conclusion and A.1 entries differently from their headings. Volume
+II's contents also omit §§27.1–27.7, 31.1–31.12, 32.1–32.62 and 33.A.1–33.A.14, although the
+text sends readers to §31.11 and tells them to "go directly to" a failure card, and leave out
+the unnumbered closing section "On Verification of the Model" (p. 114).
 
 ## Why it matters
 

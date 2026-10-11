@@ -24,7 +24,7 @@ github_issue: 62
   (ASR)";
   **Vol II §21, p. 13:** "This order defines the path AGI -> AR -> ASI / ASR."
 - **Vol II A.2, p. 117:** "ASI / ASR denotes the superhuman scale of a formed Reason.";
-  **Vol II §33.D, p. 112:** "ASI is scaled Artificial Reason".
+  **Vol II §33.D, p. 112:** "Within the proposed path, ASI is scaled Artificial Reason".
 - **Vol II §24.D.1, p. 28:** "For an irreversible external action, dependence on an untested
   overlay raises the verification class and may block ALLOW."
 
@@ -39,9 +39,15 @@ action.
 
 ## Evidence
 
-- **Vol II A.2, p. 117, and §33.D, p. 112:** the two statements above leave no way to express
-  an ASI that is not an AR. A.2 also names `reason_organization_profile` and
-  `capability_profile`, which occur nowhere else.
+- **Vol II A.2, p. 117, and §33.D, p. 112:** both identify ASI/ASR with a scaled formed Reason
+  (§33.D: "Within the proposed path, ASI is scaled Artificial Reason"). §33.D keeps two
+  profiles, one for capabilities and one for preservation of the organization of Reason, says
+  that "A high result in one profile does not replace the other", and says that until the
+  profile is filled and verified "ASI remains a scaling objective rather than an assigned
+  experimental status". A.2 names the two records `reason_organization_profile` and
+  `capability_profile` and glosses both in one sentence; the identifiers occur nowhere else and
+  neither has a schema. Neither section names a system that has ASI-level capabilities but an
+  unverified organization of Reason.
 - **Vol II, names that occur once:** "-> DialogueRequest" (§24.B.2, p. 23);
   "-> RetrievedFragment" (§24.D, p. 27); "ModelingWorkspaceSnapshot restored" (§26.C, p. 43);
   "integrate_consequences() has no right to attribute automatically" (§25.C, p. 38); "the
@@ -62,9 +68,9 @@ invent.
 - **Keep ASI and ASR apart, or merge them explicitly.** The volumes could use ASI for the
   capability level and ASR only for that level reached by a formed AR, or state that the two
   are one and use a single term.
-- **Define each Volume II name.** Each of the six names, and the two profile records
-  `reason_organization_profile` and `capability_profile`, could be given a schema or glossary
-  entry, or be removed.
+- **Define each Volume II name.** Each of the six names could be given a schema or glossary
+  entry, or be removed; the two profile records `reason_organization_profile` and
+  `capability_profile` could be given a schema that matches the two profiles of §33.D.
 
 ## Resolved when
 

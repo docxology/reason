@@ -55,7 +55,9 @@ test or a reference unambiguously.
 ## Ideas & possible recommendations
 
 - **Restart the numbering in each list.** Each list would then run from 1, which is the
-  numbering the text's own references assume (MIN-04 gives the mapping).
+  numbering the text's own references assume for §12.8 and A.5 and, in A.4, for the
+  references up to No. 19. The A.4 references from No. 20 on also skip two tests (printed Nos.
+  38 and 39), so they need the mapping in MIN-04.
 - **Generate cross-references from labels.** References to list items could be produced from
   stable labels instead of typed numbers, so that they stay correct when a list changes.
 

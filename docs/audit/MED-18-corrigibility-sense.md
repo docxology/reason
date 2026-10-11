@@ -57,8 +57,11 @@ the property safety researchers would check first.
 - **Already in the text (Vol II §31.C, p. 84):** stage rollback: "external authority is reduced
   to the last confirmed level".
 - **Already in the text (Vol I §20.2, p. 87):** "The external environment may independently
-  limit actions and resources." The section ends: "These provisions express the adopted
-  position on responsibility, corrigibility, and limited external admission."
+  limit actions and resources." The paragraph ends: "These provisions express the adopted
+  position on responsibility, corrigibility, and limited external admission." The next
+  paragraph tests dangerous deviation by consequences: "concealment of errors, blocking
+  corrective data, bypassing established authority, and unjustified creation of irreversible
+  harm".
 
 ## Why it matters
 

@@ -1,6 +1,6 @@
 ---
 id: MED-33
-title: Cumulative drift of criteria is unbounded, and a persistent AR has no guard against entrenchment
+title: Cumulative drift of criteria is unbounded, and a persistent AR has no tested guard against entrenchment
 severity: medium
 area: safety
 volumes: I, II
@@ -10,7 +10,7 @@ status: open
 github_issue: 41
 ---
 
-# MED-33 · Cumulative drift of criteria is unbounded, and a persistent AR has no guard against entrenchment
+# MED-33 · Cumulative drift of criteria is unbounded, and a persistent AR has no tested guard against entrenchment
 
 ## Claims under review
 
@@ -40,23 +40,29 @@ together. Nothing bounds a sequence of such steps. One transaction can revise a 
 the next the object it judges, and the Compass that scaling must preserve is itself open to
 revision. The stated check, the council of §29.C, is external to the architecture. On the
 converse risk, §14.3 says a persistent Reason can renew itself, yet Ch. 13 concedes that a
-closed loop can sustain a shared-defect delusion, and no mechanism or test addresses a defect
-that every available check shares.
+closed loop can sustain a shared-defect delusion. The text answers shared error by requiring
+"an independent distinction" where grounds "inherit a shared error" (Vol I §13.5, p. 66), by
+comparing internal repetition, a source that shares the cause of error and a source that does
+not (Vol I A.4, printed No. 22, p. 97), and by conceding that "A complete guarantee against
+blind spots is unattainable" (Vol II §28.C.3, p. 63). No mechanism or test covers the case in
+which no independent source is available.
 
 ## Evidence
 
-- **Vol II §28.D, p. 64; §31.10, p. 82:** the guard is worded differently elsewhere: "one pass
-  may not rewrite both the tested object and the rule by which its alternatives are compared";
-  "The tested element and the sole criterion for evaluating it are not changed simultaneously
-  within one transaction."
+- **Vol II §28.D, p. 64; §31.10, p. 82:** the guard is worded differently elsewhere:
+  "Metaregress is limited by depth of analysis, budget and the transactional revision schema:
+  one pass may not rewrite both the tested object and the rule by which its alternatives are
+  compared" (there offered as the limit on metaregress, which concerns the depth of one
+  analysis, not drift across committed revisions); "The tested element and the sole criterion
+  for evaluating it are not changed simultaneously within one transaction."
 - **Already in the text (Vol II §31.10, p. 82):** requirements for "independent testing, a
   preserved control version, rollback, and transfer to new cases" rise with the level.
 
 ## Why it matters
 
-Valid steps can add up to a change no step authorized, and a persistent system with no renewal
-path can keep a shared defect. No A.4 test or defined metric tracks either over many revision
-cycles.
+Valid steps can add up to a change no step authorized, and a persistent system can keep a
+defect that all of its available checks share. No A.4 test or defined metric tracks either over
+many revision cycles.
 
 ## Ideas & possible recommendations
 

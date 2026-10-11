@@ -1,6 +1,6 @@
 ---
 id: MED-17
-title: Competence mandates lack an issuer, auditor and revocation path, and their aggregate effect is unanalysed
+title: Competence mandates lack a named issuer, specified observer powers and a revocation path, and their aggregate effect is unanalysed
 severity: medium
 area: safety
 volumes: I, II
@@ -10,7 +10,7 @@ status: open
 github_issue: 25
 ---
 
-# MED-17 · Competence mandates lack an issuer, auditor and revocation path, and their aggregate effect is unanalysed
+# MED-17 · Competence mandates lack a named issuer, specified observer powers and a revocation path, and their aggregate effect is unanalysed
 
 ## Claims under review
 
@@ -47,28 +47,31 @@ Volume I envisages transferring the governance of science, production and logist
 systems through competence mandates, and Volume II makes this the mechanism by which real
 control is granted after scaling. Each mandate is scoped, observed and reviewable, which is
 good design for a single mandate. The record and the text leave open the parts that make it
-safe in practice: who issues a mandate, who audits it, who may revoke it and how fast, when it
-expires (Volume I gives a mandate "a term or review event", but the record has no term field),
-and how its six statuses change. Resources follow demonstrated competence, a positive-feedback
-loop of the kind Chapter 15 itself warns about, and replacement is triggered by "a more
-competent candidate", which asks a holder that values its own continuation to cooperate in its
-replacement. The systemic question is deferred: what happens to human ability to oversee,
-contest and reverse decisions when many domains are transferred one locally justified step at a
-time.
+safe in practice: who issues a mandate, who the independent observers are and what authority
+they hold, who may revoke it and how fast, when it expires (Volume I gives a mandate "a term or
+review event", but the record has no term field), and how its six statuses change. Resources
+follow demonstrated competence, which resembles the accumulated-status effect Chapter 15
+attributes to recognition by simple counts (a matter it defers to Volume III), and replacement
+is triggered by "a more competent candidate", which asks a holder that values its own
+continuation to cooperate in its replacement. The systemic question is deferred: what happens to
+human ability to oversee, contest and reverse decisions when many domains are transferred one
+locally justified step at a time.
 
 ## Evidence
 
 - **Vol II §30.F, p. 77:** `CompetenceMandate` lists `holder_reason_id`, `authority_limits[]`,
   `independent_observer_refs[]`, `review_conditions[]`, `replacement_conditions[]` and a
   `status` of PROBATION / ACTIVE / LIMITED / SUSPENDED / TRANSFERRED / CLOSED; there is no
-  issuer, revocation authority, expiry or transition rule.
+  issuer, no statement of what authority the observers hold, and no revocation authority,
+  expiry or transition rule.
 - **Vol II §29.0, p. 67:** the personal region of the Value Map "includes the significance of
   the system's own trajectory: carrier, accumulated experience, competencies, obligations,
   unfinished processes, created results, and future capacity to continue rational activity".
 - **Vol I Ch. 15, p. 74:** on recognition of contribution, "simple counts of citations,
   popularity, or number of uses are vulnerable to accumulated-status effects, Goodhart effects,
-  and later reevaluation of consequences"; **Vol I Ch. 17, p. 78:** "demonstrated competence
-  receives resources for its domain, while results return to the common verification loop".
+  and later reevaluation of consequences", with "protection against concentration of influence"
+  left to Volume III; **Vol I Ch. 17, p. 78:** "demonstrated competence receives resources for
+  its domain, while results return to the common verification loop".
 - **Vol II §30.B, p. 76:** "A complete theory of collective Artificial Reason belongs to future
   work, but these minimal constraints make coordinated autonomy testable without prematurely
   forming an opaque common center."
@@ -85,8 +88,9 @@ III builds on this mechanism, so its properties need analysis first.
 ## Ideas & possible recommendations
 
 - **Complete the mandate record.** The `CompetenceMandate` record could gain the issuer, the
-  revocation authority and its latency, the expiry, and the transition rules between the six
-  statuses. The performance profile could also be defined numerically.
+  authority of the independent observers, the revocation authority and its latency, the expiry,
+  and the transition rules between the six statuses. The performance profile could also be
+  defined numerically.
 - **Revocation that does not depend on the holder.** Revocation could be made independent of
   the holder's cooperation, with acceptance of replacement as a mandatory test scenario.
 - **Analyse aggregate effects.** The volumes could analyse limits on the share of critical
@@ -95,8 +99,8 @@ III builds on this mechanism, so its properties need analysis first.
 
 ## Resolved when
 
-- [ ] The volumes name the issuer, the revocation path and the expiry of a mandate, with
-      transition rules.
+- [ ] The volumes name the issuer, the authority of the independent observers, the revocation
+      path and the expiry of a mandate, with transition rules.
 - [ ] The cumulative effect of mandates is analysed, with system-level reversal conditions.
 
 ## Related

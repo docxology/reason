@@ -47,9 +47,15 @@ github_issue: 65
 The outlook passages above offer hypotheses without the ingredients of a test. Volume I's Open
 Research Directions, with §14.5 and Chapter 16, extend the model to theology, disorders and the
 boundary between self and automatic biological regulation, with no observable consequence.
-Volume II's Appendix B calls its hypothesis "testable" but names no comparator, task class,
-threshold or indicator definition. Both are labelled as directions or later extensions; the
-issue is that neither states a margin by which a result could count against it.
+Chapter 16 says only that its hypothesis has a value "determined by experiments and comparison
+with existing models" (Ch. 16, p. 75), and the Open Research Directions require the theological
+hypotheses to be "distinguished from ordinary cultural evolution" (p. 91); neither names an
+experiment, a model to compare with, or an observation that would settle the comparison.
+Volume II's Appendix B calls its hypothesis "testable" and gives a comparator in words,
+"repeated unfolding of all lower-level links" (App. B, p. 118), and qualitative conditions for
+support, but defines no measurable baseline and no task class, and names six indicators
+without defining them. Both are labelled as directions or later extensions; the issue is that
+neither states a numerical margin by which a result could count against it.
 
 ## Evidence
 
@@ -58,22 +64,26 @@ issue is that neither states a margin by which a result could count against it.
 - **Vol I Ch. 16, p. 75, and §14.5, p. 71:** no test among the 37 in A.4 corresponds to either
   hypothesis, and computational psychiatry (for example Montague, Dolan, Friston & Dayan 2012)
   is not mentioned.
-- **Vol II App. B, pp. 117–118:** the comparator for the lower cost is not named,
+- **Vol II App. B, pp. 117–118:** the comparator is given only in words ("repeated unfolding of
+  all lower-level links"), with no specified baseline system, compute budget or cost measure;
   "a new class of multilayer tasks" is not defined, and none of the six indicators, such as
-  "structural_compression_ratio", is defined. The hypothesis is offered only after causal
-  closure has been confirmed.
+  "structural_compression_ratio", is defined. The structural level is to be treated "only as a
+  later extension after causal closure has been confirmed", so the text asks for no test of it
+  before then.
 
 ## Why it matters
 
-A hypothesis with no comparator or observable consequence cannot be contradicted, so it widens
-the programme's apparent scope without widening what a result could show. Appendix B also waits
-on confirmed causal closure.
+A hypothesis whose comparator, task class, indicators or observable consequence are undefined
+cannot be contradicted by a specific result, so it widens the programme's apparent scope
+without widening what a result could show. Appendix B defers any engineering treatment of the
+structural level until causal closure has been confirmed.
 
 ## Ideas & possible recommendations
 
 - **Add the ingredients of a test.** Each outlook hypothesis could state an observable
-  consequence, a comparator and a falsification margin; for Appendix B, one comparator would be
-  flat retrieval over the same provenance store at equal compute.
+  consequence, a measurable comparator and a falsification margin; for Appendix B, whose
+  comparator is given only in words, one measurable comparator would be flat retrieval over the
+  same provenance store at equal compute.
 - **Cite the relevant literature.** Each hypothesis could cite the work it builds on, for
   example computational psychiatry (Montague, Dolan, Friston & Dayan 2012) for the hypothesis
   about disorders in Chapter 16.
@@ -83,7 +93,7 @@ on confirmed causal closure.
 
 ## Resolved when
 
-- [ ] Each outlook hypothesis states a comparator, an observable consequence and a
+- [ ] Each outlook hypothesis states a measurable comparator, an observable consequence and a
       falsification margin, or sits in a separate essay marked as speculation.
 
 ## Related

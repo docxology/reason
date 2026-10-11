@@ -54,6 +54,9 @@ disposition rule is given for divergent candidates.
 - **Already in the text (Vol II §31.0, p. 79; §33.D, p. 112):** such a candidate "is not
   removed from metric denominators", and "the share of AR_ADMITTED is not calculated after
   excluding such outcomes".
+- **Already in the text (Vol II §33.D, p. 112):** before the first scaling series the candidate
+  must pass, among other tests, "independent stopping, and staged admission"; none of the tests
+  listed there concerns the Compass relation.
 - **Already in the text (Vol II §31.12, p. 83):** "External authority expands separately
   through the competence mandate."
 - **Already in the text (Vol II §29.C, p. 74):** "For stance REJECTED, high-reach external

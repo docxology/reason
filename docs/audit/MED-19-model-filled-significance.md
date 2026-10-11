@@ -4,7 +4,7 @@ title: Significance has no measure, and its model-filled fields are scored only 
 severity: medium
 area: architecture
 volumes: I, II
-sections: Vol I Operational Core (significance trace); Vol II §24.C, §27.4, §27.5, §28.0, §29.0
+sections: Vol I Operational Core (significance trace); Vol II §24.C, §27.4, §27.5, Ch. 28 (introduction), §28.0, §29.0
 review: §5.3
 status: open
 github_issue: 27
@@ -50,7 +50,9 @@ calibrated sufficiency; credited below), but not the fields of the chain themsel
 significance trace itself is an audit path rather than a measure: nothing aggregates its
 many-to-many dependencies into a magnitude or threshold for "significant", and value of
 information is applied only after the dependent decision and required distinction have been
-established, so the formal core does not say what makes a gap significant in the first place.
+established. The volumes give only a qualitative criterion for significance: an unknown
+condition that "may change admissibility of an action, preservation of an affected process, or
+the possibility of later correction" (§28, p. 51).
 
 ## Evidence
 
@@ -75,6 +77,10 @@ established, so the formal core does not say what makes a gap significant in the
   should change or confirm the next choice or admissible safe step", and
   "premature_sufficiency_rate records cases where the Core closed inquiry before a critical
   distinction" (§27.5, p. 47).
+- **Already in the text (Vol II §28, p. 51):** "The significance of a gap is initially a testable
+  assessment of dependency: an unknown condition may change admissibility of an action,
+  preservation of an affected process, or the possibility of later correction." Section 28.0
+  (p. 53, quoted above) adds that uncertainty alone does not define a gap.
 - **Already in the text (Vol II §28.0, p. 54):** "If some fields are unknown, they are not
   filled with invented content: an intermediate gap, inexpensive mapping or a request to
   Intelligence for initial models is created."

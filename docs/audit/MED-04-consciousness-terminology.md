@@ -4,7 +4,7 @@ title: "Consciousness" and "causal" carry meanings that invite misreading
 severity: medium
 area: definitions
 volumes: I, II
-sections: Vol I front matter, Key Definitions, Ch. 9, §11.1, A.5; Vol II §25.A, §25.B, §31.0, Appendix A
+sections: Vol I front matter, Key Definitions, Ch. 9, §11.1, A.5; Vol II §25.A, §25.B, §31.0, §33.A, Appendix A
 review: §2.5
 status: open
 github_issue: 12
@@ -42,12 +42,15 @@ current state (first claim above), with clear disclaimers about subjective exper
 engineers call situation awareness (Endsley 1995) and psychologists call reality monitoring
 (Johnson & Raye 1981; Lau 2019). Volume II then says the assembly "becomes functioning
 Consciousness" at REASON_CLOSURE (second claim), although the same records are used before and
-after closure and only the source of direction changes, while its glossary equates Consciousness
-with `ConsciousAssemblyState` without qualification (third claim); whether Consciousness exists
-before closure depends on which passage is read. Most audiences will read these sentences as
-claims about machine consciousness, an argument the work does not need. Separately, "causal"
-marks both interventional claims (a methodological commitment) and the Worldview as a
-"causal-semantic model" (a description of content), as the fourth claim shows.
+after closure and only the source of direction changes. Its glossary maps Consciousness to
+`ConsciousAssemblyState` (third claim), with the general caveat that "Correspondence between
+terms does not mean identity" (Appendix A, p. 115). Step 5 of the §33.A assembly protocol,
+though, is "Assemble Consciousness as a Current Process" (§33.A.6, p. 103), before Step 12, the
+functional launch (§33.A.13, p. 104). Whether Consciousness exists before closure therefore
+depends on which passage is read. Most audiences will read these sentences as claims about
+machine consciousness, an argument the work does not need. Separately, "causal" marks both
+interventional claims (a methodological commitment) and the Worldview as a "causal-semantic
+model" (a description of content), as the fourth claim shows.
 
 ## Evidence
 
@@ -55,24 +58,36 @@ marks both interventional claims (a methodological commitment) and the Worldview
   technical analogue requires independent criteria."
 - **Vol II §31.0, p. 79:** "REASON_CLOSURE denotes a change in the source of the further
   trajectory."
+- **Already in the text (Vol I pp. 3, 8, 12, 41, 104):** the functional sense is given where the
+  term is first defined, "Consciousness is used in the model in a functional sense [...] The
+  presence of such a function by itself does not establish subjective experience" (p. 3), and
+  again in the abstract, "in the functional sense adopted here" (p. 8). The RFL entry says "The
+  model does not claim machine subjective experience." (p. 12), Chapter 9 calls its account "a
+  working causal-functional characterization of conscious integration" (p. 41), and the A.5 map
+  says "phenomenal experience is not separately claimed" (p. 104).
+- **Already in the text (Vol II pp. 3, 12):** Volume II repeats the opening example with the same
+  functional definition and disclaimer (p. 3), and says that "A structure's name alone implies
+  neither a performed function nor subjective experience" and that "These propositions apply
+  throughout the volume" (p. 12).
 - **Already in the text:** A.5 maps the term onto global-workspace theory (Dehaene & Changeux
   2011) and cites the indicator properties of Butlin et al. (2023), but only in the appendix.
 
 ## Why it matters
 
 Terminology that triggers the machine-consciousness debate draws reviewers away from the
-testable claims, and a reader who meets "Consciousness" in Chapter 9 without the A.5 mapping
-will misjudge what is proposed. Awarding the label at closure makes it look like a finding
-rather than a name.
+testable claims, and a reader who has not reached the A.5 mapping gets the functional
+definition and the disclaimers but not the comparison with global workspace and the Butlin et
+al. indicators. Awarding the label at closure makes it look like a finding rather than a name.
 
 ## Ideas & possible recommendations
 
 - **A neutral term in the chapters.** A neutral term could replace Consciousness in the chapters,
   for example current-state integration, a phrase A.5 already uses in its correspondence map.
-- **The mapping at first use.** The mapping to global workspace, self-model theories (Metzinger
-  2003) and the Butlin et al. indicators, now only in A.5, could be placed in Chapter 9. If the
-  author prefers to keep the word, stating the functional definition and this mapping where
-  Consciousness is first introduced would be a lighter option.
+- **The mapping at first use.** The mapping to global workspace and the Butlin et al.
+  indicators, now only in A.5, could be placed in Chapter 9, together with a mapping to
+  self-model theories (Metzinger 2003; not cited in either volume). If the author prefers to
+  keep the word, adding this mapping to the passages that already give the functional definition
+  (Vol I p. 3, the Key Definitions, Chapter 9) would be a lighter option.
 - **Describe closure as a change in the source of direction.** Closure could be described that
   way rather than as the emergence of Consciousness; §31.0 already defines REASON_CLOSURE as a
   change in the source of the further trajectory.
@@ -81,9 +96,9 @@ rather than a name.
 
 ## Resolved when
 
-- [ ] The chapters use a neutral term, or state the functional definition and mapping where
-      "Consciousness" is introduced, and the volumes agree on whether Consciousness exists
-      before closure.
+- [ ] The chapters use a neutral term, or add the mapping to the passages that give the
+      functional definition of "Consciousness", and the volumes agree on whether Consciousness
+      exists before closure.
 - [ ] "Causal" is used in one sense throughout.
 
 ## Related

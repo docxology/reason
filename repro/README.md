@@ -16,7 +16,8 @@ whitespace, and is part of `make verify`.
 What the results do and do not show is discussed in `REVIEW.md` §5.4 and in
 `docs/audit/MIN-08-code-listings.md`. In short: the §33.B gain is fixed by construction (the
 frozen control always predicts state 0 and the adaptive model is exact on every visited
-transition), so its interval measures exploration coverage; and the retention in §33.C.1 is a
+transition), so the gain and its interval are set by held-out coverage and by the share of
+transitions into state 0; and the retention in §33.C.1 is a
 plan cache, so a warm memory changes the number of evaluated states but no decision.
 
 Run everything with `make verify` from the repository root. That target checks the listings

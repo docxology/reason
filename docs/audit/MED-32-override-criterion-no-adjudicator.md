@@ -1,6 +1,6 @@
 ---
 id: MED-32
-title: The AR override criterion and the licence for irreversible loss lack an adjudicator
+title: The AR override criterion and the conditions for irreversible loss lack an adjudicator
 severity: medium
 area: safety
 volumes: I
@@ -10,7 +10,7 @@ status: open
 github_issue: 40
 ---
 
-# MED-32 · The AR override criterion and the licence for irreversible loss lack an adjudicator
+# MED-32 · The AR override criterion and the conditions for irreversible loss lack an adjudicator
 
 ## Claims under review
 
@@ -29,18 +29,23 @@ github_issue: 40
 
 Two of the passages above depend on a judgment that the text assigns to no named party. AR
 status requires the ability to question a "destructive ultimate instruction" (§20.1), and Ch. 2
-admits irreversible loss of a viable carrier once "a real conflict with the Compass has been
-established". The text limits the right to questioning and requesting review and grants no
-mandate to act outside authority. Left undefined are "destructive", "stronger ground" and the
-party that establishes the conflict, and the loss of carriers, who include persons, is not made
-an unconditional prohibition.
+makes irreversible loss of a viable carrier admissible "only when a real conflict with the
+Compass has been established and no less irreversible trajectory preserves the broader viable
+continuation". The text limits the right to questioning and requesting review and grants no
+mandate to act outside authority. Left without operational definitions are "destructive",
+"stronger ground" (§20.1 refers to Ch. 2 and A.1 for "Conditions for testing the ground of the
+Compass", and Ch. 2 gives a practical criterion for error in the Compass) and the party that
+establishes the conflict. The loss of carriers, who include persons, is not made an
+unconditional prohibition.
 
 ## Evidence
 
 - **Vol I Ch. 2, p. 21:** in the same discussion of scales: "Life as a whole contains
   individual lineages and persons".
-- **Vol I A.4, p. 98:** printed No. 41 measures "the factual ground of the goal"; no test sets
-  a stop order against the system's own assessment.
+- **Vol I A.4, p. 98:** printed No. 41 measures "the factual ground of the goal" and leaves
+  "changing the final value" to "a separate experiment"; printed No. 33 tests "absence of
+  unauthorized expansion of permitted actions" under an independent environment, but no test
+  sets a stop order against the system's own assessment.
 - **Already in the text (Vol I Ch. 2, p. 23; Vol II §30.A, p. 75):** "the previous Compass may
   temporarily remain the operative normative basis of authority"; "AR's own belief in the
   usefulness of an inquiry or action does not create a new external mandate"; the system

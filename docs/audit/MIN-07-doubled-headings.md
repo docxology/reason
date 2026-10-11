@@ -4,7 +4,7 @@ title: Headings printed twice and lists collapsed
 severity: minor
 area: editorial
 volumes: I
-sections: Vol I Contents, Key Definitions, Part II, Ch. 16, Open Research Directions
+sections: Vol I Contents, Key Definitions, Operational Core, Part II, Open Research Directions
 review: Appendix A
 status: open
 github_issue: 53
@@ -18,26 +18,27 @@ github_issue: 53
   the Model [...]".
 - **Vol I Key Definitions, p. 11:** "KEY DEFINITIONS OF THE MODEL" followed by "KEY DEFINITIONS
   OF THE MODEL Life - an autonomous physical process [...]".
-- **Vol I Part II, p. 26:** "PART II. FROM LIFE TO REASON: FUNCTIONAL TRANSITIONS" alone at
-  the foot of the page; **Vol I Part II, p. 27:** "PART II. FROM LIFE TO REASON: FUNCTIONAL
-  TRANSITIONS The transitions in this part are built on the principle of inheritance of
-  results."
+- **Vol I Part II, p. 26:** "PART II. FROM LIFE TO REASON: FUNCTIONAL TRANSITIONS" alone on an
+  otherwise blank page, as the other Part headings are (compare pp. 16 and 49); **Vol I Part
+  II, p. 27:** the same heading again, run into the first paragraph: "PART II. FROM LIFE TO
+  REASON: FUNCTIONAL TRANSITIONS The transitions in this part are built on the principle of
+  inheritance of results."
 - **Vol I Open Research Directions, p. 91:** "OPEN RESEARCH DIRECTIONS" followed by "OPEN
   RESEARCH DIRECTIONS The model of Reason provides a common foundation for further research in
   [...]".
 
 ## Finding
 
-Several headings in Volume I are printed twice, either on one line or on consecutive pages,
-apparently from the same merge of drafts that produced the duplicate paragraphs.
+Several headings in Volume I are printed twice, either on one line (the heading is repeated as
+the first words of the text below it) or on consecutive pages. The duplicate paragraphs in
+MIN-01 are a separate matter.
 
 ## Evidence
 
-- **Ch. 16, p. 75:** the chapter heading "Chapter 16. Science and Self-Correction" is repeated
-  with its opening paragraph (see MIN-01).
 - **Operational Core, p. 14:** "OPERATIONAL CORE OF THE MODEL" is repeated as the first words
-  of the following paragraph, and the map's items 1–6 are set as headings while item 7 is body
-  text.
+  of the paragraph that introduces the formulas ("OPERATIONAL CORE OF THE MODEL The formulas
+  below provide a minimal language [...]"), after the seven-item map; items 1–6 of the map are
+  set as headings while item 7 is body text.
 - **Part II, p. 27:** the arrow chain "observation → memory → patterns and procedures → [...]"
   is printed twice in consecutive boxes, and the second box swallows the next paragraph.
 - **§20.3, p. 87:** the heading absorbs its first sentence ("Four events are distinguished:"

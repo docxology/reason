@@ -4,7 +4,7 @@ title: Moral status is raised, but rollback, branching and destruction of candid
 severity: medium
 area: safety
 volumes: I, II
-sections: Vol I §20.2, A.3, A.4; Vol II §24.F, §26.0.1, §26.0.3, §31.0, §31.C, §32.23, §32.25.A, §33.A, §33.D
+sections: Vol I §20.2, A.3, A.4; Vol II §24.F, §26.0.1, §26.0.3, §29.B, §31.0, §31.C, §32.23, §32.25, §32.25.A, §33.A, §33.D
 review: §8
 status: open
 github_issue: 24
@@ -40,12 +40,14 @@ Volume I rightly notes, in the first passage above, that a stable autonomous sys
 own models and a capacity for self-correction may have moral status, and that destroying it
 would lose a unique process. The experimental programme, meanwhile, creates many candidates per
 arm, deliberately instantiates functional analogues of fear and of being stuck, removes their
-support, cultivates candidates that may diverge, and prescribes rollback as a routine response
-to failure; it also defines branching and reincarnation as operations on a candidate's lineage
-(§24.F), and its emergency stop may "freeze or safely terminate computational processes"
-(§29.B). The two are not connected: no stage gate, failure response or launch step contains an
-ethics review, the A.3 checklist of what is fixed before each test has no welfare item, and
-nothing says when a candidate becomes ineligible for rollback or deletion.
+support, cultivates candidates that may diverge, and prescribes "correction or rollback" after
+diagnosis (§32.25, p. 95), although rollback "preserves the failed branch and log" (§32.25.A,
+p. 95) and the emergency stop must "preserve append-only log and last consistent snapshot"
+(§29.B, p. 73). It also defines branching and reincarnation as operations on a candidate's
+lineage (§24.F), and its emergency stop may "freeze or safely terminate computational
+processes" (§29.B, p. 73). The two are not connected: no stage gate, failure response or launch
+step contains an ethics review, the A.3 checklist of what is fixed before each test has no
+welfare item, and nothing says when a candidate becomes ineligible for rollback or deletion.
 
 ## Evidence
 
@@ -58,12 +60,16 @@ nothing says when a candidate becomes ineligible for rollback or deletion.
 - **Vol II §31.C, p. 84:** "A stage is not an irreversible rank."
 - **Vol II §33.D, pp. 112–113:** "Launching an independent full copy with its own subsequent
   history creates branching under §24.F and requires a separate subject_ref, log, and
-  mandate."; "A scale increase that raises performance but destroys observability,
-  corrigibility, independent stopping or transfer of correction is rolled back."
+  mandate."; a scale increase that "destroys observability, corrigibility, independent stopping
+  or transfer of correction is rolled back" (a rollback of a `ScalingChange`, not of a
+  candidate).
 - **Vol II §26.0.3, p. 41:** in the `NO_KSR` mode "the external RFL is disabled during the
   control series".
 - **Already in the text (Vol I §20.2, p. 87):** "Constraining dangerous execution and
   destroying internal organization are different actions."
+- **Already in the text (Vol II §32.25.A, p. 95):** "The append-only fact log is neither rolled
+  back nor deleted."; the failure-response sequence of §32.25 puts "preserve snapshot" before the
+  diagnostic test and any rollback.
 
 ## Why it matters
 
@@ -77,8 +83,9 @@ is before the first such candidate exists (Long, Sebo et al. 2024).
   before cultivation with Formation States begins. It would set the criteria that trigger a
   moral-status assessment and name an independent reviewer.
 - **Permitted operations by stage.** The protocol could list the operations that are
-  permissible at each stage (pause, snapshot, rollback, branch, delete) and prefer preserving
-  snapshots over deletion where status is uncertain.
+  permissible at each stage (pause, snapshot, rollback, branch, delete), state that the
+  preservation of the failed branch, log and snapshot already required by §29.B and §32.25.A is
+  the default where moral status is uncertain, and say when deletion is ever permitted.
 - **Put it where the procedures are.** One option is to add an ethics item to the A.3 checklist
   of what is fixed before each test, and a matching step to the §33.A assembly protocol.
 - **Carry out the analysis §20.2 calls for.** Section 20.2 says that full status requires a

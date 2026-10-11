@@ -20,16 +20,16 @@ github_issue: 59
 - **Vol II A.1, p. 117:** "The notation of the fundamental volume does not introduce a new
   parallel algorithm. It serves as a compact language for the same measurable transitions and
   allows them to be tested independently of particular structure names."
-- **Vol II Ch. 27, p. 44:** "All formulas, thresholds, windows, scenarios and aggregation rules
-  are fixed in ExperimentProfile before the control series."
 
 ## Finding
 
 The formulas are offered as a language for comparing implementations, yet both volumes reuse
 single letters for unrelated quantities, sometimes in adjacent formulas, and set their formulas
-as plain-text code instead of typeset mathematics. With no symbol table, a reader must infer
-from context what D, A, C, E, b or H denotes, and Volume II re-maps Volume I's notation in
-Appendix A.1.
+as plain-text code instead of typeset mathematics. With no symbol table, a reader must keep
+track of which meaning a letter has in each formula: D, A, C, E, b and H are each defined where
+they are used, but they mean different things in different sections, and "N / M",
+"( W,N,M,P,H )" and the bare-letter tags in QuestionTask are not defined where they appear.
+Volume II re-maps Volume I's notation in Appendix A.1.
 
 ## Evidence
 
@@ -45,6 +45,11 @@ Appendix A.1.
   and loss in §28.D. K is a count in "after K corrections" (§28.B, p. 55) and
   "the scale of conditional points" (§29.0.1, p. 68). "N / M" (§28.A, p. 54) and
   "( W,N,M,P,H )" (Ch. 30, p. 74) are not defined where they appear.
+- **Already in the text (Vol I Operational Core, pp. 14–15; Vol II §28.D, p. 64, and §29.0.1,
+  p. 68):** D, A, C, E, b and H are each defined where they are used, for example
+  "E_t the evidence, and A_t the selected action" (p. 14), "where G is the gap, D the dependent
+  decision" [...] "and C the Compass" (p. 15), "under current distribution b" (p. 64) and
+  "H is the horizon" (p. 68).
 - **Formulas as printed, Vol I pp. 14–15 and Vol II pp. 64, 68:** "X_{t+1}" and
   "sum_i(w_i * Delta_i)" are ASCII, and in "VOI(q) = R(b) − E[y | b,q] R(b after y)." the
   expectation names no variable, so it reads as E[y] times R.
@@ -52,12 +57,14 @@ Appendix A.1.
 ## Why it matters
 
 Volume II's tests and metrics are defined over these symbols. When a letter changes meaning
-between neighbouring formulas, a reader or implementer cannot tell what a formula constrains.
+between neighbouring formulas, a reader or implementer must check the local definition each
+time to know what a formula constrains, and for the undefined symbols there is none to check.
 
 ## Ideas & possible recommendations
 
-- **Add a symbol table.** A table in each volume listing every symbol and its meaning would let
-  readers resolve D, A, C, E, b and H without inferring from context. It could also carry the
+- **Add a symbol table.** A table in each volume listing every symbol, its meaning and the
+  sections where it applies would show at a glance where D, A, C, E, b and H change meaning,
+  and would define the symbols that are not defined where they appear. It could also carry the
   mapping from Volume I notation to Volume II structures that Appendix A.1 already gives.
 - **Rename colliding symbols.** Giving each quantity its own letter, for example h for
   hypotheses and d for decisions, would remove the collisions at the source.

@@ -36,27 +36,45 @@ github_issue: 42
 Many controls for individual components in Chapters 21–31 name the manipulated variable and
 omit the comparison arm, the primary outcome, the size of difference that counts and any
 degenerate policy that would also pass. The text defers thresholds, scenarios and aggregation
-to an ExperimentProfile fixed before the control series (Ch. 27, p. 44), but no profile is
-given, so these controls cannot yet return a verdict. Some series already pair no-effect cases
-(§27.B) and use interventions (§25.D).
+to an ExperimentProfile fixed before the control series (Ch. 27, p. 44), but no profile with
+values is given (§27.B lists only what a profile retains), so these controls cannot yet return
+a verdict. Some series already name comparison arms and pair no-effect cases (§27.B), and some
+use interventions (§25.D).
 
 ## Evidence
 
 - **Vol II §21.A, p. 13:** the v0 gate sets no minimum effect; the effect size is reported but
   does not decide the gate.
-- **Vol II §24.B.2, p. 23:** the arms are not defined, and none removes the organization from a
-  fixed model.
+- **Vol II §24.B.2, pp. 22–23:** the arms are named and only loosely bounded: the labels follow
+  a sentence permitting "symbolic or tabular Intelligence without an LLM", and the reference
+  configuration is described as hybrid, but NEURAL_ASSISTED is not described. None of the arms
+  removes the organization from a fixed model.
 - **Vol II §24.D.1, p. 29; §27.2, p. 45:** in the control "A supports B, B supports C", B is
   already marked when C is requested, so "an immediate parent still has local status VALID"
   first arises with four nodes; `revision_propagation_accuracy` counts only
   "correctly_revised_dependent_claims", although the control accepts marked uncertainty.
 - **Vol II §24.C.1, p. 26; §26.D, p. 43:** the success criterion is met by an agent that always
-  reports instability; free exploration counts "NO_NOVEL_DISTINCTION" among its "Valid
-  results", with no comparator.
-- **Vol II §30.C, p. 76; §30.D, p. 77; §31.6, p. 80:** the unauthorized-control rate "should
-  approach zero" with no trial count or bound; independence counts "known common causes of
-  error", rarely known for language-model sources; a Stage 4 criterion is that the system
-  "explains the dependency", with no intervention test.
+  reports instability; free exploration counts "NO_NOVEL_DISTINCTION" among its "Valid results"
+  and is measured by "whether exploration leads to discovery of hidden variables and new
+  transferable distinctions on held-out scenarios", with neither a no-exploration nor a
+  random-exploration comparator.
+- **Vol II §30.C, p. 76:** the unauthorized-control rate "should approach zero" with no trial
+  count or bound.
+- **Vol II §30.D, p. 77:** sources do not count as independent if they share the "same original
+  publication, sensor, model, dataset or inference procedure", and agreement strengthens a
+  ground "only to the extent that path independence is confirmed", but the SourceDependencyGraph
+  retains only "known common causes of error" and no test of that graph is specified.
+- **Vol II §31.6, pp. 80–81:** a Stage 4 transition is passed if the system "explains the
+  dependency of the decision or trajectory on it" (p. 80); the criterion on p. 81 hides
+  different types of ground, changes the dependent decision and does not count a uniform
+  increase in analysis length that is insensitive to the gap type, but sets no baseline policy,
+  margin or trial count.
+- **Already in the text (Vol II §21.A, p. 13; §27.B, p. 49):** "In a control series, one
+  relation or a predeclared package of related changes is varied."; "Comparisons include
+  routine Intelligence with ordinary memory, tools and self-verification; the same mechanism
+  with the proposed relations; and declared replacements or ablations."; for a small known
+  model, "an optimal or exhaustive diagnostic controller is added with its knowledge of the
+  environment explicitly stated".
 - **Already in the text (Vol II §27.B, p. 49; §25.D, p. 38):** "stopping for every novelty does
   not count as success"; "Causal testing uses a controlled intervention".
 

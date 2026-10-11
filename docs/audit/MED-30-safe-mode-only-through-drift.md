@@ -35,13 +35,15 @@ github_issue: 38
 ## Finding
 
 The §28.A diagram has one edge into SAFE_MODE, from DRIFT, and one into RECOVERY, from
-SAFE_MODE. The prose and the failure cards quoted above require more: a critical failure
-activates SAFE_MODE, and §32.18 says the system enters it immediately. From INIT, LEARNING or
-STABLE, a critical failure can reach SAFE_MODE only through DRIFT, which is defined with a
-persistence criterion, so the restriction can be delayed. A DEGRADED event is to lead "to DRIFT
-or RECOVERY" (§32.1), but RECOVERY is reachable only through SAFE_MODE, and the only exit from
-DRIFT is SAFE_MODE, so a confirmed environment change has no edge back to LEARNING. Chapter 31
-also lists SAFE among the values of `thinking_mode`, which §28.B excludes.
+SAFE_MODE. The §28.A prose, which sits in the paragraph that defines DRIFT, agrees with the
+diagram. The failure cards quoted above require more: §32.1 says that on a CRITICAL event "the
+system must enter SAFE_MODE", §32.3 that it "transitions to SAFE_MODE", and §32.18 that it
+"immediately enters SAFE_MODE". From INIT, LEARNING or STABLE, a critical failure can reach
+SAFE_MODE only through DRIFT, which is defined with a persistence criterion, so the restriction
+can be delayed. A DEGRADED event is to lead "to DRIFT or RECOVERY" (§32.1), but RECOVERY is
+reachable only through SAFE_MODE, and the only exit from DRIFT is SAFE_MODE, so a confirmed
+environment change has no edge back to LEARNING. Chapter 31 also lists SAFE among the values of
+`thinking_mode`, which §28.B excludes.
 
 ## Evidence
 

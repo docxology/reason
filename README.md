@@ -60,9 +60,11 @@ python3 -I scripts/locate.py text/engineering-3.5.txt "The example does not impl
 Both English PDFs were read in full. The review was then audited in independent passes:
 five section-by-section readers covering every page of both volumes (217 raw findings), a
 cross-vendor fact-check of 119 of the review's claims, an "author's advocate" pass that
-searched the volumes for rebuttals to each criticism, and verification of every reference
-in the volumes' bibliographies and in the review's own. The review was corrected wherever
-those passes showed it wrong or unfair. The raw outputs are kept unedited in
+searched the volumes for rebuttals to each criticism, verification of every reference
+in the volumes' bibliographies and in the review's own, and a second cross-vendor pass that
+re-read every quotation in the issue register against its surrounding text (176 findings,
+each checked against the volumes before it was applied). The review and the register were
+corrected wherever those passes showed them wrong or unfair. The raw outputs are kept unedited in
 `notes/audit-raw/`, with `TRIAGE.md` mapping every raw finding to the register issue that
 acknowledges it; quotations, page numbers and computed numbers are re-checked by the
 scripts above.
@@ -72,5 +74,5 @@ the audit passes; an OpenAI model for the cross-vendor fact-check).
 
 ## Status
 
-Draft review, not yet sent to the author. The issues are open until the author responds
+Draft review, open for the author's response. The issues stay open until the author responds
 or a later version of the volumes addresses them.

@@ -1,6 +1,6 @@
 ---
 id: MED-13
-title: The one-step stopping test recurs where §28.D says it fails
+title: The one-step stopping test recurs although §28.D gives a sequential policy
 severity: medium
 area: formal
 volumes: I, II
@@ -10,7 +10,7 @@ status: open
 github_issue: 21
 ---
 
-# MED-13 · The one-step stopping test recurs where §28.D says it fails
+# MED-13 · The one-step stopping test recurs although §28.D gives a sequential policy
 
 ## Claims under review
 
@@ -48,6 +48,10 @@ Rivest 1976), and §28.E's degradation order is not an approximation with a guar
 
 - **Already in the text (Vol I §12.6, p. 59):** "A finite computable version of this rule is
   given in engineering §§28.D and 33.C.1."
+- **Vol II §28.D, p. 64:** the one-step criterion is stated "For one test q" and called "this
+  local criterion"; the budgeted policy is introduced "For a sequence of tests". The text does
+  not say that the local criterion fails. That it stops too early where tests are useful only in
+  sequence is an inference from the mandatory control "two tests useful only in sequence".
 - **Vol II Appendix A.1, p. 116:** a table row pairs Vol I's "VOI(p), NetVOI(p)" with one
   counterpart, "local value of information VOI(q), separate [...] accounting of cost/delay/risk,
   and final policy V(b,B)" (the omitted words belong to the neighbouring column of the table).

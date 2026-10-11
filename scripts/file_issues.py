@@ -4,7 +4,7 @@
 Usage:
     python3 -I scripts/file_issues.py --dry-run   # show what would be created or updated
     python3 -I scripts/file_issues.py             # create missing labels and issues
-    python3 -I scripts/file_issues.py --sync      # also rewrite existing issue bodies
+    python3 -I scripts/file_issues.py --sync      # also rewrite existing titles, bodies and labels
 
 Idempotent: an issue is matched by the "[ID]" prefix of its title, so re-running never
 creates duplicates. Requires an authenticated `gh` CLI with access to the repository.
@@ -67,10 +67,11 @@ def main(argv):
     audits = load_all()
     ensure_labels(audits, dry_run)
     issues = json.loads(gh("issue", "list", "-R", REPO, "--state", "all", "--limit", "500",
-                           "--json", "number,title"))
-    by_id = {}
+                           "--json", "number,title,labels"))
+    by_id, labels_by_number = {}, {}
     for issue in issues:
         title = issue["title"]
+        labels_by_number[issue["number"]] = {label["name"] for label in issue["labels"]}
         if title.startswith("[") and "]" in title:
             by_id.setdefault(title[1:title.index("]")], issue["number"])
 
@@ -98,8 +99,17 @@ def main(argv):
         for audit in audits:
             with tempfile.NamedTemporaryFile("w", suffix=".md", delete=False) as handle:
                 handle.write(body_for(audit, audits))
-            gh("issue", "edit", str(audit.number), "-R", REPO,
-               "--title", f"[{audit.id}] {audit.meta['title']}", "--body-file", handle.name)
+            args = ["issue", "edit", str(audit.number), "-R", REPO,
+                    "--title", f"[{audit.id}] {audit.meta['title']}", "--body-file", handle.name]
+            wanted = set(labels_for(audit))
+            have = labels_by_number.get(audit.number, set())
+            ours = {label for label in have
+                    if label == "audit" or label.startswith(("severity: ", "area: ", "vol "))}
+            for label in sorted(wanted - have):
+                args += ["--add-label", label]
+            for label in sorted(ours - wanted):  # only labels this register manages
+                args += ["--remove-label", label]
+            gh(*args)
             print(f"synced #{audit.number} {audit.id}")
             time.sleep(1.0)
     return 0

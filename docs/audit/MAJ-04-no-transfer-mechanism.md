@@ -46,7 +46,10 @@ boundary). They give no record or algorithm that abstracts such a schema from ep
 it to a new case; that step is left to Intelligence. In the only executable example the
 retained "method" is a plan cache keyed on the exact probe table, order and budget: with a warm
 memory the decisions are identical and only the count of evaluated states changes, and renaming
-a probe gives a full cache miss.
+a probe (same cost and outcomes) misses the cached plan for the whole problem, so it must be
+recomputed. Measured on the restored listing (`repro/diagnostic_cycle.py`) with a warm memory,
+renaming `receipt` re-evaluates 3 of the 8 belief states, and renaming the uninformative
+`read_main_again`, which stays in every remaining-probe set, re-evaluates all 8.
 
 ## Evidence
 

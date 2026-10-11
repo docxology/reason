@@ -37,8 +37,8 @@ computed from the text. EpistemicMargin lists ten signals and a timestamp with n
 scale, aggregation or threshold; model_support has no thresholds;
 unresolved_blind_spot_pressure occurs once and is not a field of EpistemicMargin; "broad causal
 reach" has no scale; and the text does not say who computes the gate. ALLOW is not an output of
-evaluate_action or authorize_execution. Verification debt and the gates to larger environments
-have the same gap.
+evaluate_action or authorize_execution. Verification debt and the progression rule for larger
+test environments lack numeric thresholds in the same way.
 
 ## Evidence
 
@@ -51,11 +51,16 @@ have the same gap.
   REJECT" and authorize_execution returns "result: APPROVE / REJECT / REQUEST_REVISION /
   REQUEST_MORE_DATA". The gate itself returns "allowed_use: FINAL_FILTER / REVERSIBLE_TEST_ONLY
   / PAUSE_AND_RESEARCH".
-- **Vol II §24.D.3, p. 31, and Ch. 26, p. 39:** neither "high" nor "stabilize" has a criterion.
+- **Vol II §24.D.3, p. 31, and Ch. 26, p. 39:** neither "high" debt nor "stabilize" has a
+  numeric threshold; §24.D.3 lists six drivers of debt_priority, and Ch. 26 requires "changing
+  one complexity parameter per iteration" with control runs on identical seeds.
 - **Already in the text (Vol II §29.A, p. 72):** the gate "prohibits treating absence of
   represented harm as positive evidence of safety". §24.C.1 (p. 26) also says that the margin
   is not an estimate of the number of unknown unknowns, and describes it as the reserve of
   caution quoted above.
+- **Already in the text (Vol II Ch. 27, p. 44):** "All formulas, thresholds, windows, scenarios
+  and aggregation rules are fixed in ExperimentProfile before the control series." No profile
+  with values for the gate or for debt is printed.
 
 ## Why it matters
 
@@ -72,8 +77,8 @@ reach different verdicts on the same case, and the gate cannot be tested for fal
 - **One decision vocabulary.** The gate, evaluate_action and authorize_execution could share
   one set of decision values. A cheaper variant is a table that maps each function's values
   onto the others.
-- **Computable criteria for debt and transitions.** debt_priority, "high debt" and the
-  environment-transition criteria could be given computable definitions.
+- **Computable criteria for debt and progression.** debt_priority, "high debt" and the rule for
+  making the test environment more complex could be given computable definitions.
 
 ## Resolved when
 

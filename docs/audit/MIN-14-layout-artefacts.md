@@ -37,8 +37,8 @@ github_issue: 60
 
 Both PDFs carry residue of a Markdown-style source, as the passages above show: a diagram
 printed as source code, literal rules and asterisks, flattened tables and definitions, stray
-spaces after hyphens and uneven headings. None changes the content, but each hampers reading
-and citation.
+spaces after hyphens and uneven headings. Most change no content, but each hampers reading
+and citation; the two flattened lines in A.5 repeat rows from p. 104 with changes of wording.
 
 ## Evidence
 
@@ -52,19 +52,26 @@ and citation.
   backticks are printed around an identifier in §32.35.
 - **Vol I Ch. 7, p. 38, and Ch. 10, p. 48:** the asterisks around the phrase are literal, and
   three definitions run together in one paragraph.
-- **Vol I A.5, p. 105:** two table rows are flattened into running text. One carries the label
-  "Meta-Thinking (working hypothesis)", which conflicts with Chapter 10. The other reads
+- **Vol I A.5, pp. 104–105:** two table rows are flattened into running text on p. 105, and
+  both appear to repeat rows that the table on p. 104 already sets properly. The first reads
   "Self-referential integration of the global workspace/current-state current state and
   accessible situation Consciousness integration, self-model access into one present;
-  phenomenal experience is not separately claimed".
+  phenomenal experience is not separately claimed", nearly word for word the Consciousness
+  row. The second appears to restate, in different wording, the row for "Structural
+  multilevel thinking", marked a working hypothesis; the p. 104 row says "it is not the
+  metathinking of Chapter 10". The p. 105 version names the hypothesis "Meta-Thinking
+  (working hypothesis)" and calls it a "Proposed next level", adding that "a distinct
+  established cognitive level is not yet claimed"; Volume I defines metathinking as a mode and
+  says that "metathinking is not declared a separate cognitive level" (Key Definitions,
+  p. 11).
 - **Vol I, 14 places on pp. 8–100:** a space follows a hyphen (search `[A-Za-z]- [a-z]`), as in
   "causal- semantic" (p. 8) and "inference- time" (p. 100). Vol II has none.
 
 ## Why it matters
 
-Raw source, literal markup and stray rules read as unfinished text, and the flattened rows
-carry a label that conflicts with Chapter 10. Spaces after hyphens also defeat a search for
-terms such as self-navigation.
+Raw source, literal markup and stray rules read as unfinished text, and one flattened row
+repeats a p. 104 row under a label ("Meta-Thinking") that Volume I does not use for it.
+Spaces after hyphens also defeat a search for terms such as self-navigation.
 
 ## Ideas & possible recommendations
 
@@ -73,8 +80,11 @@ terms such as self-navigation.
 - **Remove stray rules and markup.** The literal "---" lines, asterisks and backticks could be
   deleted or turned into formatting; a search of the source for these leftovers before export
   would find most of them.
-- **Restore the flattened text.** The two A.5 rows could be rebuilt as table rows, and the
-  definitions run together in Chapter 10 could be set as separate entries.
+- **Remove or reconcile the A.5 duplicates.** The two A.5 lines could be deleted as repeats of
+  the p. 104 rows, or rebuilt only after their wording is made to agree with those rows and
+  with Chapter 10.
+- **Separate the run-together definitions.** The three definitions that run together in
+  Chapter 10 could be set as separate entries.
 - **Tidy headings and hyphens.** The 14 spaces after hyphens could be removed, each heading
   kept with its text, and one heading style used throughout.
 

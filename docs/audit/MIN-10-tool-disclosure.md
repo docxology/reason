@@ -25,12 +25,14 @@ github_issue: 56
 
 ## Finding
 
-The volumes are published in English, Russian and (for v7.5) Chinese editions, and Volume I
-reports that novelty and priority were assessed with an AI literature tool (Elicit), as quoted
-above. Neither volume states which tools were used to draft, translate or typeset the text, and
-each title page names the author alone. The document metadata of both PDFs names the producer
-as `OpenAI / PyMuPDF`. Many journals and conferences now require a statement of AI assistance
-in writing and translation, and readers use it to calibrate how to read the text.
+The volumes are published in English, Russian and (for v7.5) Chinese editions. Volume I
+describes the order of its research, with the comparisons with the scientific literature made
+after the author's propositions had been formed, and reports that novelty and priority were
+assessed with an AI literature tool (Elicit), both as quoted above. Neither volume states which
+tools were used to draft, translate or typeset the text, and each title page names the author
+alone. The document metadata of both PDFs names the producer as `OpenAI / PyMuPDF`. Many
+journals and conferences now require a statement of AI assistance in writing and translation,
+and readers use it to calibrate how to read the text.
 
 ## Evidence
 

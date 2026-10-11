@@ -4,7 +4,7 @@ title: Truncated sentences in Volume I
 severity: minor
 area: editorial
 volumes: I
-sections: Vol I §12.3, §13.4, Ch. 18, Conclusion
+sections: Vol I Key Definitions, §12.3, §13.4, §14.6, Ch. 18, Conclusion
 review: Appendix A
 status: open
 github_issue: 48
@@ -27,7 +27,8 @@ github_issue: 48
 
 Four sentences in Volume I, quoted above, stop mid-clause. Two are the first copy of a
 duplicated paragraph (MIN-01) whose revised version follows, which supports the reading that
-two drafts were merged; the other two have no complete version anywhere in the volume.
+two drafts were merged; the other two have no complete version of the sentence anywhere in the
+volume, though other passages cover the same ground (see Evidence).
 
 ## Evidence
 
@@ -44,19 +45,32 @@ two drafts were merged; the other two have no complete version anywhere in the v
 - **Vol I Conclusion, p. 90:** the next paragraph opens "The result of this work is a set of
   fundamental foundations for the technology of AR [...]"; the cut-off sentence has no complete
   copy elsewhere in the volume.
+- **Already in the text (Vol I Key Definitions, AGI, p. 13):** "High intellectual power
+  combined with partially formed autonomy can produce behavior that is difficult to predict and
+  potentially dangerous." The entry describes the same intermediate state as the cut-off
+  Chapter 18 sentence: an AGI with some elements of Reason but without "causally closed
+  self-navigation relative to the Compass".
+- **Already in the text (Vol I §14.6, p. 71):** "If it ever becomes possible to detect and
+  repair damage with sufficient reliability, preserve the causal history of the subject, and
+  renew the carrier while preserving the organization of the process itself, the functional
+  need for coarse replacement of form should decrease." The section, headed "Immortality as a
+  Limiting Hypothesis", covers the same ground as the cut-off Conclusion sentence.
 
 Locate any of these with `python3 -I scripts/locate.py text/foundations-8.0.txt "<quote>"`.
 
 ## Why it matters
 
-A truncated sentence in a definition or argument leaves the reader to guess the claim.
+A truncated sentence in a definition or argument leaves the reader to guess the claim. For
+Chapter 18 and the Conclusion the Key Definitions and §14.6 narrow the guess, but the
+sentences still stop mid-clause.
 
 ## Ideas & possible recommendations
 
 - **Remove the truncated first copies.** In §12.3 and §13.4 a complete, revised copy of the
   paragraph follows, so deleting the cut-off copy would settle both (see MIN-01).
 - **Complete the two remaining sentences.** In Chapter 18 and the Conclusion no complete
-  version exists, so the author would need to supply the end of each sentence.
+  version exists, so the author would need to supply the end of each sentence. The Key
+  Definitions (AGI) and §14.6 indicate the sense of the two sentences.
 - **Check paragraph endings before release.** A scripted test for body paragraphs that end
   without closing punctuation would flag all four passages, along with some table cells and
   headings that it would have to skip.

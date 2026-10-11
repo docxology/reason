@@ -4,7 +4,7 @@ title: Near-duplicate paragraphs in Volume I
 severity: minor
 area: editorial
 volumes: I
-sections: Vol I Abstract, Ch. 5, §9.3, §11.1, §12.3, §12.4, §12.5, §12.9, §13.3, §13.4, Ch. 15, Ch. 16, Ch. 17
+sections: Vol I Abstract, Ch. 5, Ch. 8, §9.3, §11.1, §11.4, §12.3, §12.4, §12.5, §12.7, §12.9, §13.3, §13.4, Ch. 15, Ch. 16, Ch. 17, §20.2
 review: Appendix A
 status: open
 github_issue: 47
@@ -40,8 +40,8 @@ directly after the other, as if two edit or translation passes had been merged w
 the older copy. The passages above are three of them. An automated check
 (`repro/dup_paragraphs.py`: paragraphs over 120 characters, `difflib` similarity above 0.80
 within a window of three) confirms eleven pairs; the Abstract's repeated statement of the
-technological hypothesis and the truncated first copies in §12.3, §13.4 and Chapter 18 (MIN-02)
-are further instances. The same check finds none in Volume II.
+technological hypothesis and the truncated first copies in §12.3 and §13.4 (MIN-02) are
+further instances. The same check finds none in Volume II.
 
 ## Evidence
 
@@ -79,14 +79,16 @@ final editorial pass, which lowers reviewers' confidence in the rest.
 
 - **Keep one copy of each pair.** The later, fuller copy is usually the better one to keep.
   Where the two copies differ in substance, as in the two statements of the technological
-  hypothesis in the Abstract, the author would choose the wording he intends.
+  hypothesis in the Abstract, the author would choose the intended wording.
 - **Run a similarity check before each release.** A check such as `repro/dup_paragraphs.py`
   could be run on every release candidate, so that a merge of drafts that leaves both copies in
   place is caught before publication.
 
 ## Resolved when
 
-- [ ] `repro/dup_paragraphs.py` reports no pairs above 0.80 for the next version.
+- [ ] No paragraph of Volume I is printed twice in different wording: `repro/dup_paragraphs.py`
+      reports no pairs above 0.80, and the further pairs found by reading
+      (`notes/audit-raw/V1A.md` V1A-38, `notes/audit-raw/V1B.md` V1B-29) are resolved.
 
 ## Related
 

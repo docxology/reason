@@ -18,10 +18,12 @@ github_issue: 2
   (ASR)"
 - **Vol II Purpose of the document, p. 11:** "The technological task is to cultivate, from
   available artificial Intelligence, a system capable of independently continuing causally
-  grounded navigation, and then to scale the formed Reason to ASI." Later on the same page: "A
-  technology for forming Artificial Reason is proposed through cultivation of a universal AGI
-  instrument and subsequent transfer of the source of navigation from the external formation
-  loop to a causally closed internal organization."
+  grounded navigation, and then to scale the formed Reason to ASI." Later on the same page,
+  the stage claim ("Claim and result of this stage"), which concerns forming Artificial Reason
+  and presupposes a universal AGI instrument (it makes no ASI claim): "A technology for
+  forming Artificial Reason is proposed through cultivation of a universal AGI instrument and
+  subsequent transfer of the source of navigation from the external formation loop to a
+  causally closed internal organization."
 - **Vol II §33.D, p. 112:** "Further growth increases the capabilities of already formed AR
   while preserving its ability to understand its own state, detect gaps, revise derived
   grounds, and account for consequences." Also: "Within the proposed path, ASI is scaled
@@ -35,10 +37,12 @@ github_issue: 2
 The Zenodo records lead with superintelligence: *Superintelligence Technology (ASI):
 Foundations of Reason 8.0 — From the Meaning of Life to Artificial Reason* and *Engineering of
 Reason 3.5: ASI Technology*; Volume II's own title page makes the same promise (first claim
-above). Inside, the engineering path starts from an AGI that is assumed rather than tested,
-superhuman capability comes from scaling the levers AI laboratories already scale, and the text
-itself says ASI has no assigned experimental status. Volume II does supply a per-step gate for
-scaling (`ScalingChange`, `ScaleInvariantReport`, rollback), but no argument or pilot that the
+above), although the Purpose section scopes its stage claim to the formation of Artificial
+Reason and mentions ASI only as the later scaling task (second claim above). In the body of the
+text, the engineering path starts from an AGI that is assumed rather than tested, superhuman
+capability comes from scaling the levers AI laboratories already scale, and the text itself
+says ASI has no assigned experimental status. Volume II does supply a per-step gate for scaling
+(`ScalingChange`, `ScaleInvariantReport`, rollback), but no argument or pilot that the
 organizational invariants survive any scaling step, and the Core, Worldview and Compass are not
 among the eight axes that are scaled.
 
@@ -92,7 +96,7 @@ so the scaling claim rests on an argument that is absent.
 
 ## Resolved when
 
-- [ ] Titles and abstracts describe what the volumes contain: a functional model, an
+- [ ] Titles and the Zenodo descriptions describe what the volumes contain: a functional model, an
       engineering specification and a test programme.
 - [ ] Any ASI claim is confined to an outlook section, or is backed by an argument or pilot
       for invariant preservation under scaling.

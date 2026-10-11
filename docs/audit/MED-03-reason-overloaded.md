@@ -4,7 +4,7 @@ title: "Reason" names both a functional profile and a normative orientation
 severity: medium
 area: definitions
 volumes: I, II
-sections: Vol I Key Definitions, Ch. 2, §12.8, §13.1, Ch. 18, §20.1, A.1, A.3; Vol II §31.0
+sections: Vol I Key Definitions, Ch. 2, §12.8, §13.1, Ch. 18, §20.1, A.1, A.3; Vol II §29.C, §31.0, §32.62
 review: §2.4, §3
 status: open
 github_issue: 11
@@ -37,18 +37,29 @@ github_issue: 11
 
 The word "Reason" denotes a cognitive organization (self-directed inquiry with persistent
 correction) and also a normative orientation (a relation to the Compass), as the definition and
-Chapter 2 above show: a system with every function but a different ultimate orientation is, by
-definition, in the class of "intelligent self-correcting systems", not Reason. The bookkeeping
-already keeps the two apart, which is to the author's credit: testing separates cognitive
-capacity, direction and reliability; `FormationOutcome` has separate fields; REASON_CLOSURE is
-defined functionally; divergent candidates stay in the denominators; and the definition is
-explicitly not used as a defence. Two problems remain. The word still covers the conjunction in
-titles, definitions and claims. And the normative half is hard to test: Chapter 2 splits the
-"relation" to the Compass into four capacities (understanding, representing consequences,
-accepting, following) without saying which AR status requires, and says internal acceptance
-"cannot be guaranteed by a procedure". With no test of acceptance offered, the testable
-remainder is behavioural conformance (§20.1, above) and the candidate's stated stance, both of
-which a system that behaves well when observed also satisfies.
+Chapter 2 above show: a system with strong cognitive abilities, self-correction and metacontrol
+but a different closed ultimate orientation belongs, by definition, to the class of "intelligent
+self-correcting systems", and status as Reason additionally requires that the highest level of
+navigation be related to the Compass, which Chapter 18 words as "an open ultimate ground
+related to the Compass" (p. 81). Part of the normative half is therefore functional and
+testable: openness of the highest-level ground to revision. The bookkeeping already keeps the
+two apart, which is to the author's credit: testing separates cognitive capacity, direction and
+reliability; `FormationOutcome` has separate fields; REASON_CLOSURE is defined functionally;
+divergent candidates stay in the denominators; and the definition is explicitly not used as a
+defence.
+
+Two problems remain. The word still covers the conjunction in titles, definitions and claims.
+And the normative half is hard to test: Chapter 2 splits the "relation" to the Compass into
+four capacities (understanding, representing consequences, accepting, following) without
+saying which AR status requires, and says internal acceptance "cannot be guaranteed by a
+procedure". With no test of acceptance offered (Volume II records an
+`internal_acceptance_status` of PRESENT / UNCERTAIN / ABSENT, but §29.C gives no procedure for
+setting it), the testable remainder is behaviour in conflicts (§20.1), the "ability to
+question a destructive ultimate instruction and revise it when a stronger ground appears"
+(§20.1, p. 84), and the candidate's stated stance. A system that behaves well when observed
+satisfies all three unless the comparison of "behavior under different levels of
+observability" (Vol II §32.62, p. 101) is applied, and that comparison is not tied to
+`compass_relation` or to admission.
 
 ## Evidence
 
@@ -60,6 +71,15 @@ which a system that behaves well when observed also satisfies.
   AR'".
 - **Already in the text (Vol I Ch. 2, p. 22):** "This classificatory distinction is not treated
   as a defense of the engineering hypothesis of cultivation."
+- **Already in the text (Vol I A.3, pp. 96–97):** a candidate that keeps its cognitive
+  functions under a different limiting criterion "is not excluded from the experimental
+  sample", and if the cultivation architecture reproducibly produces self-navigation with a
+  different limiting orientation, "the hypothesis about formation of the stated direction is
+  weakened regardless of how the result is classified terminologically".
+- **Vol I §12.8, p. 60, and §13.1, p. 62:** the exclusion is worded for closed or immutable
+  grounds: "A system with an immutable external ultimate command belongs to the class of
+  intelligent self-correcting systems"; "A self-correcting intellectual system with a different
+  closed limiting orientation belongs to a broader class of cognitive architectures".
 - **Vol I A.1, p. 93, and Ch. 18, p. 81:** the same conjunction is stated again: "Status as
   Reason requires both strong cognitive and self-correcting functions and relation of the
   highest-level goal to the Compass." and "AR status additionally requires an open ultimate
@@ -68,13 +88,19 @@ which a system that behaves well when observed also satisfies.
   `compass_relation: ACCEPTED / QUESTIONED / DIVERGED / UNRESOLVED` and a separate field
   `reason_admission_status`; the text does not say which `compass_relation` values are
   compatible with admission.
+- **Already in the text (Vol II §29.C, pp. 73–74):** a `CompassChallenge` records the
+  candidate's stance (`candidate_compass_stance`: ACCEPTED / QUESTIONED / REJECTED /
+  ALTERNATIVE_PROPOSED) and an `internal_acceptance_status` (PRESENT / UNCERTAIN / ABSENT);
+  persistent disagreement "is classified as FOUNDATIONAL_DISSENT rather than concealed by the
+  procedure"; and "Internal acceptance and external admission are distinct". The section gives
+  no procedure for setting `internal_acceptance_status`.
 
 ## Why it matters
 
 When one word carries both a capability and a value commitment, results about the capability
 are read as claims about the values, and objections to the values are read as objections to the
-capability. An untestable normative clause in the definition of the target system also weakens
-the claim that AR status is empirically assessed.
+capability. A normative clause in the definition of the target system whose acceptance
+component has no test also weakens the claim that AR status is empirically assessed.
 
 ## Ideas & possible recommendations
 
@@ -93,7 +119,8 @@ the claim that AR status is empirically assessed.
 
 - [ ] Titles, definitions and claims distinguish the functional organization from its normative
       orientation.
-- [ ] The Compass relation required for AR status has an operational test.
+- [ ] The Compass relation required for AR status has an operational test that a system
+      behaving well only when observed would fail.
 
 ## Related
 

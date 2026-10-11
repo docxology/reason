@@ -4,7 +4,7 @@ title: No comparative evidence yet for the central hypothesis
 severity: major
 area: evidence
 volumes: I, II
-sections: Vol I §12.9, A.2, A.2.1, A.4; Vol II front matter, §27.B
+sections: Vol I Abstract, §12.9, A.2, A.2.1, A.4; Vol II front matter, §27.B
 review: §5.2(a), §7, §9
 status: open
 github_issue: 1
@@ -26,13 +26,18 @@ github_issue: 1
 ## Finding
 
 Neither volume reports a comparison between the proposed organization (the Core plus the
-epistemic layer) and any baseline, so the hypotheses above have not yet been tested. The only
-empirical activity is a benchmark-construction pilot: four of five task packages were rejected,
-no candidate system was evaluated, and the work stopped before any comparative run. Every claim
-that the organization improves fault localization, sufficiency judgments, persistence of
-corrections or transfer is therefore a hypothesis, not a result. The author says so plainly,
-which is to his credit; the issue is that the titles, the abstract and the "technology" framing
-read as if the work were further along.
+epistemic layer) and any baseline, so the hypotheses above have not yet been tested. The
+evidence table in Vol I A.2.1 lists a completed limited example of learning from consequences
+for the lower loop and says the Core and Compass "require separate tests"; the diagnostic cycle
+of §33.C.1 is a further limited executable example. Beyond these, the only empirical activity
+is a benchmark-construction pilot: of the five task packages named, 001 to 004 were rejected,
+and in the reviewed materials package 005 has no completed external admission and no
+comparative C0/C1/C2 run. Every claim that the organization improves fault localization,
+sufficiency judgments, persistence of corrections or transfer is therefore a hypothesis, not a
+result. The author says so plainly, which is to the author's credit; the issue is that the titles and
+the "technology" framing read as if the work were further along, although the Volume I abstract
+itself says "A complete artificial system of Reason and its scaling to ASI remain goals for
+further implementation and testing."
 
 ## Evidence
 
@@ -44,14 +49,26 @@ read as if the work were further along.
   dataset-quality errors; machine-aligned 003 and 004 were rejected because confirmed
   shortcut methods allowed guessing." The pilot ran "in a dialogue loop with the author's
   participation".
-- **Vol I A.2.1, p. 95** (evidence table): the row is labelled "Inquiry-loop pilot", although
-  the pilot evaluated no inquiry loop; for the "Central discriminating test" the status is
-  "Program and controls are formulated", and the next step is "Run a preregistered series
-  under equal total resources". For ASI the status is "Scaling direction only".
-- **Vol I A.4, p. 99:** the first series is described as "proposed variants, not
+- **Vol I A.2.1, p. 95** (evidence table): the row is labelled "Inquiry-loop pilot", and its
+  status cell reads "Methodological results have been obtained", citing rejected sets and
+  changes in procedure made with the author's participation. The table therefore does not
+  claim that an inquiry loop was evaluated, though the label alone can suggest it; for the
+  "Central discriminating test" the status is "Program and controls are formulated", and the
+  next step is "Run a preregistered series under equal total resources". For ASI the status
+  is "Scaling direction only".
+- **Vol I A.4, pp. 99–100:** the first series is specified as at least three variants (a
+  strong-null agent stack, the same intelligence level with explicit organization of gaps and
+  inquiry experience, and a specialized strong controller in a small known environment), all
+  with "comparable total resources", under the rule that if the strong null "reproduces the
+  full causal profile of inquiry obligations", the necessity of the author's decomposition
+  "is then not established". The variants are described as "proposed variants, not
   implemented results".
 - **Already in the text (Vol II title page, p. 9):** "Status: engineering specification and
   experimental verification program".
+- **Already in the text (Vol I guide, p. 6):** "The source volumes present a causal model, an
+  engineering specification, limited executable examples, and a program of comparative tests.
+  A methodological pilot is described. Full integrated confirmation of the upper loop and
+  scaling to ASI remains a further task."
 
 ## Why it matters
 
@@ -63,16 +80,17 @@ for reviewers (MED-15).
 
 ## Ideas & possible recommendations
 
-- **One preregistered comparison.** The design sketched in review §10 would test the §12.9
-  hypothesis directly: the same model, tools and token and call budget for four arms (a
-  strong agent stack, the stack plus the Vol II epistemic layer only, the stack plus the full
-  Core, and the exact dynamic-programming oracle where tractable), on generated diagnosis
-  families with perturbations and at least one external benchmark.
+- **One preregistered comparison.** Appendix A.4 already outlines a three-variant first
+  series. The design sketched in review §10 would turn it into a preregistered instance that
+  tests the §12.9 hypothesis directly: the same model, tools and token and call budget for
+  four arms (a strong agent stack, the stack plus the Vol II epistemic layer only, the stack
+  plus the full Core, and the exact dynamic-programming oracle where tractable), on generated
+  diagnosis families with perturbations and at least one external benchmark.
 - **A smaller first run.** If four arms are too costly at first, two arms at equal total
   resources (the strong stack against the stack plus the full Core) would already turn the
   hypothesis into a result, positive or negative.
-- **Relabel the evidence table.** The A.2.1 row could read *benchmark-construction pilot* and
-  say that no candidate system was evaluated.
+- **Relabel the evidence table.** The A.2.1 row could read *benchmark-construction pilot*, in
+  line with its own status cell, and say what the pilot did and did not evaluate.
 - **Hold the text steady.** Freezing the volumes until a comparative result exists would give
   reviewers a fixed target (MED-15).
 

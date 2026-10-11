@@ -43,17 +43,18 @@ github_issue: 7
 ## Finding
 
 The volumes do contain a comparison apparatus, placed at the end: Volume I's final appendix
-section, A.5 "Retrospective Scientific Comparisons", which describes itself as a map of "the
-nearest architectures", annotates 29 references and adds a terminological correspondence map
-and a comparative map that states, for each nearby line of work, what remains a separate claim;
-Volume II §34.A cites seven systems in line and treats them as strong nulls. The author also
-says the AI-tool priority audit is "not proof of novelty or priority". What is missing is the
-closest prior work for the components the chapters present as derived (Chapters 5 and 6,
-above): Soar's impasse-driven subgoaling and chunking (the closest single precedent, absent
-from Volume I), goal-driven autonomy, truth maintenance and belief revision, model-based
-diagnosis (the running example is a textbook case), decision-region active learning, the Robot
-Scientist, structure-mapping and case-based reasoning, and the philosophy of inquiry (Peirce,
-Dewey, Hintikka, Kant). The chapters themselves name the literature once.
+section, A.5 "Retrospective Scientific Comparisons", which describes itself as "a selective map
+of primary publications for comparison of individual functions and the nearest architectures",
+annotates 29 references and adds a terminological correspondence map and a comparative map that
+states, for each nearby line of work, what remains a separate claim; Volume II §34.A cites
+seven systems in line and treats them as strong nulls. The author also says the AI-tool
+priority audit is "not proof of novelty or priority". What is missing is the closest prior
+work for the components the chapters present as derived (Chapters 5 and 6, above): Soar's
+impasse-driven subgoaling and chunking (the closest single precedent, absent from Volume I),
+goal-driven autonomy, truth maintenance and belief revision, model-based diagnosis (the
+running example is a textbook case), decision-region active learning, the Robot Scientist,
+structure-mapping and case-based reasoning, and the philosophy of inquiry (Peirce, Dewey,
+Hintikka, Kant). The chapters themselves name the literature once.
 
 ## Evidence
 
@@ -68,18 +69,25 @@ Dewey, Hintikka, Kant). The chapters themselves name the literature once.
 - **Vol I §7.2, p. 37:** the only literature named in the chapters, RAG and ReAct, cited as
   "Appendix A.5, items 15–16" (printed as items 70 and 71).
 - **Vol II §34.A, pp. 114–115:** Soar, ACT-R, LIDA, Generative Agents, Reflexion, Voyager and
-  MemGPT cited as [R1]–[R7]; NARS and metareasoning named without references.
+  MemGPT cited as [R1]–[R7]; NARS and metareasoning named without references in §34.A (Volume I
+  A.5 has entries for both: item 64 for NARS, items 58 and 82 for metareasoning).
 - **Absent from both volumes** (exhaustive search): truth maintenance, belief revision,
   model-based diagnosis, Dewey, Peirce, Kant, Hintikka, Stanovich, blackboard architectures,
   the Robot Scientist, BACON, adaptive-submodular test selection, structure-mapping,
-  case-based reasoning, goal-driven autonomy, shutdown or off-switch incentives, impact
-  measures, prompt injection.
+  case-based reasoning, goal-driven autonomy (as a term; A.5 item 62 cites MIDCA), shutdown or
+  off-switch incentives, impact measures, prompt injection.
 - **Vol I A.2, p. 94:** the method by which components are derived: "The method is process-based
   and causal-functional reconstruction. First the capability under study and its limitation are
   specified, then possible ways of overcoming that limitation are considered."
-- **Vol I Chs. 5–6, pp. 32–34:** the Chapter 6 trigger for Intelligence, quoted above, matches
-  Soar's impasse types, and Chapter 5's compression of successful episodes into procedures
-  matches chunking.
+- **Vol I Chs. 5–6, pp. 32–34:** the first two Chapter 6 triggers for Intelligence ("no
+  suitable method exists in Procedural Memory", "several learned methods produce incompatible
+  consequences") resemble Soar's impasses (no applicable operator; a tie or conflict among
+  candidates), and Chapter 5's compression of relations in which "a particular action
+  repeatedly produces an acceptable result" resembles chunking. Both comparisons come from
+  outside the volumes, which mention neither impasses nor chunking. The third trigger, "a
+  solution assembled from different parts of experience", is stated as a requirement on the new
+  solution rather than as an impasse condition. A.5's correspondence map lists "production
+  rules, cached policy" (p. 103) among the nearest existing concepts to Procedural Memory.
 
 ## Why it matters
 
@@ -109,7 +117,9 @@ making it than for leaving readers to find the overlap.
 ## Resolved when
 
 - [ ] Each component chapter cites and contrasts its closest precedents.
-- [ ] Every system named in the text has a bibliography entry.
+- [ ] Every system named in the text has a bibliography entry or a cross-reference to one
+      (NARS and metareasoning in Volume II §34.A currently have no pointer to their Volume I A.5
+      entries).
 
 ## Related
 

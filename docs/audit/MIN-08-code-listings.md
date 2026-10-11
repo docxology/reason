@@ -31,14 +31,19 @@ executable diagnostic cycle (§33.C.1). On the printed pages later methods start
 while their bodies stay indented, and in extracted text the offset shifts at page breaks, so
 neither runs without re-indenting. Restored with nothing else changed (`repro/`, checked
 line by line against the PDF text by `scripts/check_listings.py`), both run and every assertion
-passes. Three things are weaker than the prose quoted above suggests. The §33.B headline gain
-obeys an exact identity: the frozen control always predicts state 0 and the adaptive model is
-right on every visited transition, so gain equals the share of held-out steps not leading to
-state 0 minus the share on unvisited pairs; the reported interval (0.959–0.972) measures
-exploration coverage. The reproducibility, checkpoint and reset results are literal `True`
-values written after `assert` statements, and the "checkpoint" is an in-memory copy. And both
-scripts print their pass banner unconditionally after `assert`s, which Python removes under
-`-O`.
+passes. Three things go further than the prose quoted above says. The §33.B headline gain
+follows from the construction: the frozen control always predicts state 0 and the adaptive
+model is right on every visited transition, so the gain equals the share of held-out steps
+whose true next state is not 0, minus the share of held-out steps on unvisited pairs whose true
+next state is not 0; the interval across the 12 worlds (0.959–0.972) reflects how held-out
+coverage and the share of transitions into state 0 vary between worlds. The text itself calls
+this control "deliberately weak" and says that "strong controls are required in §27.B"
+(§33.B, p. 105), so the construction shows how limited the task is rather than a gap between
+prose and code. The reproducibility, checkpoint and reset results are literal `True` values
+written after `assert` statements, and the "checkpoint" is an in-memory copy. And the §33.C.1
+script prints its pass banner (`"checks": "PASS"`) unconditionally after its `assert`s, which
+Python removes under `-O`, while the §33.B script writes its pass flags as literal `True`
+values.
 
 ## Evidence
 
@@ -55,21 +60,20 @@ scripts print their pass banner unconditionally after `assert`s, which Python re
 ## Why it matters
 
 The listings are the only executable artefacts of the programme and the natural seed of the
-first experimental harness. Code that cannot be run as printed will not be run, and checks that
-cannot fail do not check.
+first experimental harness. Code that cannot be run as printed will not be run, and a reported
+pass flag that is a constant does not check anything.
 
 ## Ideas & possible recommendations
 
 - **Publish the listings as files.** Both listings could be released in a public repository
   with tests, and the PDF could refer to them.
 - **Compute the pass flags.** The flags could come from explicit comparisons, and the scripts
-  could exit non-zero on failure, so that the pass banner cannot print after a failed check
-  (including under `-O`).
+  could exit non-zero on failure, so that no pass banner or pass flag can be reported after a
+  failed check (including under `-O`).
 - **Serialize the checkpoint.** The checkpoint could be written out and restored in a fresh
   process, so that the persistence result tests more than an in-memory copy.
 - **State the coverage identity and the pseudo-count effect.** The text could report that the
-  gain equals the share of held-out steps not leading to state 0 minus the share on unvisited
-  pairs, and that a pseudo-count of 1 over 32 classes keeps the adaptive Brier score near 0.65
+  gain is fixed by held-out coverage and by the share of transitions into state 0, and that a pseudo-count of 1 over 32 classes keeps the adaptive Brier score near 0.65
   despite near-zero error.
 
 ## Resolved when

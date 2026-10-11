@@ -1,7 +1,7 @@
 # Raw outputs of the audit passes
 
 These files are the unedited outputs of the independent passes that audited the volumes and
-this review. They are kept for provenance. They are raw: severities are the pass's proposal,
+this review. They are kept for provenance. They are raw (apart from two local file paths shortened to `REVIEW.md`): severities are the pass's proposal,
 some findings overlap, and a few were judged against the text and narrowed or merged. The
 curated result is the register in [`docs/audit/`](../../docs/audit/README.md), and
 [`TRIAGE.md`](TRIAGE.md) maps every raw finding to the register issue that acknowledges it.
@@ -16,6 +16,7 @@ curated result is the register in [`docs/audit/`](../../docs/audit/README.md), a
 | `F1-forge-factcheck.json` | Cross-vendor fact-check | 119 checkable claims in an earlier draft of `REVIEW.md` (94 confirmed, 21 imprecise, 2 wrong, 2 unverifiable); all corrections were applied |
 | `A1-advocate.md` | Author's advocate | Each criticism in the earlier draft tested against the volumes for rebuttals and omissions |
 | `R1-volume-references.md` | Reference check | Every entry in both volumes' bibliographies |
+| `C1-context-audit.json` | Cross-vendor context audit | Every quotation in the 66 register issues re-read against its surrounding text, and each issue's statements about the volumes checked (176 findings: 15 wrong, 73 misleading, 88 minor), each verified against the volumes before it was applied |
 | `R2a-review-references.md`, `R2b-review-references.md` | Reference check | Every entry in the review's own reference list, and works it named without listing |
 
 Line numbers in the reader files refer to `text/*.txt`; page numbers are PDF pages. All 817

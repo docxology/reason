@@ -1,8 +1,9 @@
 # Extracted text
 
 Plain-text conversions of the two PDFs in `../sources/`, made with poppler's `pdftotext`
-(version 26.10.0). They are adaptations of CC BY-NC 4.0 works by Mihail Tkalic; the only
-change is the conversion to text.
+(version 26.10.0). They are adaptations of works by Mihail Tkalic licensed
+[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/); the only change is the
+conversion to text.
 
 | File | Command |
 |---|---|
