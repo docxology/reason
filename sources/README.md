@@ -11,4 +11,4 @@ license. They are the exact English editions the review in `../REVIEW.md` refers
 © Mihail Tkalic. The Zenodo records also carry Russian editions, which were not reviewed.
 
 Verify a local copy with `shasum -a 256 sources/*/*.pdf`, or check the recorded digests with
-`shasum -a 256 -c sources/SHA256SUMS` (the same check as `make sha` in `make verify`).
+`shasum -a 256 -c sources/SHA256SUMS` (the same check `make sha`, part of `make verify`, runs).
