@@ -27,7 +27,7 @@ until such an experiment has run.
 | [`REVIEW.md`](REVIEW.md) | The full review: answers to the author's seven questions, a reconstruction of the architecture, the prior-art comparison including active inference, a safety analysis, the scientific status, and ideas and possible recommendations, including a concrete first experiment. Each section opens with the claims it responds to, quoted from the volumes with volume, section and page |
 | [`docs/audit/`](docs/audit/README.md) | The issue register: 66 issues (8 major, 38 medium, 20 minor), each mirrored by a GitHub issue with the same ID. Every file opens with the claims under review, quoted with volume, section and page, then gives the finding, evidence, ideas and possible recommendations, and a resolution criterion |
 | [`repro/`](repro/README.md) | The two Python listings from Vol II with their indentation restored, and the duplicate-paragraph check |
-| [`scripts/`](scripts/) | Quote locator, quotation and page-citation checks, number check, audit-register index and issue filing |
+| [`scripts/`](scripts/) | Quote locator, quotation and page-citation checks, number check, audit-register index, triage map, Zenodo history and issue filing |
 | [`notes/`](notes/) | Reading notes, the Zenodo publication history, and the raw outputs of the independent audit passes |
 | [`sources/`](sources/README.md) | The two English PDFs under review (CC BY-NC 4.0, unmodified) with SHA-256 checksums |
 | [`text/`](text/README.md) | Text extracted from the PDFs; every quotation, page and line number is taken from it |

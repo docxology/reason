@@ -22,8 +22,8 @@ github_issue: 23
 ## Finding
 
 The two title pages above fix the reviewed versions: Volume I version 8.0 and Volume II version
-3.5, both dated 10 October 2026. The Volume I concept record on Zenodo holds 38 records.
-Thirty-one are the main text: 19 distinct revisions, most uploaded separately in English and
+3.5, both dated 10 October 2026. The Volume I concept record on Zenodo holds 39 records.
+Thirty-two are the main text: 20 distinct revisions, most uploaded separately in English and
 Russian. The other seven are spin-off documents (an engineering volume, a one-page specification,
 a popular introduction, *Deriving AGI From First Principles*, *The Core of Reason 6.7*). The
 earliest record was created on 16 December 2025, so the series spans about ten months; the record
@@ -33,11 +33,12 @@ January 2026, which looks like a year typed wrongly. Seven numbered revisions, 6
 and the Zenodo title changed at nearly every revision from 4.5 on: from *A Structural Stability
 Model for Autonomous Systems and AI Alignment*, through *A Process-Based Model of Life, Reason,
 and AGI* and *Minimal Architecture of ASI*, to *Superintelligence Technology (ASI)*. Volume II
-went from v2.4 to v3.5 in thirteen days. Appendix A.2 gives a short history of selected
-revisions (2.1R, 5.8H, 7.0) and says the Compass Phrase is primary "in the present revision"; it
-does not itemise the changes in 7.2, 7.5 or 8.0. The documented 7.0 changes add experimental
-distinctions rather than remove them, and the Common Rules state that "Both volumes are revised
-according to" the results of the first discriminating series (Common Rules, p. 92). But the
+went from v2.4 to v3.5 in thirteen days, and to v4.0 six days later. Appendix A.2 gives a
+short history of selected revisions (2.1R, 5.8H, 7.0) and says the Compass Phrase is primary "in
+the present revision"; it does not itemise the changes in 7.2, 7.5 or 8.0. The documented 7.0
+changes add experimental distinctions rather than remove them, and the Common Rules state that
+"Both volumes are revised according to" the results of the first discriminating series (Common
+Rules, p. 92). But the
 reviewed versions report no comparative data (MAJ-01), so these are revisions of the theory, not
 responses to results.
 
@@ -46,6 +47,8 @@ responses to results.
 - `notes/zenodo-history.md`, generated from the Zenodo REST API by `scripts/zenodo_history.py`:
   every record with its creation and publication dates, version label, title and license.
 - Zenodo record 18208467 (labelled 1.4r): created 2026-01-10, publication date 2025-01-10.
+- Zenodo records 23353986 (Volume I v8.9) and 23391873 (Volume II v4.0), both created
+  2026-10-15, supersede the reviewed revisions six days after they were posted.
 - **Already in the text (Vol I A.2, p. 94):** "Revision 7.0 preserves separation of definitions,
   philosophical justification, and implementation testing, permits functional substitutions,
   and specifies experimental distinctions."; "Some older reports analyze the Compass as

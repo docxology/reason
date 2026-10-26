@@ -4,8 +4,8 @@ Sources: Zenodo 10.5281/zenodo.23271702 (Vol I, 105 pp EN) and 10.5281/zenodo.23
 
 ## Publication history (Zenodo API)
 
-- Vol I concept record 17957561: 38 versions, 2025-01-10 (v1.4r) through 2026-10-09 (v8.0). Titles drift: "Structural Stability Model for Autonomous Systems and AI Alignment" (v1-v3) → "Process Model of Life, Reason, and AGI" (v4.5-v5.5) → "Minimal Architecture of ASI" (v6) → "Causal Model / ASI Technology" (v6.7-v8.0). Spinoffs inside it: "Minimal AGI System: One-Page Spec" (2026-04-21), "Deriving AGI From First Principles" (2026-06-18), "Popular Introduction" (2026-07-10), "Core of Reason 6.7" (2026-08-31).
-- Cadence: v7.0 2026-09-09, v7.2 09-19, v7.5 10-02 (EN/RU/ZH), v8.0 10-09. Vol II: v2.4 2026-09-26, v3.5 2026-10-09. Vol III ("Civilization of Reason", "Rialadia") v1.8 2026-09-26, not under review.
+- Vol I concept record 17957561: 39 versions, 2025-01-10 (v1.4r) through 2026-10-14 (v8.9); the reviewed version is v8.0 (2026-10-09). Titles drift: "Structural Stability Model for Autonomous Systems and AI Alignment" (v1-v3) → "Process Model of Life, Reason, and AGI" (v4.5-v5.5) → "Minimal Architecture of ASI" (v6) → "Causal Model / ASI Technology" (v6.7-v8.9). Spinoffs inside it: "Minimal AGI System: One-Page Spec" (2026-04-21), "Deriving AGI From First Principles" (2026-06-18), "Popular Introduction" (2026-07-10), "Core of Reason 6.7" (2026-08-31).
+- Cadence: v7.0 2026-09-09, v7.2 09-19, v7.5 10-02 (EN/RU/ZH), v8.0 10-09, v8.9 10-15. Vol II: v2.4 2026-09-26, v3.5 2026-10-09, v4.0 10-15. Vol III ("Civilization of Reason", "Rialadia") v1.8 2026-09-26, not under review.
 - Concept-record stats: Vol I 1970 unique views / 286 unique downloads across versions; Vol II 26 views / 3 downloads.
 - No peer-reviewed venue, no citation trail visible; single author.
 
