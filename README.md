@@ -76,3 +76,7 @@ the audit passes; an OpenAI model for the cross-vendor fact-check).
 
 Draft review, open for the author's response. The issues stay open until the author responds
 or a later version of the volumes addresses them.
+
+## License
+
+This review is licensed under [CC BY-NC 4.0](LICENSE). The two reviewed volumes in `sources/` remain under their own CC BY-NC 4.0 terms from their author.
