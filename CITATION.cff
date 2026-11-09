@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+type: software
+title: "reason"
+authors:
+  - family-names: Friedman
+    given-names: Daniel Ari
+    orcid: "https://orcid.org/0000-0001-6232-9096"
+repository-code: "https://github.com/docxology/reason"
+abstract: "Referee-style scientific review, requested by the author, of Mihail Tkalic's Foundations of Reason 8.0 and Engineering of Reason 3.5."
