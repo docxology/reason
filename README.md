@@ -45,7 +45,7 @@ audit files is not in the volumes, or a quotation in `REVIEW.md` or the register
 the page it cites; if a register file does not open with its quoted claims or offers fewer
 than two ideas; if the register's index is stale or a raw finding is not mapped to a
 register issue; or if the PDFs do not match their checksums. Outputs go to
-`$TMPDIR/reason-verify/`. Python 3.10 or later, standard library only. `make text` regenerates `text/` (needs poppler's `pdftotext`); `make zenodo`
+`$TMPDIR/reason-verify/`. Python 3.11 or later, standard library only. `make text` regenerates `text/` (needs poppler's `pdftotext`); `make zenodo`
 refreshes the publication history (needs network).
 
 To find any quotation in the volumes:
