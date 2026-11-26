@@ -81,5 +81,5 @@ the text specifies it in two incompatible ways.
 
 ## Related
 
-- Review: [§8](../../REVIEW.md#8-safety)
+- Review: [§8](../review.md#8-safety)
 - Issues: MED-28, MED-29, MED-33, MED-38

@@ -83,5 +83,5 @@ revision rather than by tested prediction.
 
 ## Related
 
-- Review: [§7](../../REVIEW.md#weakest), [§9](../../REVIEW.md#9-scientific-status)
+- Review: [§7](../review.md#weakest), [§9](../review.md#9-scientific-status)
 - Issues: MAJ-01, MIN-09 (titles and dates)

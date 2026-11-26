@@ -6,7 +6,7 @@ Usage:
     python3 -I scripts/audit_index.py --check   # validate; fail if the index is stale
 
 The same run regenerates the body of the "## Appendix C: Issue register" section of
-REVIEW.md, from its heading to the next level-two heading.
+docs/review.md, from its heading to the next level-two heading.
 """
 import re
 import sys
@@ -21,7 +21,7 @@ Every issue found in the audit of *Foundations of Reason 8.0* (Vol I) and *Engin
 Reason 3.5* (Vol II) has a standalone file in this directory and a GitHub issue with the
 same ID. The files are the source of truth; this index and the issues are generated from
 them by `scripts/audit_index.py` and `scripts/file_issues.py`. The full argument is in
-[`REVIEW.md`](../../REVIEW.md).
+[the full review](../review.md).
 
 Each file opens with the claims under review: the author's statements the issue responds
 to, quoted verbatim with volume, section and PDF page (for an issue about how the text is
@@ -74,7 +74,7 @@ def render(audits):
 
 
 APPENDIX = "## Appendix C: Issue register"
-INTRO = ("Each issue has a standalone file in [`docs/audit/`](docs/audit/README.md) that quotes the "
+INTRO = ("Each issue has a standalone file in [`docs/audit/`](audit/README.md) that quotes the "
          "claims under review with volume, section and page, then gives the finding, evidence, "
          "ideas and possible recommendations, and a resolution criterion; each is mirrored by a "
          "GitHub issue with the same ID. The section references in parentheses point back into "
@@ -82,7 +82,7 @@ INTRO = ("Each issue has a standalone file in [`docs/audit/`](docs/audit/README.
 
 
 def review_block(audits):
-    """The body of the register appendix in REVIEW.md: one line per issue, linked to its file."""
+    """The body of the register appendix in docs/review.md: one line per issue, linked to its file."""
     lines = [APPENDIX, "", INTRO, ""]
     for severity in SEVERITIES:
         group = [a for a in audits if a.meta["severity"] == severity]
@@ -91,7 +91,7 @@ def review_block(audits):
         lines.append(f"**{TITLES[severity]} ({len(group)})**")
         lines.append("")
         for a in group:
-            lines.append(f"- [{a.id}](docs/audit/{a.path.name}) {a.meta['title']} ({a.meta['review']})")
+            lines.append(f"- [{a.id}](audit/{a.path.name}) {a.meta['title']} ({a.meta['review']})")
         lines.append("")
     return "\n".join(lines)
 
@@ -106,14 +106,14 @@ def link_ids(review_text, audits):
 
     def repl(match):
         ident = match.group(1)
-        return f"[{ident}](docs/audit/{files[ident]})" if ident in files else ident
+        return f"[{ident}](audit/{files[ident]})" if ident in files else ident
 
     return BARE_ID.sub(repl, head) + sep + tail
 
 
 def with_review_block(review_text, audits):
     if APPENDIX not in review_text:
-        raise SystemExit(f"REVIEW.md lacks the heading '{APPENDIX}'")
+        raise SystemExit(f"docs/review.md lacks the heading '{APPENDIX}'")
     head, rest = review_text.split(APPENDIX, 1)
     following = rest.find("\n## ")
     tail = rest[following + 1:] if following >= 0 else ""
@@ -133,7 +133,7 @@ def main(argv):
         print("\n".join(errors))
         return 1
     index = AUDIT_DIR / "README.md"
-    review = ROOT / "REVIEW.md"
+    review = ROOT / "docs" / "review.md"
     text = render(audits)
     review_text = review.read_text(encoding="utf-8")
     new_review = link_ids(with_review_block(review_text, audits), audits)
@@ -142,7 +142,7 @@ def main(argv):
         if not index.exists() or index.read_text(encoding="utf-8") != text:
             stale.append("docs/audit/README.md")
         if new_review != review_text:
-            stale.append("REVIEW.md register appendix")
+            stale.append("docs/review.md register appendix")
         if stale:
             print(" and ".join(stale) + " stale; run scripts/audit_index.py")
             return 1
@@ -150,7 +150,7 @@ def main(argv):
         return 0
     index.write_text(text, encoding="utf-8")
     review.write_text(new_review, encoding="utf-8")
-    print(f"wrote docs/audit/README.md and the REVIEW.md register appendix ({len(audits)} issues)")
+    print(f"wrote docs/audit/README.md and the docs/review.md register appendix ({len(audits)} issues)")
     return 0
 
 

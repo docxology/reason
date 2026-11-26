@@ -24,7 +24,7 @@ The body opens with "# ID · title" and then has these level-two sections, in or
     ## Why it matters
     ## Ideas & possible recommendations   at least two options, offered rather than prescribed
     ## Resolved when            checklist
-    ## Related                  links into REVIEW.md and other issues
+    ## Related                  links into docs/review.md and other issues
 
 The files are the single source of truth: the index (docs/audit/README.md) and the
 GitHub issues are generated from them.

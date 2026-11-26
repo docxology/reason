@@ -137,5 +137,5 @@ words it, cannot occur cannot carry the formation programme (MAJ-05); only the n
 
 ## Related
 
-- Review: [§2.2](../../REVIEW.md#22-the-necessities-are-close-to-analytic-the-substance-is-in-untested-hypotheses)
+- Review: [§2.2](../review.md#22-the-necessities-are-close-to-analytic-the-substance-is-in-untested-hypotheses)
 - Issues: MAJ-01, MAJ-05 (formation experiment), MED-12 (failure condition)

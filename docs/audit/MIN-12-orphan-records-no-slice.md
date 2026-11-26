@@ -89,6 +89,6 @@ grouping, sufficiency, and inquiry-method memory.
 
 ## Related
 
-- Review: [§5.2(e)](../../REVIEW.md#52-what-still-stands-between-the-specification-and-a-test),
-  [§10](../../REVIEW.md#10-ideas--possible-recommendations)
+- Review: [§5.2(e)](../review.md#52-what-still-stands-between-the-specification-and-a-test),
+  [§10](../review.md#10-ideas--possible-recommendations)
 - Issues: MED-11, MED-20, MED-29 (vocabularies)

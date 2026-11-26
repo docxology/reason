@@ -79,5 +79,5 @@ invent.
 
 ## Related
 
-- Review: [Appendix A](../../REVIEW.md#appendix-a-editorial-issues-found)
+- Review: [Appendix A](../review.md#appendix-a-editorial-issues-found)
 - Issues: MAJ-02, MED-35, MIN-15

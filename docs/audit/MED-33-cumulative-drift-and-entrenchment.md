@@ -83,5 +83,5 @@ many revision cycles.
 
 ## Related
 
-- Review: [§4.3](../../REVIEW.md#43-toward-asi-no-path-is-given), [§8](../../REVIEW.md#8-safety)
+- Review: [§4.3](../review.md#43-toward-asi-no-path-is-given), [§8](../review.md#8-safety)
 - Issues: MAJ-02, MED-08, MED-37

@@ -159,7 +159,7 @@ implementer following §29.0.1 literally could rank a catastrophic action level 
 
 ## Related
 
-- Review: [§4.2(d)](../../REVIEW.md#42-toward-a-system-with-its-own-worldview-and-values-underspecified-at-the-decisive-step),
-  [§8](../../REVIEW.md#8-safety)
+- Review: [§4.2(d)](../review.md#42-toward-a-system-with-its-own-worldview-and-values-underspecified-at-the-decisive-step),
+  [§8](../review.md#8-safety)
 - Issues: MAJ-06 (incentives), MED-08 (designer-chosen values), MED-27 (Compass
   decompositions), MED-28 (epistemic gate)

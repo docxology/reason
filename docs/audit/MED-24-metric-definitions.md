@@ -118,5 +118,5 @@ practically significant effect" (p. 50) retained in the experiment's Profile.
 
 ## Related
 
-- Review: [§5.2(c)](../../REVIEW.md#52-what-still-stands-between-the-specification-and-a-test)
+- Review: [§5.2(c)](../review.md#52-what-still-stands-between-the-specification-and-a-test)
 - Issues: MED-10, MED-11, MED-35

@@ -103,5 +103,5 @@ does nothing useful.
 
 ## Related
 
-- Review: [§5.2(a)](../../REVIEW.md#52-what-still-stands-between-the-specification-and-a-test)
+- Review: [§5.2(a)](../review.md#52-what-still-stands-between-the-specification-and-a-test)
 - Issues: MAJ-01, MED-10, MED-11, MED-24

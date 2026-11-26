@@ -63,5 +63,5 @@ identifiers (MIN-05).
 
 ## Related
 
-- Review: [Appendix B](../../REVIEW.md#appendix-b-what-i-verified-and-how)
+- Review: [Appendix B](../review.md#appendix-b-what-i-verified-and-how)
 - Issues: MED-23, MIN-01

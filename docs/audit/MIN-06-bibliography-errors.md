@@ -83,5 +83,5 @@ the peer-reviewed version strengthens the support.
 
 ## Related
 
-- Review: [Appendix A](../../REVIEW.md#appendix-a-editorial-issues-found)
+- Review: [Appendix A](../review.md#appendix-a-editorial-issues-found)
 - Issues: MAJ-07, MIN-03

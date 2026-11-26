@@ -98,5 +98,5 @@ structural level until causal closure has been confirmed.
 
 ## Related
 
-- Review: [§9](../../REVIEW.md#9-scientific-status)
+- Review: [§9](../review.md#9-scientific-status)
 - Issues: MAJ-01, MED-12

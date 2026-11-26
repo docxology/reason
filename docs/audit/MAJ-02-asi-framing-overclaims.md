@@ -103,7 +103,7 @@ so the scaling claim rests on an argument that is absent.
 
 ## Related
 
-- Review: [§4.3](../../REVIEW.md#43-toward-asi-no-path-is-given),
-  [§10](../../REVIEW.md#10-ideas--possible-recommendations)
+- Review: [§4.3](../review.md#43-toward-asi-no-path-is-given),
+  [§10](../review.md#10-ideas--possible-recommendations)
 - Issues: MAJ-01 (no evidence), MIN-09 (titles differ across PDF, Zenodo and the author's own
   references), MIN-16 (ASI and ASR)

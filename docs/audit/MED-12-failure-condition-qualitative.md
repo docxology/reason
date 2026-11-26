@@ -99,6 +99,6 @@ by fixing in advance the result that would count against its distinctive claim.
 
 ## Related
 
-- Review: [§5.2(d)](../../REVIEW.md#52-what-still-stands-between-the-specification-and-a-test),
-  [§9](../../REVIEW.md#9-scientific-status)
+- Review: [§5.2(d)](../review.md#52-what-still-stands-between-the-specification-and-a-test),
+  [§9](../review.md#9-scientific-status)
 - Issues: MAJ-01, MAJ-03, MED-10 (process-conformance metrics), MED-11 (preregistration)

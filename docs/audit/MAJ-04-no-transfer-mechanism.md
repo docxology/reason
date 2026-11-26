@@ -104,6 +104,6 @@ case-based reasoning (Kolodner 1993; Aamodt & Plaza 1994).
 
 ## Related
 
-- Review: [§5.3](../../REVIEW.md#53-my-answer-to-the-guides-question-for-reviewers),
-  [§7](../../REVIEW.md#in-need-of-development)
+- Review: [§5.3](../review.md#53-my-answer-to-the-guides-question-for-reviewers),
+  [§7](../review.md#in-need-of-development)
 - Issues: MAJ-03 (decision rule), MED-22 (gap taxonomies), MIN-08 (code listings)

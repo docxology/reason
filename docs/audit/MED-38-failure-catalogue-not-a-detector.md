@@ -112,5 +112,5 @@ that two implementations would apply the same way.
 
 ## Related
 
-- Review: [§8](../../REVIEW.md#8-safety)
+- Review: [§8](../review.md#8-safety)
 - Issues: MED-24, MED-30, MED-36

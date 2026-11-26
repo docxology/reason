@@ -81,5 +81,5 @@ time to know what a formula constrains, and for the undefined symbols there is n
 
 ## Related
 
-- Review: [Appendix A](../../REVIEW.md#appendix-a-editorial-issues-found)
+- Review: [Appendix A](../review.md#appendix-a-editorial-issues-found)
 - Issues: MED-20, MED-26

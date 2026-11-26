@@ -76,5 +76,5 @@ principle is descriptive, while the Compass is prescriptive; the two should be k
 
 ## Related
 
-- Review: [§6.1](../../REVIEW.md#61-active-inference-specifically)
+- Review: [§6.1](../review.md#61-active-inference-specifically)
 - Issues: MAJ-03, MAJ-07

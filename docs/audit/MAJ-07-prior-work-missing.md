@@ -123,7 +123,7 @@ making it than for leaving readers to find the overlap.
 
 ## Related
 
-- Review: [§6](../../REVIEW.md#6-relation-to-existing-cognitive-and-agent-architectures),
-  [§6.1](../../REVIEW.md#61-active-inference-specifically)
+- Review: [§6](../review.md#6-relation-to-existing-cognitive-and-agent-architectures),
+  [§6.1](../review.md#61-active-inference-specifically)
 - Issues: MED-14 (active inference), MED-23 (unpublished priority audit), MIN-06
   (bibliography), MIN-18 (borrowed methods without citations)

@@ -89,5 +89,5 @@ A closed-loop candidate with its own orientation is the case the safety discussi
 
 ## Related
 
-- Review: [§8](../../REVIEW.md#8-safety)
+- Review: [§8](../review.md#8-safety)
 - Issues: MAJ-06, MED-16, MED-17

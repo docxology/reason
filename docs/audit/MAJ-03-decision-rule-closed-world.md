@@ -130,6 +130,6 @@ NP-hard in general (Hyafil & Rivest 1976).
 
 ## Related
 
-- Review: [§5.2(f)](../../REVIEW.md#52-what-still-stands-between-the-specification-and-a-test)
+- Review: [§5.2(f)](../review.md#52-what-still-stands-between-the-specification-and-a-test)
 - Issues: MED-13 (one-step stopping test), MED-19 (model-filled significance), MED-22 (gap
   taxonomies), MED-25 (Core ablation), MED-28 (EpistemicMargin)

@@ -113,6 +113,6 @@ programme.
 
 ## Related
 
-- Review: [§5.2(b)](../../REVIEW.md#52-what-still-stands-between-the-specification-and-a-test),
-  [§10](../../REVIEW.md#10-ideas--possible-recommendations)
+- Review: [§5.2(b)](../review.md#52-what-still-stands-between-the-specification-and-a-test),
+  [§10](../review.md#10-ideas--possible-recommendations)
 - Issues: MAJ-01, MED-11

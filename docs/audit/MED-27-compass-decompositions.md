@@ -83,5 +83,5 @@ the same thing, so a result stated in one set of terms cannot be carried to anot
 
 ## Related
 
-- Review: [§2.3](../../REVIEW.md#23-the-philosophical-layer-does-not-carry-weight-in-the-engineering)
+- Review: [§2.3](../review.md#23-the-philosophical-layer-does-not-carry-weight-in-the-engineering)
 - Issues: MED-02, MED-08, MED-21

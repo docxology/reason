@@ -106,5 +106,5 @@ stage; as stated, its scope is given only in Chapter 23.
 
 ## Related
 
-- Review: [§5.4](../../REVIEW.md#54-what-the-executable-examples-show)
+- Review: [§5.4](../review.md#54-what-the-executable-examples-show)
 - Issues: MAJ-03, MIN-08

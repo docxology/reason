@@ -1,0 +1,32 @@
+paper:
+  title: "Artificial Reason as a Research Programme: An Evidence-Based Referee Review"
+  subtitle: "A review of two published volumes by Mihail Tkalic"
+
+authors:
+  - name: "Daniel Ari Friedman"
+    orcid: "0000-0001-6232-9096"
+
+publication:
+  github_repository: "docxology/reason"
+  repository_url: "https://github.com/docxology/reason"
+  year: "2026"
+
+keywords:
+  - artificial reason
+  - referee review
+  - inquiry regulation
+  - evidence provenance
+
+metadata:
+  license: "CC BY-NC 4.0"
+  language: "en"
+
+manuscript_dir: docs/manuscript
+
+render:
+  formats:
+    pdf: true
+    html: true
+    slides: false
+    docx: false
+    epub: false

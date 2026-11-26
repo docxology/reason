@@ -105,5 +105,5 @@ III builds on this mechanism, so its properties need analysis first.
 
 ## Related
 
-- Review: [§8](../../REVIEW.md#8-safety)
+- Review: [§8](../review.md#8-safety)
 - Issues: MAJ-06 (incentives), MED-31 (authorization contract)

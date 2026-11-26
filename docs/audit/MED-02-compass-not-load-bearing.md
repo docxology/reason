@@ -145,6 +145,6 @@ components stand or fall with the Compass's content.
 
 ## Related
 
-- Review: [§2.3](../../REVIEW.md#23-the-philosophical-layer-does-not-carry-weight-in-the-engineering)
+- Review: [§2.3](../review.md#23-the-philosophical-layer-does-not-carry-weight-in-the-engineering)
 - Issues: MED-03 ("Reason" overloaded), MED-08 (designer-chosen values), MED-21 (two
   non-equivalent criteria), MED-27 (Compass decompositions)

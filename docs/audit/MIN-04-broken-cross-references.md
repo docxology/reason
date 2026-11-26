@@ -103,5 +103,5 @@ tests. When they do not resolve, a reader cannot tell which tests make up the fi
 
 ## Related
 
-- Review: [Appendix A](../../REVIEW.md#appendix-a-editorial-issues-found)
+- Review: [Appendix A](../review.md#appendix-a-editorial-issues-found)
 - Issues: MIN-03

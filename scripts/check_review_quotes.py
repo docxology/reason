@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Check that every quotation of the volumes in REVIEW.md is verbatim and cited to its page.
+"""Check that every quotation of the volumes in docs/review.md is verbatim and cited to its page.
 
 Usage: python3 -I scripts/check_review_quotes.py
 
-Scope: REVIEW.md from "## The short answer" up to "## Appendix C" (the header gives the
+Scope: docs/review.md from "## The short answer" up to "## Appendix C" (the header gives the
 Zenodo titles, Appendix C is generated, and the references quote titles of other works).
 A quotation is a double-quoted fragment (straight or curly). Quotation marks are reserved for
 words from the volumes; titles of other works and terms this review proposes are in italics.
@@ -66,7 +66,7 @@ def citation_for(line, start, end):
 
 
 def main():
-    text = (ROOT / "REVIEW.md").read_text(encoding="utf-8")
+    text = (ROOT / "docs" / "review.md").read_text(encoding="utf-8")
     body = text[text.index(START):text.index(STOP)]
     offset = text[:text.index(START)].count("\n")
     total = misses = 0
@@ -89,8 +89,8 @@ def main():
                     miss = audit.check(quote, None, citation)
             if miss:
                 misses += 1
-                print(f"{miss} REVIEW.md:{number}: {' '.join(quote.split())[:90]}")
-    print(f"\n{total - misses}/{total} quotations in REVIEW.md verbatim and cited to their page")
+                print(f"{miss} docs/review.md:{number}: {' '.join(quote.split())[:90]}")
+    print(f"\n{total - misses}/{total} quotations in docs/review.md verbatim and cited to their page")
     return 1 if misses else 0
 
 

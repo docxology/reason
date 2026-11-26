@@ -1,0 +1,21 @@
+claims:
+  - claim_id: audit-findings
+    value: 66
+    source: Audit register generated and checked by scripts/audit_index.py
+    artifact_path: docs/audit/README.md
+  - claim_id: major-findings
+    value: 8
+    source: Major entries in the generated audit register
+    artifact_path: docs/audit/README.md
+  - claim_id: medium-findings
+    value: 38
+    source: Medium entries in the generated audit register
+    artifact_path: docs/audit/README.md
+  - claim_id: minor-findings
+    value: 20
+    source: Minor entries in the generated audit register
+    artifact_path: docs/audit/README.md
+  - claim_id: mapped-raw-findings
+    value: 217
+    source: Archived audit findings counted and checked by scripts/triage.py
+    artifact_path: notes/audit-raw/TRIAGE.md

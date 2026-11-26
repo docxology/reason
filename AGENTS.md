@@ -5,12 +5,12 @@ Guidance for agents working in this repository.
 ## What this repository is
 
 A referee-style review of Tkalic's two-volume *Foundations of Reason* and *Engineering of
-Reason*. The review is the deliverable: `REVIEW.md` and the material in `text/`. What makes it
+Reason*. The review is the deliverable: `docs/review.md` and the material in `text/`. What makes it
 checkable is `repro/` — the review's claims are tied back to the source volumes, and the
 build re-derives the quotations, figures and numbers from those sources rather than retyping
 them.
 
-Python 3.10 or newer, standard library only.
+Python 3.11 or newer, standard library only. CI uses Python 3.14.
 
 ## Layout
 
@@ -23,7 +23,7 @@ Python 3.10 or newer, standard library only.
 | `scripts/` | Build and release helpers |
 | `assets/` | Figures and other binary material |
 | `docs/` | Documentation |
-| `REVIEW.md` | The review itself, and the entry point for a reader |
+| `docs/review.md` | The review itself, and the entry point for a reader |
 
 ## Commands
 
@@ -47,5 +47,4 @@ make verify
   rewrite it as an endorsement or as an attack.
 - Standard library only. Adding a dependency to a reproducibility script makes the review
   harder to check, which is the opposite of the point.
-- There is no CI workflow, so `make verify` is only as real as your last run of it. Report its
-  actual output, including any target that did not pass.
+- CI runs `make verify`. Report the actual local result, including any target that failed.
