@@ -91,5 +91,5 @@ corrigibility literature has been addressed when it has not.
 
 ## Related
 
-- Review: [§8](../../REVIEW.md#8-safety)
+- Review: [§8](../review.md#8-safety)
 - Issues: MAJ-06 (incentive analysis), MED-32 (override criterion)

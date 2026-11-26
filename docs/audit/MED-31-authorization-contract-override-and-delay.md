@@ -88,5 +88,5 @@ and the text leaves open whether the restrictions that matter most for safety bi
 
 ## Related
 
-- Review: [§8](../../REVIEW.md#8-safety)
+- Review: [§8](../review.md#8-safety)
 - Issues: MAJ-06, MED-18, MED-32

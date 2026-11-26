@@ -105,6 +105,6 @@ the first series, a gain at one model strength says nothing about the next.
 
 ## Related
 
-- Review: [§3](../../REVIEW.md#3-is-the-intelligencereason-distinction-meaningful-and-useful),
-  [§5.2(f)](../../REVIEW.md#52-what-still-stands-between-the-specification-and-a-test)
+- Review: [§3](../review.md#3-is-the-intelligencereason-distinction-meaningful-and-useful),
+  [§5.2(f)](../review.md#52-what-still-stands-between-the-specification-and-a-test)
 - Issues: MAJ-01, MAJ-03, MED-05, MED-12

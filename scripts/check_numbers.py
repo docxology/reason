@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fail if a computed number quoted in REVIEW.md or repro/README.md disagrees with its source.
+"""Fail if a computed number quoted in docs/review.md or repro/README.md disagrees with its source.
 
 Usage: python3 -I scripts/check_numbers.py OUTDIR
 
@@ -17,7 +17,7 @@ from fractions import Fraction
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-DOCS = [ROOT / "REVIEW.md", ROOT / "repro" / "README.md"]
+DOCS = [ROOT / "docs" / "review.md", ROOT / "repro" / "README.md"]
 
 
 def load_listing():

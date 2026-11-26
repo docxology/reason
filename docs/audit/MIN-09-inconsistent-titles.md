@@ -72,5 +72,5 @@ titles refer to the same version.
 
 ## Related
 
-- Review: [§10](../../REVIEW.md#10-ideas--possible-recommendations)
+- Review: [§10](../review.md#10-ideas--possible-recommendations)
 - Issues: MAJ-02, MED-15

@@ -73,5 +73,5 @@ allow deletion after a control series under the retention policy.
 
 ## Related
 
-- Review: [Appendix A](../../REVIEW.md#appendix-a-editorial-issues-found)
+- Review: [Appendix A](../review.md#appendix-a-editorial-issues-found)
 - Issues: MIN-04

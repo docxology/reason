@@ -13,7 +13,7 @@ whitespace, and is part of `make verify`.
 | `diagnostic_cycle.py` | Vol II §33.C.1 (pp. 109–111) | Exact memoized decision-tree search over three causes (D/A/S) and three probes, with 12 control episodes | all 12 checks pass; receipt-first expected cost 7/3 versus 8/3 for measuring first |
 | `dup_paragraphs.py` | written for this review | Sliding-window `difflib` check for near-duplicate paragraphs | Vol I: 11 pairs with ratio > 0.80; Vol II: none |
 
-What the results do and do not show is discussed in `REVIEW.md` §5.4 and in
+What the results do and do not show is discussed in [the review](../docs/review.md) §5.4 and in
 `docs/audit/MIN-08-code-listings.md`. In short: the §33.B gain is fixed by construction (the
 frozen control always predicts state 0 and the adaptive model is exact on every visited
 transition), so the gain and its interval are set by held-out coverage and by the share of
@@ -22,7 +22,7 @@ plan cache, so a warm memory changes the number of evaluated states but no decis
 
 Run everything with `make verify` from the repository root. That target checks the listings
 against the PDF, writes all outputs under `$TMPDIR/reason-verify/`, and then runs
-`scripts/check_numbers.py`, which fails if any number quoted in `REVIEW.md` no longer matches
+`scripts/check_numbers.py`, which fails if any number quoted in [the review](../docs/review.md) no longer matches
 what these scripts produce.
 
 Run by hand:
@@ -37,4 +37,4 @@ As printed, `v0_lower_loop.py` writes `report.json` and a 27 MB `trace.jsonl` to
 `./v0_results` in the current directory, so run it from a scratch directory.
 
 Neither listing bears on the central hypothesis of the volumes, and the author says so. They
-are the seed of the harness that the experiment in `REVIEW.md` §10 would need.
+are the seed of the harness that the experiment in [the review](../docs/review.md) §10 would need.

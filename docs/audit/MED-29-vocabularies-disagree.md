@@ -106,5 +106,5 @@ and the closure ablations.
 
 ## Related
 
-- Review: [§5.2(e)](../../REVIEW.md#52-what-still-stands-between-the-specification-and-a-test)
+- Review: [§5.2(e)](../review.md#52-what-still-stands-between-the-specification-and-a-test)
 - Issues: MAJ-05 (removal arms), MED-28, MED-36

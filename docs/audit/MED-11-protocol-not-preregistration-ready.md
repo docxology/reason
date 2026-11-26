@@ -97,6 +97,6 @@ nothing.
 
 ## Related
 
-- Review: [§5.2(a)](../../REVIEW.md#52-what-still-stands-between-the-specification-and-a-test),
-  [§10](../../REVIEW.md#10-ideas--possible-recommendations)
+- Review: [§5.2(a)](../review.md#52-what-still-stands-between-the-specification-and-a-test),
+  [§10](../review.md#10-ideas--possible-recommendations)
 - Issues: MAJ-01, MED-12, MED-09, MED-10, MED-24 (metric definitions)

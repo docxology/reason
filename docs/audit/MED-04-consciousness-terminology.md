@@ -103,5 +103,5 @@ al. indicators. Awarding the label at closure makes it look like a finding rathe
 
 ## Related
 
-- Review: [§2.5](../../REVIEW.md#25-two-naming-choices-that-cost-more-than-they-buy)
+- Review: [§2.5](../review.md#25-two-naming-choices-that-cost-more-than-they-buy)
 - Issues: MED-20 (readability), MED-35 (load-bearing terms)

@@ -78,5 +78,5 @@ needs an external check.
 
 ## Related
 
-- Review: [§8](../../REVIEW.md#8-safety)
+- Review: [§8](../review.md#8-safety)
 - Issues: MAJ-06, MED-31, MED-37

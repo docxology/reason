@@ -99,5 +99,5 @@ changes blur coined terms and common nouns.
 
 ## Related
 
-- Review: [Appendix A](../../REVIEW.md#appendix-a-editorial-issues-found)
+- Review: [Appendix A](../review.md#appendix-a-editorial-issues-found)
 - Issues: MED-20, MED-35, MIN-11

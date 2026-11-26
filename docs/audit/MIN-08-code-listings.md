@@ -83,5 +83,5 @@ pass flag that is a constant does not check anything.
 
 ## Related
 
-- Review: [§5.4](../../REVIEW.md#54-what-the-executable-examples-show)
+- Review: [§5.4](../review.md#54-what-the-executable-examples-show)
 - Issues: MAJ-04 (retention is caching), MIN-17 (pseudocode defects)

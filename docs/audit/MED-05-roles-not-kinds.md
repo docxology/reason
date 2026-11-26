@@ -116,5 +116,5 @@ and regressions.
 
 ## Related
 
-- Review: [§3](../../REVIEW.md#3-is-the-intelligencereason-distinction-meaningful-and-useful)
+- Review: [§3](../review.md#3-is-the-intelligencereason-distinction-meaningful-and-useful)
 - Issues: MED-03 ("Reason" overloaded), MED-25 (Core ablation)

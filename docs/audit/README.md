@@ -4,7 +4,7 @@ Every issue found in the audit of *Foundations of Reason 8.0* (Vol I) and *Engin
 Reason 3.5* (Vol II) has a standalone file in this directory and a GitHub issue with the
 same ID. The files are the source of truth; this index and the issues are generated from
 them by `scripts/audit_index.py` and `scripts/file_issues.py`. The full argument is in
-[`REVIEW.md`](../../REVIEW.md).
+[the full review](../review.md).
 
 Each file opens with the claims under review: the author's statements the issue responds
 to, quoted verbatim with volume, section and PDF page (for an issue about how the text is

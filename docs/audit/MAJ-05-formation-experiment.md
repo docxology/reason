@@ -110,6 +110,6 @@ be excluded without the never-supported and information-matched arms.
 
 ## Related
 
-- Review: [§4.2(a)](../../REVIEW.md#42-toward-a-system-with-its-own-worldview-and-values-underspecified-at-the-decisive-step)
+- Review: [§4.2(a)](../review.md#42-toward-a-system-with-its-own-worldview-and-values-underspecified-at-the-decisive-step)
 - Issues: MED-01 (pre-rational significance), MED-07 ("own" Worldview), MED-29 (Formation
   State classes), MIN-05 (KSR)

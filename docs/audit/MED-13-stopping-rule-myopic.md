@@ -83,5 +83,5 @@ Volume I or the reference heuristic would build that rule.
 
 ## Related
 
-- Review: [§5.2(f)](../../REVIEW.md#52-what-still-stands-between-the-specification-and-a-test)
+- Review: [§5.2(f)](../review.md#52-what-still-stands-between-the-specification-and-a-test)
 - Issues: MAJ-03 (closed-world decision rule), MED-26 (Operational Core formulas)

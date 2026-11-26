@@ -66,5 +66,5 @@ Minor on its own, but together with MIN-01 and MIN-02 it signals an unedited tex
 
 ## Related
 
-- Review: [Appendix A](../../REVIEW.md#appendix-a-editorial-issues-found)
+- Review: [Appendix A](../review.md#appendix-a-editorial-issues-found)
 - Issues: MIN-01, MED-20

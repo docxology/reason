@@ -104,8 +104,8 @@ for reviewers (MED-15).
 
 ## Related
 
-- Review: [§5.2(a)](../../REVIEW.md#52-what-still-stands-between-the-specification-and-a-test),
-  [§9](../../REVIEW.md#9-scientific-status),
-  [§10](../../REVIEW.md#10-ideas--possible-recommendations)
+- Review: [§5.2(a)](../review.md#52-what-still-stands-between-the-specification-and-a-test),
+  [§9](../review.md#9-scientific-status),
+  [§10](../review.md#10-ideas--possible-recommendations)
 - Issues: MED-11 (no preregistered instance), MED-12 (failure condition), MED-09 (ceiling
   risk), MED-15 (version churn), MED-23 (unpublished pilot materials)

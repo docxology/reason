@@ -147,7 +147,7 @@ this failure.
 
 ## Related
 
-- Review: [§8](../../REVIEW.md#8-safety)
+- Review: [§8](../review.md#8-safety)
 - Issues: MED-16 (moral status), MED-17 (competence mandates), MED-18 (corrigibility), MED-31
   (authorization contract), MED-32 (override criterion), MED-37 (divergent candidates),
   MED-38 (failure catalogue)

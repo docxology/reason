@@ -90,5 +90,5 @@ the evidence for the Core, or define AR status, the result is fixed before the e
 
 ## Related
 
-- Review: [§5.2(c)](../../REVIEW.md#52-what-still-stands-between-the-specification-and-a-test)
+- Review: [§5.2(c)](../review.md#52-what-still-stands-between-the-specification-and-a-test)
 - Issues: MED-12 (failure condition), MED-11, MED-24 (metric definitions)

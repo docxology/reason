@@ -92,5 +92,5 @@ final editorial pass, which lowers reviewers' confidence in the rest.
 
 ## Related
 
-- Review: [Appendix A](../../REVIEW.md#appendix-a-editorial-issues-found)
+- Review: [Appendix A](../review.md#appendix-a-editorial-issues-found)
 - Issues: MIN-02, MED-20

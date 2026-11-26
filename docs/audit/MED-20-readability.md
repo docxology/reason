@@ -104,6 +104,6 @@ barrier is presentational, and it raises the cost of reviewing the work.
 
 ## Related
 
-- Review: [§7](../../REVIEW.md#weakest), [§10](../../REVIEW.md#10-ideas--possible-recommendations),
-  [Appendix A](../../REVIEW.md#appendix-a-editorial-issues-found)
+- Review: [§7](../review.md#weakest), [§10](../review.md#10-ideas--possible-recommendations),
+  [Appendix A](../review.md#appendix-a-editorial-issues-found)
 - Issues: MED-04, MED-35, MIN-01, MIN-02, MIN-03, MIN-04, MIN-07, MIN-14, MIN-15

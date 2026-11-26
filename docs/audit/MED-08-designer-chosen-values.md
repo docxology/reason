@@ -110,5 +110,5 @@ the designer's responsibility rather than the system's.
 
 ## Related
 
-- Review: [§4.2(d)](../../REVIEW.md#42-toward-a-system-with-its-own-worldview-and-values-underspecified-at-the-decisive-step)
+- Review: [§4.2(d)](../review.md#42-toward-a-system-with-its-own-worldview-and-values-underspecified-at-the-decisive-step)
 - Issues: MAJ-08 (value sum), MED-02, MED-33 (drift)

@@ -92,5 +92,5 @@ volumes add.
 
 ## Related
 
-- Review: [§6](../../REVIEW.md#6-relation-to-existing-cognitive-and-agent-architectures)
+- Review: [§6](../review.md#6-relation-to-existing-cognitive-and-agent-architectures)
 - Issues: MAJ-07, MIN-06

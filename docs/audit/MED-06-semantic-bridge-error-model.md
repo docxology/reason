@@ -104,5 +104,5 @@ consistent. This is the knowledge-acquisition problem that limited expert system
 
 ## Related
 
-- Review: [§4.2(b)](../../REVIEW.md#42-toward-a-system-with-its-own-worldview-and-values-underspecified-at-the-decisive-step)
+- Review: [§4.2(b)](../review.md#42-toward-a-system-with-its-own-worldview-and-values-underspecified-at-the-decisive-step)
 - Issues: MED-07, MED-19, MED-38 (failure catalogue)

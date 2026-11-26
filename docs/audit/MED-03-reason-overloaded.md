@@ -124,5 +124,5 @@ component has no test also weakens the claim that AR status is empirically asses
 
 ## Related
 
-- Review: [§2.4](../../REVIEW.md#24-reason-currently-means-two-different-things)
+- Review: [§2.4](../review.md#24-reason-currently-means-two-different-things)
 - Issues: MED-02, MED-05, MAJ-06 (observed versus unobserved behaviour)

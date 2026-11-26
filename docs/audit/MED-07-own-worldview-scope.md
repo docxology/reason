@@ -97,5 +97,5 @@ point where it differs from a well-prompted agent.
 
 ## Related
 
-- Review: [§4.2(c)](../../REVIEW.md#42-toward-a-system-with-its-own-worldview-and-values-underspecified-at-the-decisive-step)
+- Review: [§4.2(c)](../review.md#42-toward-a-system-with-its-own-worldview-and-values-underspecified-at-the-decisive-step)
 - Issues: MAJ-05 (formation experiment), MED-06 (semantic bridge)

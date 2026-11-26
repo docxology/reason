@@ -80,6 +80,6 @@ REASON_CLOSURE (§31.0, p. 78), although Vol I names it once, in the guide (§6,
 
 ## Related
 
-- Review: [§2.1](../../REVIEW.md#21-the-functional-cycle-holds-together),
-  [Appendix A](../../REVIEW.md#appendix-a-editorial-issues-found)
+- Review: [§2.1](../review.md#21-the-functional-cycle-holds-together),
+  [Appendix A](../review.md#appendix-a-editorial-issues-found)
 - Issues: MED-03, MED-18, MIN-15

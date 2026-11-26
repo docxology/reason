@@ -100,5 +100,5 @@ is before the first such candidate exists (Long, Sebo et al. 2024).
 
 ## Related
 
-- Review: [§8](../../REVIEW.md#8-safety)
+- Review: [§8](../review.md#8-safety)
 - Issues: MAJ-06 (incentives), MED-35 (death defined two ways), MED-37 (divergent candidates)

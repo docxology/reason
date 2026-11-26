@@ -79,5 +79,5 @@ protocol. Readers navigating by the contents will meet different terms in the bo
 
 ## Related
 
-- Review: [Appendix A](../../REVIEW.md#appendix-a-editorial-issues-found)
+- Review: [Appendix A](../review.md#appendix-a-editorial-issues-found)
 - Issues: MED-20, MIN-05

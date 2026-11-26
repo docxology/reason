@@ -85,5 +85,5 @@ different entry rules revise different things after the same failure.
 
 ## Related
 
-- Review: [§7](../../REVIEW.md#7-strongest-weakest-distinctive-and-in-need-of-development)
+- Review: [§7](../review.md#7-strongest-weakest-distinctive-and-in-need-of-development)
 - Issues: MED-34, MED-38, MIN-15

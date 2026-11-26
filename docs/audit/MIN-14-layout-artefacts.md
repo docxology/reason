@@ -95,5 +95,5 @@ Spaces after hyphens also defeat a search for terms such as self-navigation.
 
 ## Related
 
-- Review: [Appendix A](../../REVIEW.md#appendix-a-editorial-issues-found)
+- Review: [Appendix A](../review.md#appendix-a-editorial-issues-found)
 - Issues: MED-20, MIN-07, MIN-11, MIN-13

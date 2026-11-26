@@ -69,5 +69,5 @@ implementation that follows the identifiers literally will carry the typo into c
 
 ## Related
 
-- Review: [Appendix A](../../REVIEW.md#appendix-a-editorial-issues-found)
+- Review: [Appendix A](../review.md#appendix-a-editorial-issues-found)
 - Issues: MAJ-05, MED-20

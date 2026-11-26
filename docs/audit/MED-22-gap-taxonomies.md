@@ -121,5 +121,5 @@ tuned to the test environment. A test of explicit gap typing needs one fixed typ
 
 ## Related
 
-- Review: [§5.3](../../REVIEW.md#53-my-answer-to-the-guides-question-for-reviewers)
+- Review: [§5.3](../review.md#53-my-answer-to-the-guides-question-for-reviewers)
 - Issues: MAJ-03, MAJ-04, MED-29 (vocabularies)

@@ -132,5 +132,5 @@ trace that development only with the log and the packages.
 
 ## Related
 
-- Review: [§6](../../REVIEW.md#6-relation-to-existing-cognitive-and-agent-architectures)
+- Review: [§6](../review.md#6-relation-to-existing-cognitive-and-agent-architectures)
 - Issues: MAJ-01, MAJ-07

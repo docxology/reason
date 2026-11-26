@@ -89,5 +89,5 @@ reach different verdicts on the same case, and the gate cannot be tested for fal
 
 ## Related
 
-- Review: [§8](../../REVIEW.md#8-safety)
+- Review: [§8](../review.md#8-safety)
 - Issues: MAJ-03, MAJ-08, MED-29

@@ -92,6 +92,6 @@ volumes, an implementation can satisfy the equations without being a Core.
 
 ## Related
 
-- Review: [§2.1](../../REVIEW.md#21-the-functional-cycle-holds-together),
-  [§5.2(f)](../../REVIEW.md#52-what-still-stands-between-the-specification-and-a-test)
+- Review: [§2.1](../review.md#21-the-functional-cycle-holds-together),
+  [§5.2(f)](../review.md#52-what-still-stands-between-the-specification-and-a-test)
 - Issues: MED-13, MAJ-03, MED-19
